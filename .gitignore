@@ -1,0 +1,16 @@
+!.keep
+*.DS_Store
+*.swo
+*.swp
+/.bundle
+/.env
+/.foreman
+/coverage/*
+/db/*.sqlite3
+/log/*
+log/development.log
+/public/system
+/public/assets
+/tmp/*
+tags
+gems.tags
