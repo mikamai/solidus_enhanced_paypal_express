@@ -12,5 +12,6 @@ log/development.log
 /public/system
 /public/assets
 /tmp/*
+/config/database.yml
 tags
 gems.tags
