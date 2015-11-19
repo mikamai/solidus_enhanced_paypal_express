@@ -397,7 +397,6 @@ DEPENDENCIES
   jquery-rails
   mysql2 (< 0.4)
   rails (= 4.2.4)
-  rb-fsevent
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
