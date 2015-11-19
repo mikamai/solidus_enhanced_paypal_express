@@ -48,6 +48,7 @@ group :development, :test do
   gem 'capistrano-passenger', '0.1.1', require: false
   gem 'capistrano-rails', '~> 1.1.3', require: false
   gem 'capistrano-rbenv', '~> 2.0.3', require: false
+  gem 'slackistrano', require: false
 end
 
 group :development do
