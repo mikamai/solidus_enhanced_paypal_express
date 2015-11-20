@@ -20,7 +20,7 @@ module.exports = class Coverized
           $(e).data("original-height", $(e).height())
           # Loaded
           url = $(e).attr("src")
-          console.log "%c Load #{url}", "color:#0A0"
+          # console.log "%c Load #{url}", "color:#0A0"
 
           @_scale(e)
           $(e).fadeIn( $(e).data("fade-time") || 'slow' )
@@ -64,7 +64,6 @@ module.exports = class Coverized
 
   _scale: (element)->
     parent       = $(element).parents($(element).data("parent")) || $(element).parent()
-    console.log $(element).data("parent")
     targetwidth  = $(parent).width()
     targetheight = $(parent).height()
     srcwidth     = $(element).data("original-width")

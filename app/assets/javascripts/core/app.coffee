@@ -22,6 +22,11 @@ module.exports = class App
         classe = classe.substring(@options.prefix.length)
         @[classe]?.call?(@)
 
+    # Set toggler Navigation
+    $(".js-nav-toggler").on "click", (e) ->
+      e.preventDefault()
+      $("body").toggleClass("open")
+
   # Microtemplate
   _t:(s,d) ->
     for p of d
