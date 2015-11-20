@@ -10,6 +10,7 @@ Forst e-shop
 cp config/database.yml.sample config/database.yml
 subl -n config/database.yml # Edit password
 bundle
+npm install
 bundle exec rake db:setup spree_sample:load
 powder link
 powder open

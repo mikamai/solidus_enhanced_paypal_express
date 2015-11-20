@@ -1,0 +1,100 @@
+// Banner Product
+.banner-product
+  position: relative
+
+  +max-screen($screen-sm)
+    background: url(asset-path("home/banner-background-responsive.png")) top center no-repeat
+
+
+  &__background
+    position: relative
+    z-index: 1
+    width: 100%
+
+    +max-screen($screen-sm)
+      display: none
+
+  &__image-container
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+    width: 46%
+    height: 100%
+    padding: 20px 0 10px 0
+
+    +max-screen($screen-sm)
+      position: relative
+      width: 100%
+      text-align: center
+
+
+  &__container
+    position: absolute
+    top: 0
+    left: 46%
+    width: 46%
+    z-index: 2
+
+    +max-screen($screen-sm)
+      position: relative
+      width: 90%;
+      left: 5%;
+      text-align: center
+
+
+  &__product
+    position: relative
+    height: 100%
+    left: 50%
+
+    +max-screen($screen-sm)
+      left: auto
+      height: 250px
+
+
+  &__title
+    font-size: 32px
+    color: #000
+    font-weight: 700
+    margin: 10% 0 0 0
+    padding: 0
+
+    +min-screen($screen-sm)
+      font-size: 24px
+      margin: 5% 0 0 0
+
+    +min-screen($screen-md)
+      margin: 8% 0 0 0
+
+    +min-screen($screen-xl)
+      font-size: 30px
+      margin: 12% 0 0 0
+
+  &__description
+    font-size: 14px
+    color: #000
+    font-weight: 300
+    margin: 0
+    padding: 0
+
+    +min-screen($screen-sm)
+      font-size: 16px
+      line-height: 16px
+      margin-bottom: 10px
+
+    +min-screen($screen-md)
+      font-size: 20px
+      line-height: 24px
+
+    +min-screen($screen-lg)
+      font-size: 20px
+      line-height: 30px
+      margin-bottom: 20px
+
+    +min-screen($screen-xl)
+      font-size: 24px
+      line-height: 32px
+      margin-bottom: 20px
+
+// END Banner Product

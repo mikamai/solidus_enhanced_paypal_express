@@ -1,0 +1,51 @@
+// Footer
+.footer
+  padding: 0 0 20px 0
+
+  &__ornament
+    background: transparent url(asset-path("layout/footer-ornament.png")) center center no-repeat
+    width: 100%
+    overflow: hidden
+    margin: -34px auto 0 auto
+    height: 91px
+
+
+  &__logo
+    position: relative
+    width: 88px
+    display: block
+    margin: 10px auto 0 auto
+
+  &__nav
+    list-style: none
+    text-align: center
+
+    li
+      position: relative
+      display: inline-block
+      margin-right: 10px
+
+      a
+        +transition(all .4s ease-out)
+        text-decoration: none
+        color: #000
+
+        &:hover
+          color: $color-green-forst
+
+      &:last-child
+        &::after
+          display: none
+
+      &::after
+        content: ""
+        border-right: 1px solid #000
+        display: inline-block
+        width: 1px
+        height: 15px
+        top: 6px
+        position: absolute
+        margin-left: 6px
+
+
+// END Footer

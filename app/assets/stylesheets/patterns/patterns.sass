@@ -1,0 +1,27 @@
+.site-container
+  position: relative
+  z-index: 1
+  background: #FFFFFF
+
+// Buttons
+.btn-follow
+  +transition(all .3s ease-out)
+  font-size: 16px
+  font-weight: 700
+  display: block
+  padding: 12px 45px
+  background: $color-green-forst
+  color: #FFFFFF
+  line-height: 22px
+  text-decoration: none
+  text-align: center
+  width: 220px
+
+  +max-screen($screen-sm)
+    font-size: 14px
+    padding: 8px 35px
+    line-height: 20px
+    margin: 10px auto
+
+  &:hover
+    background: lighten($color-green-forst, 4%)

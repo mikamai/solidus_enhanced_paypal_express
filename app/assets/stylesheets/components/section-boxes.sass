@@ -1,0 +1,56 @@
+// Section Box
+.section-boxes
+  padding: 8px
+
+.section-box
+  position: relative
+  overflow: hidden
+
+  &__content
+    font-size: 62.5%
+    text-align: center
+    position: absolute
+    width: 100%
+    top: 28%
+    z-index: 2
+
+  &__link
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    display: block
+
+    &:hover
+      .section-box__icon
+        +scale(1.2)
+
+  &__icon
+    +transition(all .2s ease-out)
+    width: 16%
+
+  &__image
+    position: relative
+    width: 100%
+    padding: 8px
+    z-index: 1
+
+
+  &__title
+    font-size: 30px
+    font-weight: 300
+    padding: 0
+    margin: 0
+    color: #fff
+    +text-shadow(0 0 20px rgba(0,0,0,1))
+
+    +min-screen($screen-sm)
+      font-size: 24px
+
+    +min-screen($screen-md)
+      font-size: 37px
+
+    +min-screen($screen-lg)
+      font-size: 42px
+
+// END Section Box

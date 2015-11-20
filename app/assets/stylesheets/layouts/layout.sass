@@ -1,0 +1,18 @@
+body
+  font-family: 'Titillium Web', sans-serif
+
+  &.open
+    overflow: hidden
+
+    .site-container
+      right: 260px
+
+    .navigation
+      right: 0
+
+.site-container
+  position: relative
+  z-index: 3
+  +transition(all .5s cubic-bezier(1.000, 0.145, 0.395, 1.005))
+  right: 0
+
