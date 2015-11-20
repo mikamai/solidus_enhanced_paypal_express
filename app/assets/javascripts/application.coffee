@@ -5,7 +5,6 @@ require 'core/plugin'
 App = require 'core/app'
 Coverized = require 'vendor/coverized'
 
-
 $(document).on 'page:change', (event) ->
   # idempotent function
   # -> function that applied more than one time does not wreck everything
