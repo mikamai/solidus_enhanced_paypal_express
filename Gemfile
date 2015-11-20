@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'browserify-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'font-awesome-sass', '~> 4.4.0'
 
 
 # Solidus!
