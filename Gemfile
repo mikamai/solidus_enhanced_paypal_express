@@ -19,7 +19,10 @@ group :development do
   gem 'spring'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
+  gem 'guard', require: false
   gem 'rb-fsevent', require: false, install_if: ->() { `uname` =~ /darwin/i }
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
   gem 'capistrano', '~> 3.4.0', require: false
   gem 'capistrano-bundler', '~> 1.1.4', require: false
   gem 'capistrano-passenger', '0.1.1', require: false
