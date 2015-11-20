@@ -1,4 +1,4 @@
-class App
+module.exports = class App
   defaults:
     # Imposta il prefisso delle classi css
     # Se definisco una classe js_main in frontend priva di stili

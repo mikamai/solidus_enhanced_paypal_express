@@ -1,6 +1,6 @@
 $ = require "jquery"
 
-class Analytics
+module.exports = class Analytics
   defaults:
     UA: "UA-XXXXXX"
 
@@ -27,5 +27,3 @@ class Analytics
     # Set options
     @options = $.extend({}, @defaults, options )
     do @send
-
-module.exports = Analytics

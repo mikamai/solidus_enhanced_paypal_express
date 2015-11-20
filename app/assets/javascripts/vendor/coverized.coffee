@@ -1,4 +1,4 @@
-class Coverized
+module.exports = class Coverized
   defaults:
     selector: "img.coverized"
 

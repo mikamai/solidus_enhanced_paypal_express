@@ -1,6 +1,6 @@
 ### Plugin for Methods in console ###
 # Avoid `console` errors in browsers that lack a console.
-module.exports = do ()->
+do ()->
   method;
   noop = () ->
   methods = [
