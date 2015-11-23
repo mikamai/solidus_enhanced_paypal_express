@@ -4,6 +4,31 @@
   margin: 0
   padding: 0
 
+  &__social
+    a
+      +transition(all .2s ease-out)
+      cursor: pointer
+      display: block
+      float: left
+      width: 50px
+      height: 50px
+      margin-right: 4px
+      background: #2a3110
+      +border-radius(100%)
+      text-align: center
+
+      i
+        color: #FFF
+        font-size: 22px
+        line-height: 50px
+
+      &:hover
+        background: lighten(#2a3110, 2%)
+
+
+
+
+
   li.title
     font-weight: 600
     font-size: 20px
