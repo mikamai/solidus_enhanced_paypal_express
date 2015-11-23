@@ -8,7 +8,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'browserify-rails'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'font-awesome-sass', '~> 4.4.0'
 
 
@@ -26,14 +25,15 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'guard', require: false
   gem 'rb-fsevent', require: false, install_if: ->() { `uname` =~ /darwin/i }
-  gem 'guard-livereload', require: false
   gem 'rack-livereload'
+  gem 'guard-livereload', require: false
+  gem 'guard-bundler', require: false
   gem 'capistrano', '~> 3.4.0', require: false
   gem 'capistrano-bundler', '~> 1.1.4', require: false
   gem 'capistrano-passenger', '0.1.1', require: false
   gem 'capistrano-rails', '~> 1.1.3', require: false
   gem 'capistrano-rbenv', '~> 2.0.3', require: false
-  gem 'capistrano-npm'
+  gem 'capistrano-npm', require: false
   gem 'slackistrano', require: false
 end
 
