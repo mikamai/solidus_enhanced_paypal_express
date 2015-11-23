@@ -8,6 +8,22 @@
     color: #FFFFFF
     font-size: 28px
 
+.navigations
+  +max-screen($screen-sm)
+    position: absolute
+    z-index: 4
+    top: 0
+    left: 0
+    width: 100%
+    height: 80px
+    background: rgba(0,0,0,.5)
+
+  &--sticky
+    position: relative
+    width: 100%
+    height: 80px
+    background: #46521b
+
 .navigation
   +transition(all .5s cubic-bezier(1.000, 0.145, 0.395, 1.005))
   position: fixed
@@ -19,7 +35,7 @@
   width: 260px
   overflow: auto
   z-index: 0
-  background: $color-green-forst
+  background: darken($color-green-forst, 3%)
 
   &__toggler
 
@@ -56,7 +72,7 @@
     margin: 30px 0 0 0
     padding: 0
     padding-top: 30px
-    border-top: 1px solid #545f2c
+    border-top: 1px solid darken($color-green-forst, 5%)
     list-style: disc
     color: #FFF
 
@@ -72,9 +88,13 @@
 
 .nav-languages
   position: absolute
-  z-index: 5
+  z-index: 20
 
   &__list
+    position: relative
+    z-index: 20
+    margin-top: 27px
+
     .world
       color: #fff
       font-size: 25px
@@ -101,10 +121,11 @@
       text-align: left
 
     &__list
+      padding-left: 17px
       display: none
 
     .toogler
-      padding: 20px 0 0 43px
+      padding: 20px 0 0 20px
 
       a
         display: block
