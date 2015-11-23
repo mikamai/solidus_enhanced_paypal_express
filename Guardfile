@@ -31,4 +31,11 @@ guard 'livereload' do
 
   # file needing a full reload of the page anyway
   watch(%r{app/views/.+$})
+  watch(%r{app/controllers/.+$})
+  watch('config/routes.rb')
+end
+
+guard :bundler do
+  require 'guard/bundler'
+  watch('Gemfile')
 end
