@@ -1,161 +1,163 @@
 <!-- Navigation -->
 <div class="navigation js_navigation_container">
   <div class="js-nav-toggler">
-      <a class="navigation-toggler" href="#">
-          <i class="fa fa-times"></i>
-      </a>
+    <a class="navigation-toggler" href="#">
+      <i class="fa fa-times"></i>
+    </a>
   </div>
   <ul class="navigation__primary-menu">
-      <li><a href="#">FORST SHOP</a></li>
-      <li><a href="#">LE NOSTRE BIRRE</a></li>
-      <li>
-        <a href="#">MERCHANDISING</a>
-        <ul>
-            <li><a href="#">BICCHIERI</a></li>
-            <li><a href="#">ABBIGLIAMENTO</a></li>
-            <li><a href="#">ACCESSORI</a></li>
-        </ul>
-      </li>
+    <li><a href="#">FORST SHOP</a></li>
+    <li><a href="#">LE NOSTRE BIRRE</a></li>
+    <li>
+      <a href="#">MERCHANDISING</a>
+      <ul>
+        <li><a href="#">BICCHIERI</a></li>
+        <li><a href="#">ABBIGLIAMENTO</a></li>
+        <li><a href="#">ACCESSORI</a></li>
+      </ul>
+    </li>
   </ul>
   <ul class="navigation__secondary-menu">
-      <li><a href="#">Contatti</a></li>
-      <li><a href="#">Informativa privacy</a></li>
-      <li><a href="#">Condizioni generali di vendita</a></li>
+    <li><a href="#">Contatti</a></li>
+    <li><a href="#">Informativa privacy</a></li>
+    <li><a href="#">Condizioni generali di vendita</a></li>
   </ul>
 </div>
 <!-- // Navigation -->
 <div class="site-container">
-    <div class="container-fluid js_site_container js_main controller">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="nav-languages">
-                    <ul class="nav-languages__list">
-                        <li><a href="#">IT</a></li>
-                        <li><a href="#">DE</a></li>
-                        <li><a href="#">EN</a></li>
-                    </ul>
-                </div>
-                <div class="js-nav-toggler">
-                    <a class="navigation-toggler" href="#">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-                <!-- Splash -->
-                <div class="splash">
-                    <div class="splash__content">
-                        <div class="splash__logo"><img src="<%= image_path 'home/splash-logo.png' %>" alt="" /></div>
-                        <h1 class="splash__title">Il magico mondo della Spezialbier-Brauerei FORST ti dà il benvenuto.</h1>
-                        <p class="splash__description">
-                            Qui puoi ordinare una delle nostre birre di qualità superiore
-                            <br /> e scoprire la nostra linea di abbigliamento e accessori.
-                            <br /> Lasciati ispirare dai nostri prodotti e ritrova la magia del mondo FORST.
-                        </p>
-                    </div>
-                    <img data-fit="true" data-align="top center" class="splash__background coverized" src="<%= image_path 'home/splash.jpg' %>" alt="" />
-                </div>
-                <!-- // Splash -->
-            </div>
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="nav-languages">
+          <div class="toogler">
+            <a class="world" href="#"><i class="fa fa-globe"></i></a>
+          </div>
+          <ul class="nav-languages__list">
+            <li class="active"><a href="#">IT</a></li>
+            <li><a href="#">DE</a></li>
+            <li><a href="#">EN</a></li>
+          </ul>
         </div>
-        <!-- Boxes -->
-        <div class="section-boxes">
-            <div class="row">
-                <div class="col-sm-4 col-md-4">
-                    <!-- Section-box -->
-                    <div class="section-box">
-                        <a class="section-box__link" href="#" class="Il merchandising">
+        <div class="js-nav-toggler">
+          <a class="navigation-toggler" href="#">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <!-- Splash -->
+        <div class="splash">
+          <div class="splash__content">
+            <div class="splash__logo"><img src="<%= image_path 'home/splash-logo.png' %>" alt="" /></div>
+            <h1 class="splash__title">Il magico mondo della Spezialbier-Brauerei FORST ti dà il benvenuto.</h1>
+            <p class="splash__description">
+              Qui puoi ordinare una delle nostre birre di qualità superiore
+              <br /> e scoprire la nostra linea di abbigliamento e accessori.
+              <br /> Lasciati ispirare dai nostri prodotti e ritrova la magia del mondo FORST.
+            </p>
+          </div>
+          <img data-fit="true" data-align="top center" class="splash__background coverized" src="<%= image_path 'home/splash.jpg' %>" alt="" />
+        </div>
+        <!-- // Splash -->
+      </div>
+    </div>
+    <!-- Boxes -->
+    <div class="section-boxes">
+      <div class="row">
+        <div class="col-sm-4 col-md-4">
+          <!-- Section-box -->
+          <div class="section-box">
+            <a class="section-box__link" href="#" class="Il merchandising">
                             <img class="section-box__image" src="<%= image_path 'home/box-merchandising-background.png' %>" alt="" />
                             <div class="section-box__content">
                                 <img class="section-box__icon" src="<%= image_path 'home/box-merchandising-icon.png' %>" alt="" />
                                 <h1 class="section-box__title">Il merchandising</h1>
                             </div>
                         </a>
-                    </div>
-                    <!-- // Section-box -->
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    <!-- Section-box -->
-                    <div class="section-box">
-                        <a class="section-box__link" href="#" class="Le birre">
+          </div>
+          <!-- // Section-box -->
+        </div>
+        <div class="col-sm-4 col-md-4">
+          <!-- Section-box -->
+          <div class="section-box">
+            <a class="section-box__link" href="#" class="Le birre">
                             <img class="section-box__image" src="<%= image_path 'home/box-birre-background.png' %>" alt="" />
                             <div class="section-box__content">
                                 <img class="section-box__icon" src="<%= image_path 'home/box-birre-icon.png' %>" alt="" />
                                 <h1 class="section-box__title">Le birre</h1>
                             </div>
                         </a>
-                    </div>
-                    <!-- // Section-box -->
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    <!-- Section-box -->
-                    <div class="section-box">
-                        <a class="section-box__link" href="#" class="La birra di Natale">
+          </div>
+          <!-- // Section-box -->
+        </div>
+        <div class="col-sm-4 col-md-4">
+          <!-- Section-box -->
+          <div class="section-box">
+            <a class="section-box__link" href="#" class="La birra di Natale">
                             <img class="section-box__image" src="<%= image_path 'home/box-birra-natale-background.png' %>" alt="" />
                             <div class="section-box__content">
                                 <img class="section-box__icon" src="<%= image_path 'home/box-birra-natale-icon.png' %>" alt="" />
                                 <h1 class="section-box__title">La birra di Natale</h1>
                             </div>
                         </a>
-                    </div>
-                    <!-- // Section-box -->
-                </div>
-            </div>
-        </div>
-        <!-- // Boxes -->
-    </div>
-    <div class="banner-product">
-        <img class="banner-product__background" src="<%= image_path 'home/banner-background.png' %>" alt="" />
-        <div class="banner-product__image-container">
-            <img class="banner-product__product" src="<%= image_path 'home/banner-product.png' %>" alt="" />
-        </div>
-        <div class="banner-product__container">
-            <h1 class="banner-product__title">La birra di Natale 2015</h1>
-            <p class="banner-product__description">
-                La dodicesima edizione della Birra di Natale, disponibile nell’elegante bottiglia da 2 litri a forma di sifone. Per la prima volta in vetro, raffigura lo stabilimento di Birra FORST in veste natalizia.
-            </p>
-            <a href="#" class="btn-follow">SCOPRI DI PIÚ</a>
-        </div>
-    </div>
-    <section class="big-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <ul class="menu-list">
-                <li class="title">Categorie</li>
-                <li><a href="#">Accessori FORST</a></li>
-                <li><a href="#">Le nostre birre</a></li>
-                <li><a href="#">La birra di Natale</a></li>
-            </ul>
           </div>
-          <div class="col-sm-4">
-            <ul class="menu-list">
-                <li class="title">CONTATTI</li>
-                <li><a href="#">www.forst.it</a></li>
-                <li><a href="#">shop@forst.it</a></li>
-                <li>+39 0473 260 360</li>
-                <li><br />
-                    Via Venosta, 11<br />
-                    39022 Forst/Lagundo (BZ)
-                </li>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <ul class="menu-list">
-                <li class="title">SEGUICI</li>
-                <li><a href="#">Iscriviti alla Newsletter</a></li>
-            </ul>
-          </div>
+          <!-- // Section-box -->
         </div>
       </div>
-    </section>
-
-    <section class="footer">
-        <div class="footer__ornament">
-          <img class="footer__logo" src="<%= image_path 'layout/logo-small.png' %>" alt="" />
+    </div>
+    <!-- // Boxes -->
+  </div>
+  <div class="banner-product">
+    <img class="banner-product__background" src="<%= image_path 'home/banner-background.png' %>" alt="" />
+    <div class="banner-product__image-container">
+      <img class="banner-product__product" src="<%= image_path 'home/banner-product.png' %>" alt="" />
+    </div>
+    <div class="banner-product__container">
+      <h1 class="banner-product__title">La birra di Natale 2015</h1>
+      <p class="banner-product__description">
+        La dodicesima edizione della Birra di Natale, disponibile nell’elegante bottiglia da 2 litri a forma di sifone. Per la prima volta in vetro, raffigura lo stabilimento di Birra FORST in veste natalizia.
+      </p>
+      <a href="#" class="btn-follow">SCOPRI DI PIÚ</a>
+    </div>
+  </div>
+  <section class="big-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <ul class="menu-list">
+            <li class="title">Categorie</li>
+            <li><a href="#">Accessori FORST</a></li>
+            <li><a href="#">Le nostre birre</a></li>
+            <li><a href="#">La birra di Natale</a></li>
+          </ul>
         </div>
-        <ul class="footer__nav">
-            <li>© Copyright Forstshop</li>
-            <li><a href="#" title="Informativa sulla privacy">Informativa sulla privacy</a></li>
-            <li><a href="#" title="Condizioni generali di vendita">Condizioni generali di vendita</a></li>
-        </ul>
-    </section>
+        <div class="col-sm-4">
+          <ul class="menu-list">
+            <li class="title">CONTATTI</li>
+            <li><a href="#">www.forst.it</a></li>
+            <li><a href="#">shop@forst.it</a></li>
+            <li>+39 0473 260 360</li>
+            <li>
+              <br /> Via Venosta, 11
+              <br /> 39022 Forst/Lagundo (BZ)
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="menu-list">
+            <li class="title">SEGUICI</li>
+            <li><a href="#">Iscriviti alla Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="footer__ornament">
+      <img class="footer__logo" src="<%= image_path 'layout/logo-small.png' %>" alt="" />
+    </div>
+    <ul class="footer__nav">
+      <li>© Copyright Forstshop</li>
+      <li><a href="#" title="Informativa sulla privacy">Informativa sulla privacy</a></li>
+      <li><a href="#" title="Condizioni generali di vendita">Condizioni generali di vendita</a></li>
+    </ul>
+  </section>
 </div>
