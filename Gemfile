@@ -17,6 +17,9 @@ gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
 
+#payment through Braintree
+gem "solidus_braintree"
+
 group :development do
   gem 'spring'
   gem 'byebug'
@@ -39,4 +42,3 @@ group :test do
   gem 'rspec-rails', require: false
   gem 'guard-rspec', require: false
 end
-
