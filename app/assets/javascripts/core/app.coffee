@@ -27,6 +27,11 @@ module.exports = class App
       e.preventDefault()
       $("body").toggleClass("open")
 
+    # Set toggler World
+    $(".js-world-toggler").on "click", (e) ->
+      e.preventDefault()
+      $(".nav-languages__list").toggleClass("open")
+
   # Microtemplate
   _t:(s,d) ->
     for p of d
