@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Spree::Core::Engine, :at => '/'
-
+  root to: 'pages#home'
   get 'mockup/:page', controller: :mockup, action: :static
+  mount Spree::Core::Engine, at: '/'
 end
