@@ -1,54 +1,9 @@
-<!-- Navigation -->
-<div class="navigation js_navigation_container">
-  <div class="js-nav-toggler">
-    <a class="navigation-toggler" href="#">
-      <i class="fa fa-times"></i>
-    </a>
-  </div>
-  <ul class="navigation__primary-menu">
-    <li><a href="#">FORST SHOP</a></li>
-    <li><a href="#">LE NOSTRE BIRRE</a></li>
-    <li>
-      <a href="#">IL MERCHANDISING</a>
-      <ul>
-        <li><a href="#">BICCHIERI</a></li>
-        <li><a href="#">ABBIGLIAMENTO</a></li>
-        <li><a href="#">ACCESSORI</a></li>
-      </ul>
-    </li>
-  </ul>
-  <ul class="navigation__secondary-menu">
-    <li><a href="#">Contatti</a></li>
-    <li><a href="#">Informativa privacy</a></li>
-    <li><a href="#">Condizioni generali di vendita</a></li>
-  </ul>
-</div>
-<!-- // Navigation -->
+<%= render "responsive_menu" %>
 <div class="site-container">
   <div class="container-fluid js_site_container js_main controller">
     <div class="row">
       <div class="col-md-12">
-        <div class="nav-languages">
-          <div class="toogler">
-            <a class="world js-world-toggler" href="#"><i class="fa fa-globe"></i></a>
-          </div>
-          <ul class="nav-languages__list">
-            <li class="active"><a href="#">IT</a></li>
-            <li><a href="#">DE</a></li>
-            <li><a href="#">EN</a></li>
-          </ul>
-        </div>
-        <div class="cart-small">
-          <a href="#">
-            <i class="fa fa-shopping-cart"></i>
-            <p>0/€0.00</p>
-          </a>
-        </div>
-        <div class="js-nav-toggler">
-          <a class="navigation-toggler" href="#">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
+        <%= render "navigation" %>
         <!-- Splash -->
         <div class="splash">
           <div class="splash__content">
@@ -124,48 +79,6 @@
       <a href="#" class="btn-follow">SCOPRI DI PIÚ</a>
     </div>
   </div>
-  <section class="big-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <ul class="menu-list">
-            <li class="title">Categorie</li>
-            <li><a href="#">Il merchandising</a></li>
-            <li><a href="#">Le nostre birre</a></li>
-            <li><a href="#">La birra di Natale</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <ul class="menu-list">
-            <li class="title">CONTATTI</li>
-            <li><a href="#">www.forst.it</a></li>
-            <li><a href="#">shop@forst.it</a></li>
-            <li>+39 0473 260 360</li>
-            <li>
-              <br /> Via Venosta, 11
-              <br /> 39022 Forst/Lagundo (BZ)
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <ul class="menu-list">
-            <li class="title">SEGUICI</li>
-            <li class="menu-list__social">
-              <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-youtube"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="footer">
-    <div class="footer__ornament">
-      <img class="footer__logo" src="<%= image_path 'layout/logo-small.png' %>" alt="" />
-    </div>
-    <ul class="footer__nav">
-      <li>© Copyright Forstshop</li>
-      <li><a href="#" title="Informativa sulla privacy">Informativa sulla privacy</a></li>
-      <li><a href="#" title="Condizioni generali di vendita">Condizioni generali di vendita</a></li>
-    </ul>
-  </section>
+  <%= render "big_footer" %>
+  <%= render "footer" %>
 </div>
