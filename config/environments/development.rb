@@ -39,5 +39,7 @@ Rails.application.configure do
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = false
 
-  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload, no_swf: true
+  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload,
+    no_swf: true,
+    ignore: [ %r{^/admin/} ]
 end
