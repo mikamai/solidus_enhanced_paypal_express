@@ -1,10 +1,10 @@
-<%= render "responsive_menu" %>
+<%= render partial: "responsive_menu" %>
 <!-- // Navigation -->
 <div class="site-container">
   <div class="container-fluid js_site_container js_main controller">
     <div class="row">
       <div class="col-md-12">
-        <%= render "navigation" %>
+        <%= render partial: "navigation", locals: { sticky: true } %>
 
         <br />
         <br />
@@ -18,6 +18,6 @@
     </div>
   </div>
 
-  <%= render "big_footer" %>
-  <%= render "footer" %>
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
 </div>
