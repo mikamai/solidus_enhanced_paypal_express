@@ -7,12 +7,28 @@
   top: 0
   left: 0
 
+  +max-screen($screen-md)
+    height: 450px
+
   &__content
     position: relative
     z-index: 2
     text-align: center
 
   &__logo
+    margin-top: 130px
+
+    +max-screen($screen-md)
+      margin-top: 80px
+
+    img
+      max-width: 100%
+      +max-screen($screen-md)
+        max-width: 80%
+
+      +max-screen($screen-sm)
+        max-width: 240px
+
 
   &__title
     color: #FFFFFF
@@ -20,11 +36,26 @@
     font-size: 24px
     +text-shadow(0 0 27px rgba(0,0,0,.7))
 
+    +max-screen($screen-md)
+      font-size: 20px
+      line-height: 1
+      margin: 0
+
+    +max-screen($screen-sm)
+      margin: 0 10% 10px 10%
+
   &__description
     color: #FFFFFF
     font-weight: 300
     font-size: 22px
-    line-height: 29px
+    line-height: 1.2
+
+    +max-screen($screen-md)
+      font-size: 18px
+      line-height: 1
+
+    +max-screen($screen-sm)
+      margin: 0 10% 10px 10%
 
   &__background
     position: absolute

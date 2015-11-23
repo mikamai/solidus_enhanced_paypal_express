@@ -9,7 +9,7 @@
     <li><a href="#">FORST SHOP</a></li>
     <li><a href="#">LE NOSTRE BIRRE</a></li>
     <li>
-      <a href="#">MERCHANDISING</a>
+      <a href="#">IL MERCHANDISING</a>
       <ul>
         <li><a href="#">BICCHIERI</a></li>
         <li><a href="#">ABBIGLIAMENTO</a></li>
@@ -30,13 +30,19 @@
       <div class="col-md-12">
         <div class="nav-languages">
           <div class="toogler">
-            <a class="world" href="#"><i class="fa fa-globe"></i></a>
+            <a class="world js-world-toggler" href="#"><i class="fa fa-globe"></i></a>
           </div>
           <ul class="nav-languages__list">
             <li class="active"><a href="#">IT</a></li>
             <li><a href="#">DE</a></li>
             <li><a href="#">EN</a></li>
           </ul>
+        </div>
+        <div class="cart-small">
+          <a href="#">
+            <i class="fa fa-shopping-cart"></i>
+            <p>0/€0.00</p>
+          </a>
         </div>
         <div class="js-nav-toggler">
           <a class="navigation-toggler" href="#">
@@ -66,25 +72,25 @@
           <!-- Section-box -->
           <div class="section-box">
             <a class="section-box__link" href="#" class="Il merchandising">
-                            <img class="section-box__image" src="<%= image_path 'home/box-merchandising-background.png' %>" alt="" />
-                            <div class="section-box__content">
-                                <img class="section-box__icon" src="<%= image_path 'home/box-merchandising-icon.png' %>" alt="" />
-                                <h1 class="section-box__title">Il merchandising</h1>
-                            </div>
-                        </a>
+              <img class="section-box__image" src="<%= image_path 'home/box-merchandising-background.png' %>" alt="" />
+              <div class="section-box__content">
+                <img class="section-box__icon" src="<%= image_path 'home/box-merchandising-icon.png' %>" alt="" />
+                <h1 class="section-box__title">Il merchandising</h1>
+              </div>
+            </a>
           </div>
           <!-- // Section-box -->
         </div>
         <div class="col-sm-4 col-md-4">
           <!-- Section-box -->
           <div class="section-box">
-            <a class="section-box__link" href="#" class="Le birre">
-                            <img class="section-box__image" src="<%= image_path 'home/box-birre-background.png' %>" alt="" />
-                            <div class="section-box__content">
-                                <img class="section-box__icon" src="<%= image_path 'home/box-birre-icon.png' %>" alt="" />
-                                <h1 class="section-box__title">Le birre</h1>
-                            </div>
-                        </a>
+            <a class="section-box__link" href="#" class="Le nostre birre">
+              <img class="section-box__image" src="<%= image_path 'home/box-birre-background.png' %>" alt="" />
+              <div class="section-box__content">
+                <img class="section-box__icon" src="<%= image_path 'home/box-birre-icon.png' %>" alt="" />
+                <h1 class="section-box__title">Le nostre birre</h1>
+              </div>
+              </a>
           </div>
           <!-- // Section-box -->
         </div>
@@ -92,12 +98,12 @@
           <!-- Section-box -->
           <div class="section-box">
             <a class="section-box__link" href="#" class="La birra di Natale">
-                            <img class="section-box__image" src="<%= image_path 'home/box-birra-natale-background.png' %>" alt="" />
-                            <div class="section-box__content">
-                                <img class="section-box__icon" src="<%= image_path 'home/box-birra-natale-icon.png' %>" alt="" />
-                                <h1 class="section-box__title">La birra di Natale</h1>
-                            </div>
-                        </a>
+              <img class="section-box__image" src="<%= image_path 'home/box-birra-natale-background.png' %>" alt="" />
+              <div class="section-box__content">
+                <img class="section-box__icon" src="<%= image_path 'home/box-birra-natale-icon.png' %>" alt="" />
+                <h1 class="section-box__title">La birra di Natale</h1>
+              </div>
+            </a>
           </div>
           <!-- // Section-box -->
         </div>
@@ -124,7 +130,7 @@
         <div class="col-sm-4">
           <ul class="menu-list">
             <li class="title">Categorie</li>
-            <li><a href="#">Accessori FORST</a></li>
+            <li><a href="#">Il merchandising</a></li>
             <li><a href="#">Le nostre birre</a></li>
             <li><a href="#">La birra di Natale</a></li>
           </ul>
@@ -144,7 +150,9 @@
         <div class="col-sm-4">
           <ul class="menu-list">
             <li class="title">SEGUICI</li>
-            <li><a href="#">Iscriviti alla Newsletter</a></li>
+            <li class="menu-list__social">
+              <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-youtube"></i></a>
+            </li>
           </ul>
         </div>
       </div>
