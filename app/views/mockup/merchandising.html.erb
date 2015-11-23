@@ -1,0 +1,75 @@
+<%= render partial: "responsive_menu" %>
+<!-- // Navigation -->
+<div class="site-container">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "navigation", locals: { sticky: true } %>
+
+        <div class="catalog-merchandising">
+          <h2 class="catalog-merchandising__title">Il Merchandising</h2>
+          <img data-fit="true" data-align="top center" class="coverized catalog-merchandising__background" src="<%= image_path 'merchandising/merchandising.jpg' %>" alt="">
+        </div>
+
+        <div class="wrapper">
+          <div class="container">
+            <div class="row">
+
+              <!-- product 1 -->
+              <div class="col-md-4 col-sm-4">
+                <div class="product-merchandising">
+                  <div class="product-merchandising__image">
+                    <img src="http://scottjoplin.it/wp-content/uploads/2014/02/bloemenbier-_75.jpg" alt="birra confenzione">
+                  </div>
+                  <div class="product-merchandising__name">
+                    <p>L'abbigliamento</p>
+                  </div>
+                  <div class="product-merchandising__discover">
+                    <a href="#" class="button">Scopri i prodotti</a>
+                  </div>
+                </div>
+              </div>
+              <!-- END product 1 -->
+
+              <!-- product 2 -->
+              <div class="col-md-4 col-sm-4">
+                <div class="product-merchandising">
+                  <div class="product-merchandising__image">
+                    <img src="http://www.carlsbergitalia.it/stc/ResourceLoader.pub_do/(id)4028828d394795910139497494b301fa/blonde.jpg" alt="birra confenzione">
+                  </div>
+                  <div class="product-merchandising__name">
+                    <p>Gli accessori</p>
+                  </div>
+                  <div class="product-merchandising__discover">
+                    <a href="#" class="button">Scopri i prodotti</a>
+                  </div>
+                </div>
+              </div>
+              <!-- END product 2 -->
+
+              <!-- product 3 -->
+              <div class="col-md-4 col-sm-4">
+                <div class="product-merchandising last">
+                  <div class="product-merchandising__image">
+                    <img src="http://www.carlsbergitalia.it/stc/ResourceLoader.pub_do/(id)4028828d394795910139496cdf9801e7/double.jpg" alt="birra confenzione">
+                  </div>
+                  <div class="product-merchandising__name">
+                    <p>I bicchieri</p>
+                  </div>
+                  <div class="product-merchandising__discover">
+                    <a href="#" class="button">Scopri i prodotti</a>
+                  </div>
+                </div>
+              </div>
+              <!-- END product 3 -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+</div>

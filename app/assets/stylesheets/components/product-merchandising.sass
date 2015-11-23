@@ -1,0 +1,71 @@
+.col-md-4
+  +max-screen($screen-sm)
+    .product-merchandising
+      margin: 20px 0px 10px
+
+      height: 335px
+
+    &:nth-child(2n)
+      border: 0px
+      border-top: 1px solid #dad8ca
+      border-bottom: 1px solid #dad8ca
+
+.catalog-merchandising
+  position: relative
+  width: 100%
+  height: 350px
+  overflow: hidden
+
+  +max-screen($screen-sm)
+    height: 200px
+  +max-screen($screen-md)
+    height: 250px
+
+
+  &__title
+    box-sizing: border-box
+    position: absolute
+    width: 100%
+    text-align: center
+    font-size: 35px
+    top: 25%
+    color: #fff
+    font-weight: 400
+    text-transform: uppercase
+    z-index: 3
+
+  &__background
+    position: absolute
+
+
+.product-merchandising
+  margin: 0px 20px 40px 20px
+  border-right: 1px solid #dad8ca
+  text-align: center
+
+  &.last
+    border-right: 0px
+
+  &__image
+    padding: 10px 0px
+
+    img
+      height: 200px
+      width: auto
+
+  &__name
+    p
+      color: #5e5e5e
+      font-weight: 300
+      font-size: 18px
+      margin: 15px 0px
+
+  &__discover
+    a
+      font-weight: 700
+      font-size: 14px
+      color: #000000
+      background: #fff
+      padding: 7px 12px
+      border: 1px solid #dad8ca
+      text-decoration: none
