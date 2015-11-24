@@ -1,5 +1,7 @@
 #= require jquery
 #= require jquery_ujs
+#= require spree
+#= require_tree ./spree_custom/
 
 require 'core/plugin'
 App = require 'core/app'
