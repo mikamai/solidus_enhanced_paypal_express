@@ -1,0 +1,227 @@
+.table-cart
+  .row
+    margin: 0
+
+  &__header
+    background: #f9f9f9
+    border-bottom: 1px solid #bbbbbb
+
+  &__content
+    padding: 15px
+    position: relative
+
+    +max-screen($screen-md)
+      padding-top: 0
+
+    &__image
+      width: 100px
+      position: absolute
+
+      +max-screen($screen-md)
+        width: 100%
+        position: relative
+        display: block
+        padding: 20px 10px
+
+    &__text
+      margin-left: 120px
+
+      +max-screen($screen-md)
+        margin: 10px 20px
+
+    h4
+      margin: 0
+      padding: 0
+      font-size: 16px
+
+    &--product
+      +max-screen($screen-md)
+        text-align: center
+      h1
+        margin: 0
+        padding: 0
+        font-size: 16px
+        font-weight: 700
+
+        +max-screen($screen-md)
+          font-size: 32px
+      p
+        font-size: 16px
+        font-weight: 100
+        margin: 0
+        padding: 0
+
+    &--checker
+      text-align: right
+
+  &__body
+
+
+    .row
+      background: #FFFFFF
+      border-top: 1px solid #bbbbbb
+      min-height: 120px
+      vertical-align: middle
+
+      +max-screen($screen-md)
+        margin-bottom: 30px
+        border: 1px solid #e6e6e6
+
+    .row:nth-child(odd)
+
+
+    .row:first-child
+      border-top: 0
+
+      +max-screen($screen-md)
+        border-top: 1px solid #e6e6e6
+
+  &__quantity
+    +max-screen($screen-md)
+      width: 35%
+      float: left
+      margin-bottom: 16px
+
+  &__stepper
+    padding: 0 10px
+    width: 80%
+    border: 1px solid #e6e6e6
+
+    +max-screen($screen-md)
+      width: 65%
+      float: left
+
+  &__remove
+    background: transparent
+    border: 0
+
+    i
+      font-size: 24px
+      color: #d00
+
+    +max-screen($screen-md)
+      background: $color-green-forst
+      color: #FFFFFF
+      display: block
+      margin: 10px auto
+      padding: 8px 20px
+
+      i
+        display: none
+
+
+  &__footer
+    background: #f9f9f9
+    border-top: 1px solid #bbbbbb
+
+    +max-screen($screen-md)
+      border: 0
+      background: $color-green-forst
+      color: #FFF
+
+      .text-right
+        text-align: left
+
+  &__total
+    position: relative
+    vertical-align: bottom
+    font-size: 16px
+    line-height: 30px
+    right: -20px
+    bottom: -4px
+
+    +max-screen($screen-md)
+      right: auto
+      bottom: auto
+      text-align: center
+      font-size: 24px
+
+  &__price, &__total-price, &__subtotal-price
+    vertical-align: bottom
+    font-size: 30px
+    line-height: 30px
+
+  &__price
+    +max-screen($screen-md)
+      margin: 0 auto
+      display: block
+      font-size: 24px
+      text-align: center
+      line-height: 1
+      border: 1px solid #e1e1e1
+      border-left: 0
+      border-right: 0
+      padding: 10px 0
+      background: #e1e1e1
+
+  &__total-price
+    +max-screen($screen-md)
+      margin: 0 auto
+      display: block
+      font-size: 36px
+      text-align: right
+      line-height: 1
+      border-left: 0
+      border-right: 0
+      padding: 0
+      font-weight: 600
+      margin-top: -50px
+
+      i
+        display: inline !important
+        margin: 0
+
+  &__subtotal-price
+    +max-screen($screen-md)
+      margin: 0 auto
+      display: block
+      font-size: 18px
+      text-align: left
+      line-height: 1
+      border-left: 0
+      border-right: 0
+      padding: 10px 0
+      border-top: 2px solid #E5E5E5
+      clear: both
+      font-weight: 600
+
+      i
+        display: inline !important
+        margin: 0
+
+  &__console
+    margin: 10px auto
+    width: 100%
+    padding: 15px
+
+    &__console--inline
+
+.continue-shopping
+  display: inline-block
+  padding: 10px
+
+  i
+    font-style: normal
+
+  a
+    color: $color-green-forst
+
+  +max-screen($screen-md)
+    vertical-align: top
+    background: #FFF
+    color: #000000
+    font-weight: 600
+    text-align: center
+    border: 1px solid #dad8ca
+    padding: 10px 20px
+    display: block
+    width: 100%
+    margin-bottom: 10px
+
+    &:hover
+      background: darken(#FFF, 4%)
+
+    a
+      color: #000000
+      text-decoration: none
+
