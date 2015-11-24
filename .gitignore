@@ -11,6 +11,7 @@
 log/development.log
 /public/system
 /public/assets
+/public/spree
 /tmp/*
 /config/database.yml
 tags
