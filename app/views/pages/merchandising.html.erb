@@ -15,53 +15,21 @@
           <div class="container">
             <div class="row">
 
-              <!-- product 1 -->
-              <div class="col-md-4 col-sm-4">
-                <div class="product-merchandising">
-                  <div class="product-merchandising__image">
-                    <img src="http://scottjoplin.it/wp-content/uploads/2014/02/bloemenbier-_75.jpg" alt="birra confenzione">
-                  </div>
-                  <div class="product-merchandising__name">
-                    <p>L'abbigliamento</p>
-                  </div>
-                  <div class="product-merchandising__discover">
-                    <a href="#" class="button">Scopri i prodotti</a>
-                  </div>
-                </div>
-              </div>
-              <!-- END product 1 -->
-
-              <!-- product 2 -->
-              <div class="col-md-4 col-sm-4">
-                <div class="product-merchandising">
-                  <div class="product-merchandising__image">
-                    <img src="http://www.carlsbergitalia.it/stc/ResourceLoader.pub_do/(id)4028828d394795910139497494b301fa/blonde.jpg" alt="birra confenzione">
-                  </div>
-                  <div class="product-merchandising__name">
-                    <p>Gli accessori</p>
-                  </div>
-                  <div class="product-merchandising__discover">
-                    <a href="#" class="button">Scopri i prodotti</a>
+              <% taxons.each do |taxon| %>
+                <div class="col-md-4 col-sm-4">
+                  <div class="product-merchandising <%= cycle('first', 'middle', 'last') %>">
+                    <div class="product-merchandising__image">
+                      <img src="<%= taxon.icon.url(:big) %>" alt="<%= taxon.name %>">
+                    </div>
+                    <div class="product-merchandising__name">
+                      <p><%= taxon.name %></p>
+                    </div>
+                    <div class="product-merchandising__discover">
+                      <a href="#" class="button">Scopri i prodotti</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- END product 2 -->
-
-              <!-- product 3 -->
-              <div class="col-md-4 col-sm-4">
-                <div class="product-merchandising last">
-                  <div class="product-merchandising__image">
-                    <img src="http://www.carlsbergitalia.it/stc/ResourceLoader.pub_do/(id)4028828d394795910139496cdf9801e7/double.jpg" alt="birra confenzione">
-                  </div>
-                  <div class="product-merchandising__name">
-                    <p>I bicchieri</p>
-                  </div>
-                  <div class="product-merchandising__discover">
-                    <a href="#" class="button">Scopri i prodotti</a>
-                  </div>
-                </div>
-              </div>
-              <!-- END product 3 -->
+              <% end %>
 
             </div>
           </div>
