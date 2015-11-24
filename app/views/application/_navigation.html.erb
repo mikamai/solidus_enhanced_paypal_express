@@ -1,8 +1,10 @@
 <div class="navigations <%= "navigations--sticky" if local_assigns[:sticky] %>">
-  <a href="#" title="Home" class="navigations__forst-shop"></a>
+  <a href="<%= root_path %>" title="Home" class="navigations__forst-shop"></a>
   <div class="nav-languages">
     <div class="toogler">
-      <a class="world js-world-toggler" href="#"><i class="fa fa-globe"></i></a>
+      <a class="world js-world-toggler" href="#">
+        <i class="fa fa-globe"></i>
+      </a>
     </div>
     <ul class="nav-languages__list">
       <li class="active"><a href="#">IT</a></li>
