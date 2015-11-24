@@ -1,3 +1,6 @@
+.text-right
+  text-align: right
+
 .site-container
   position: relative
   z-index: 1
@@ -38,7 +41,44 @@
   color: #000000
   font-weight: 300
   text-align: center
+  border: 1px solid #bbb
 
   &:hover
     background: darken(#e1e1e1, 4%)
+
+.btn-grey
+  vertical-align: top
+  background: #FFF
+  color: #000000
+  font-weight: 600
+  text-align: center
+  border: 1px solid #dad8ca
+  padding: 10px 20px
+
+  +max-screen($screen-md)
+    display: block
+    width: 100%
+    margin-bottom: 10px
+
+  &:hover
+    background: darken(#FFF, 4%)
+
+.btn-checkout
+  vertical-align: top
+  background: $color-green-forst
+  color: #FFF
+  font-weight: 600
+  text-transform: uppercase
+  text-align: center
+  border: 0
+  font-size: 18px
+  padding: 15px 24px
+
+  +max-screen($screen-md)
+    display: block
+    width: 100%
+    margin-bottom: 10px
+
+  &:hover
+    background: darken($color-green-forst, 4%)
 
