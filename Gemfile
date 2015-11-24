@@ -16,8 +16,10 @@ gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
 
-#payment through Braintree
+#payment methods
 gem "solidus_braintree"
+#official solidus gateways
+gem "solidus_gateway"
 
 group :development do
   gem 'spring'

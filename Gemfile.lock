@@ -362,6 +362,8 @@ GEM
       jquery-rails
       solidus_api (= 1.0.2)
       solidus_core (= 1.0.2)
+    solidus_gateway (0.9.0)
+      solidus_core (~> 1.0.0)
     solidus_sample (1.0.2)
       solidus_core (= 1.0.2)
     spring (1.4.1)
@@ -443,6 +445,7 @@ DEPENDENCIES
   solidus
   solidus_auth_devise
   solidus_braintree
+  solidus_gateway
   spring
   spring-commands-rspec
   uglifier (>= 1.3.0)
