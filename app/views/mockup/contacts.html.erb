@@ -1,0 +1,52 @@
+<%= render partial: "responsive_menu" %>
+<!-- // Navigation -->
+<div class="site-container">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "navigation", locals: { sticky: true } %>
+
+        <div class="contacts">
+          <h2 class="contacts__title">Contatti</h2>
+          <h3 class="contacts__subtitle">
+            Se vuoi saperne più su di noi, hai domande o ti serve aiuto sentiti libero di contattarci.<br />
+            Ci piacerebbe molto conoscerti!
+          </h3>
+          <img data-fit="true" data-align="top center" class="coverized contacts__background" src="<%= image_path 'contacts/contacts.jpg' %>" alt="">
+        </div>
+
+        <div class="wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 col-md-offset-4">
+
+                <div class="contacts-list">
+
+                  <div class="contacts-info address">
+                    <a href="https://goo.gl/maps/M73bdNeaJB52" target="_blank">
+                    <i class="icon-pin"></i>Birra Forst Via Venosta, 11 39022 Forst/Lagundo (BZ)</a>
+                  </div>
+
+                  <div class="contacts-info mail">
+                    <a href="mailto:shop@forst.it" target="_blank" title="shop@forst.it">
+                    <i class="icon-mail"></i>shop@forst.it</a>
+                  </div>
+
+                  <div class="contacts-info phone">
+                    <a href="tel:+390473260360" class="Blondie">
+                      <i class="icon-phone"></i>+39 0473 260 360
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+</div>
