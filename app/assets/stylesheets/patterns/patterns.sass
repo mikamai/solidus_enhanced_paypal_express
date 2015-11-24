@@ -7,8 +7,11 @@
   padding: 70px 0
   background: #f6f2ee url(asset-path("pattern.png")) left top
 
+  +max-screen($screen-sm)
+    padding: 20px 0
+
 // Buttons
-.btn-follow
+.btn-follow, .btn-add-to-cart
   +transition(all .3s ease-out)
   font-size: 16px
   font-weight: 700
@@ -29,3 +32,13 @@
 
   &:hover
     background: lighten($color-green-forst, 4%)
+
+.btn-add-to-cart
+  background: #e1e1e1
+  color: #000000
+  font-weight: 300
+  text-align: center
+
+  &:hover
+    background: darken(#e1e1e1, 4%)
+
