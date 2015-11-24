@@ -30,6 +30,7 @@ group :development do
   gem 'rack-livereload'
   gem 'guard-livereload', require: false
   gem 'guard-bundler', require: false
+  gem 'guard-pow', require: false
   gem 'capistrano', '~> 3.4.0', require: false
   gem 'capistrano-bundler', '~> 1.1.4', require: false
   gem 'capistrano-passenger', '0.1.1', require: false

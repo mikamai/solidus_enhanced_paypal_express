@@ -35,7 +35,17 @@ guard 'livereload' do
   watch('config/routes.rb')
 end
 
-guard :bundler do
-  require 'guard/bundler'
+guard 'bundler' do
   watch('Gemfile')
+end
+
+guard 'pow' do
+  watch('.powrc')
+  watch('.powenv')
+  watch('.ruby-version')
+  watch('Gemfile.lock')
+  watch('config/application.rb')
+  watch('config/environment.rb')
+  watch('config/environments/development.rb')
+  watch(%r{^config/initializers/.*\.rb$})
 end
