@@ -35,8 +35,7 @@ guard 'livereload' do
   watch('config/routes.rb')
 end
 
-guard :bundler do
-  require 'guard/bundler'
+guard 'bundler' do
   watch('Gemfile')
 end
 
