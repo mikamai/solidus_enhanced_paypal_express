@@ -1,0 +1,144 @@
+.overlay-background
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+  img
+    position: absolute
+
+.entry-page-overlay
+  position: fixed
+  overflow: hidden
+  width: 100%
+  height: 100%
+  top: 0px
+  left: 0px
+  background: rgba(0, 0, 0, 0.6)
+  z-index: 1
+
+.entry-page
+  position: relative
+  width: 100%
+  z-index: 2
+
+  // navigation
+  &__navigation
+    text-align: center
+    margin: 20px auto
+
+    &__list
+      padding: 0px
+
+      li
+        list-style: none
+        display: inline-block
+
+        &:nth-child(2)
+          &::after,
+          &::before
+            display: block
+            content: "-"
+            margin: 0px 4px
+            display: inline-block
+            color: #c9cbcb
+
+        &.active,
+        &:hover
+          a
+            color: #fff
+        a
+          color: #c9cbcb
+          text-decoration: none
+
+  // logo
+  &__logo-forst
+    text-align: center
+    margin: 0 0 60px
+
+    +max-screen($screen-sm)
+      & img
+        width: 80%
+
+  // box
+  &__box
+    width: 100%
+    background: #f6f2ee url(asset-path("pattern.png")) left top
+    text-align: center
+    padding: 20px
+    position: relative
+
+    &:before
+      content: ""
+      display: block
+      background: transparent url(asset-path("entry/entry-page-ornament.png")) center center no-repeat
+      width: 100%
+      height: 89px
+      position: absolute
+      top: -22px
+      margin: 0 auto
+
+      +max-screen($screen-sm)
+        width: 100%
+        background-size: 90%
+        background-position: initial
+
+    &__title
+      h3
+        padding-top: 20px
+        font-size: 25px
+        font-weight: 100
+        margin-bottom: 10px
+      h2
+        font-size: 35px
+        font-weight: 100
+        margin-top: 20px
+        text-transform: uppercase
+
+    &__choose
+      margin-bottom: 50px
+      li
+        display: inline-block
+        width: 110px
+        height: 110px
+        background: #46521b
+        margin: 0px 18px
+
+        a
+          font-weight: 500
+          text-align: center
+          line-height: 110px
+          font-size: 50px
+          color: #fff
+          text-transform: uppercase
+          text-decoration: none
+
+    &__disclaimer
+      li
+        display: inline-block
+
+        +min-screen($screen-md)
+          &:nth-child(2)
+            &::after,
+            &::before
+              display: block
+              content: "|"
+              margin: 0px 4px
+              display: inline-block
+              color: #c9cbcb
+
+        +max-screen($screen-sm)
+          &
+            display: block
+
+        a
+          font-size: 14px
+          font-weight: 100
+          text-decoration: none
+
+  .wrapper-entry-page
+    position: absolute
+

@@ -32,6 +32,21 @@ module.exports = class App
       e.preventDefault()
       $(".nav-languages__list").toggleClass("open")
 
+    $(window).load =>
+      @_center_object(".wrapper-entry-page")
+    $(window).resize =>
+      @_center_object(".wrapper-entry-page")
+
+  # auto vertical center entry page box
+  _center_object:(selector) ->
+    nh=($(window).height()-$(selector).height())/2
+    nw=($(window).width()-$(selector).width())/2
+    console.log(nh, nw)
+    $(selector).css
+      "top":nh
+      "left":nw
+
+
   # Microtemplate
   _t:(s,d) ->
     for p of d
