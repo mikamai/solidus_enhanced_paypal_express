@@ -1,0 +1,22 @@
+<div class="site-container">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "navigation", locals: { sticky: true } %>
+
+        <div class="catalog-beer">
+          <h2 class="catalog-beer__title">Products</h2>
+          <img data-fit="true" data-align="top center" class="coverized catalog-beer__background" src="<%= image_path 'catalog_beer/catalog_beer_splash.jpg' %>" alt="">
+        </div>
+
+        <div class="wrapper" data-hook="homepage_products">
+          <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+</div>

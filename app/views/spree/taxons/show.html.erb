@@ -1,0 +1,30 @@
+<% taxon = @taxon %>
+
+<div class="site-container">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "navigation", locals: { sticky: true } %>
+
+        <div class="catalog-beer">
+          <h2 class="catalog-beer__title"><%= taxon.name %></h2>
+          <img data-fit="true" data-align="top center" class="coverized catalog-beer__background" src="<%= taxon_splash_image_path(taxon) %>">
+        </div>
+
+        <div class="wrapper" data-hook="taxon">
+
+          <% if taxon.children.any? %>
+            <%= render partial: 'subtaxons', locals: { taxons: taxon.children } %>
+          <% else %>
+            <%= render partial: 'spree/shared/products', locals: { products: taxon.products, taxon: taxon } %>
+          <% end %>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+</div>
