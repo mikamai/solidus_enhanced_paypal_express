@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+
+    <% if products.any? %>
+      <% products.each do |product| %>
+
+        <div class="col-md-3 col-sm-6">
+          <a href="<%= spree.product_path(product, taxon_id: @taxon.try(:id)) %>">
+            <div id="product_<%= product.id %>" class="product-catalog" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+              <div class="product-catalog__image">
+                <%= image_tag(product.display_image.attachment(:small), itemprop: "image") %>
+              </div>
+              <div class="product-catalog__name">
+                <p><%= truncate(product.name, length: 50) %></p>
+              </div>
+              <div class="product-catalog__price" itemprop="price">
+                <p><%= display_price(product) %></p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      <% end %>
+    <% else %>
+      <div class="col-xs-12" data-hook="products_search_results_heading_no_results_found">
+        <%= Spree.t(:no_products_found) %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

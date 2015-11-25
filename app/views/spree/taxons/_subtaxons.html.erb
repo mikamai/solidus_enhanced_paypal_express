@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+
+    <% taxons.each do |taxon| %>
+      <div class="col-md-4 col-sm-4">
+        <div class="product-merchandising <%= cycle('first', 'middle', 'last') %>">
+          <div class="product-merchandising__image">
+            <img src="<%= taxon.icon.url(:big) %>" alt="<%= taxon.name %>">
+          </div>
+          <div class="product-merchandising__name">
+            <p><%= taxon.name %></p>
+          </div>
+          <div class="product-merchandising__discover">
+            <a href="#" class="button">Scopri i prodotti</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
