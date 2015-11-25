@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def taxon_splash_image_path
+  def taxon_splash_image_path(taxon)
     splash = case taxon.name
              when "Beers"         then 'catalog_beer/catalog_beer_splash.jpg'
              when "Merchandising" then 'merchandising/merchandising.jpg'
