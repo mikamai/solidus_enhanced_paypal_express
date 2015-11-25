@@ -1,12 +1,4 @@
 <% taxon = @taxon %>
-<% splash = case taxon.name
-            when "Beers"         then 'catalog_beer/catalog_beer_splash.jpg'
-            when "Merchandising" then 'merchandising/merchandising.jpg'
-            when "Clothing"      then 'merchandising/merchandising.jpg'
-            when "Accessories"   then 'merchandising/merchandising.jpg'
-            when "Glasses"       then 'merchandising/merchandising.jpg'
-            end
-%>
 
 <div class="site-container">
   <div class="container-fluid js_site_container js_main controller">
@@ -16,7 +8,7 @@
 
         <div class="catalog-beer">
           <h2 class="catalog-beer__title"><%= taxon.name %></h2>
-          <img data-fit="true" data-align="top center" class="coverized catalog-beer__background" src="<%= image_path splash %>" alt="">
+          <img data-fit="true" data-align="top center" class="coverized catalog-beer__background" src="<%= taxon_splash_image_path(taxon) %>">
         </div>
 
         <div class="wrapper" data-hook="taxon">
