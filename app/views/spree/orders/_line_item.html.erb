@@ -1,0 +1,42 @@
+<% item_image = line_item.variant.images.try(:first) || line_item.variant.product.display_image %>
+<% item_image_url = image_path item_image.attachment.url(:small) %>
+
+<%= order_form.fields_for :line_items, line_item do |item_form| %>
+  <div class="row">
+    <div class="table-cart__item">
+      <div class="table-cart__content table-cart__content--product col-md-6">
+        <img class="table-cart__content__image" src="<%= item_image_url %>">
+        <div class="table-cart__content__text">
+          <h1><%= line_item.name %></h1>
+          <p>
+            <%= line_item.description %>
+          </p>
+        </div>
+      </div>
+      <div class="table-cart__content col-md-2">
+        <span class="table-cart__price">
+          <i class="hidden-md hidden-lg"><%= Spree.t(:price) %>:</i>
+          <%= line_item.single_money.to_html %>
+        </span>
+      </div>
+      <div class="table-cart__content col-md-2">
+        <i class="visible-xs visible-sm table-cart__quantity"><%= Spree.t(:qty) %>:</i>
+        <%= item_form.number_field :quantity, :min => 0, :class => "table-cart__stepper js-remove-from-cart__quantity" %>
+      </div>
+      <div class="table-cart__content col-md-1 ">
+        <div class="table-cart__subtotale">
+          <span class="table-cart__subtotal-price">
+            <i class="visible-xs visible-sm"><%= Spree.t(:subtotal) %>:</i>
+            <%= line_item.display_amount.to_html unless line_item.quantity.nil? %>
+          </span>
+        </div>
+      </div>
+      <div class="table-cart__content table-cart__content--checker col-md-1">
+        <button class="table-cart__remove js-remove-from-cart">
+          <span class="visible-xs visible-sm"><%= Spree.t(:remove) %></span>
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+<% end %>

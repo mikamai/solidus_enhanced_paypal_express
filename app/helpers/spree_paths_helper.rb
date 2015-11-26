@@ -14,4 +14,8 @@ module SpreePathsHelper
   def shop_christmas_beer_path
     spree.product_path Spree::Product.find_by_slug "birra-di-natale-forst-2l"
   end
+
+  def continue_shopping_path
+    spree.products_path
+  end
 end
