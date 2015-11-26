@@ -25,12 +25,20 @@
   &__background
     position: absolute
 
+// fix underline
+.product-catalog-wrapper
+  text-decoration: none
 
 .product-catalog
   margin: 0px 20px 40px 20px
   border: 1px solid #dad8ca
   text-align: center
   background: #fff
+  transition: all 0.2s ease-in-out;
+
+  &:hover
+    border: 1px solid #edc9bf
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
   &__image
     padding: 10px 0px
@@ -44,9 +52,13 @@
       font-weight: 300
       font-size: 18px
       margin: 15px 0px
+      color: #000
+      text-decoration: none
 
   &__price
     p
       font-weight: 500
       font-size: 25px
       margin: 15px 0 5px
+      color: #000
+      text-decoration: none

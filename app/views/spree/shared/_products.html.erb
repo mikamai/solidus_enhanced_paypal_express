@@ -5,7 +5,7 @@
       <% products.each do |product| %>
 
         <div class="col-md-3 col-sm-6">
-          <a href="<%= spree.product_path(product, taxon_id: @taxon.try(:id)) %>">
+          <a class="product-catalog-wrapper" href="<%= spree.product_path(product, taxon_id: @taxon.try(:id)) %>">
             <div id="product_<%= product.id %>" class="product-catalog" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
               <div class="product-catalog__image">
                 <%= image_tag(product.display_image.attachment(:small), itemprop: "image") %>
