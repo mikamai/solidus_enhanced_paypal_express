@@ -1,0 +1,8 @@
+<% unless @product_properties.empty? %>
+  <% @product_properties.each do |product_property| %>
+    <li class="product-details__attributes__item">
+      <h3><%= product_property.property.presentation %></h3>
+      <p><%= product_property.value %></p>
+    </li>
+  <% end %>
+<% end %>
