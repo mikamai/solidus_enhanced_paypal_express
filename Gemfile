@@ -21,6 +21,7 @@ gem "solidus_braintree"
 #official solidus gateways
 gem "solidus_gateway"
 gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
+gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
 
 group :development do
   gem 'spring'
