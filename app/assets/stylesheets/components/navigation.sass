@@ -9,10 +9,12 @@
     font-size: 28px
 
 .navigations
+  position: relative
+
   +max-screen($screen-sm)
     position: absolute
     z-index: 4
-    top: 0
+    // top: 0
     left: 0
     width: 100%
     height: 80px
@@ -42,7 +44,7 @@
   +transition(all .5s cubic-bezier(1.000, 0.145, 0.395, 1.005))
   position: fixed
   right: -260px
-  top: 0
+  // top: 0
   margin: 0
   padding: 0
   height: 100%
