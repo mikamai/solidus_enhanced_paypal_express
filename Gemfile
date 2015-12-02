@@ -22,6 +22,7 @@ gem "solidus_braintree"
 gem "solidus_gateway"
 gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
 gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
+gem 'solidus_simple_weight_calculator', github: 'dfranciosi/solidus_simple_weight_calculator', branch: 'master'
 
 group :development do
   gem 'spring'
