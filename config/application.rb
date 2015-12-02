@@ -46,5 +46,8 @@ module ForstDrunkenIbex
     config.active_record.raise_in_transactional_callbacks = true
 
     config.browserify_rails.commandline_options = "-t coffeeify --extension=\".coffee\""
+
+    # Set default locale to Italian
+    config.i18n.default_locale = :it
   end
 end
