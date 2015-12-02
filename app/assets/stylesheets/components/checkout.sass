@@ -1,0 +1,64 @@
+.progress-cart
+  &__title
+    h1
+      margin: 0px
+
+  .customer-email
+    padding: 15px 0px
+
+    label, input
+      display: inline-block
+
+    label
+      font-size: 16px
+      font-weight: bold
+      color: $color-green-forst
+      margin-right: 7px
+
+    input#order_email
+      width: 200px
+
+  &__list
+    padding-left: 0px
+    padding-top: 2px
+
+    &__step
+      list-style: none
+      display: inline-block
+      color: #919898
+
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5)
+        &:before
+          content: "-"
+          display: block
+          float: left
+          margin: 0 15px
+          color: #c9cbcb
+
+      &.current
+        color: $color-green-forst
+        font-weight: bold
+
+#checkout-summary
+  h3
+    font-size: 24px
+    margin-bottom: 12px
+
+  table
+    td
+      font-size: 20px
+
+    td:nth-child(2)
+      color: $color-green-forst
+      padding-left: 20px
+
+  +max-screen($screen-sm)
+    &
+      text-align: center
+
+      table
+        margin: 0 auto
