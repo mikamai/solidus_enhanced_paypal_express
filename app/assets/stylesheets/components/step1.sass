@@ -1,0 +1,73 @@
+#checkout_form_address
+  .cart-info-address
+    overflow: hidden
+
+    &.billing
+      margin-bottom: 50px
+
+    &.shipping
+      margin-bottom: 20px
+
+    .checkbox
+      padding: 20px
+
+    h2
+      background: $color-green-forst
+      color: #fff
+      text-align: left
+      padding: 15px
+      font-size: 16px
+      margin-bottom: 0px
+
+    fieldset
+      background: #fff
+      border: 0px
+      padding: 0px
+
+      +min-screen($screen-sm)
+        .row
+          padding: 20px
+
+          &:nth-child(2n+1)
+            background: #f9f9f9
+
+      +max-screen($screen-md)
+        .form-field
+          padding-bottom: 20px
+
+      +max-screen($screen-sm)
+        .form-field
+          padding: 15px
+
+          input
+            width: 100% !important
+
+          &:nth-child(2n+1)
+            background: #fff
+
+
+      label
+        font-size: 16px
+        font-weight: bold
+
+      input[type=text], select
+        width: 250px
+
+  .form-buttons
+    input[type=submit]
+      vertical-align: top
+      background: $color-green-forst
+      color: #FFF
+      font-weight: 600
+      text-transform: uppercase
+      text-align: center
+      border: 0
+      font-size: 18px
+      padding: 15px 24px
+
+    .save-address
+      line-height: 57px
+
+    +max-screen($screen-sm)
+      &
+        text-align: center
