@@ -1,0 +1,219 @@
+<div class="site-container">
+
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="navigations navigations--sticky">
+  <a href="/" title="Home" class="navigations__forst-shop"></a>
+  <div class="nav-languages">
+    <div class="toogler">
+      <a class="world js-world-toggler" href="#">
+        <i class="fa fa-globe"></i>
+      </a>
+    </div>
+    <ul class="nav-languages__list">
+      <li class="active"><a href="#">IT</a></li>
+      <li><a href="#">DE</a></li>
+      <li><a href="#">EN</a></li>
+    </ul>
+  </div>
+  <div class="cart-small hidden-xs">
+    <a href="/cart">
+      <i class="icon-cart"></i>
+    </a>
+    <span class="js-inject-link-to-cart"><a class="cart-info full" href="/cart">Cart: (1)  <span class="amount">€20.00</span></a></span>
+  </div>
+  <div class="js-nav-toggler">
+    <a class="navigation-toggler" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+          <div class="wrapper" data-hook="homepage_products">
+            <div class="container">
+              <div class="progress-cart" data-hook="">
+
+
+                <div class="row" data-hook="checkout_header">
+                  <div class="progress-cart__title col-md-2">
+                    <h1>Checkout</h1>
+                  </div>
+                  <div class="col-md-6" data-hook="checkout_progress">
+                    <ul class="progress-cart__list">
+                        <li class="progress-cart__list__step ">Address</li>
+                        <li class="progress-cart__list__step current">Delivery</li>
+                        <li class="progress-cart__list__step ">Payment</li>
+                        <li class="progress-cart__list__step ">Confirm</li>
+                        <li class="progress-cart__list__step ">Complete</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="row" data-hook="checkout_content">
+                  <div class="col-md-12" data-hook="checkout_form_wrapper">
+                    <form id="checkout_form_delivery" class="edit_order" action="/checkout/update/delivery" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="BE85G5+1pFiHavHutmvviH36UR9yRX+0eAwEWlEq7HyJXM3/EFbXnG7E+llBAWJdOh5HSKnGPR+XGGsmp/Wl8g==">
+                      <fieldset id="shipping_method" data-hook="">
+  <legend align="center">Delivery</legend>
+  <div class="inner" data-hook="shipping_method_inner">
+    <div id="methods">
+
+
+        <div class="shipment">
+          <h3 class="stock-location" data-hook="stock-location">
+            package from
+            <strong class="stock-location-name" data-hook="stock-location-name">Forst Shop</strong>
+          </h3>
+
+          <table class="stock-contents" data-hook="stock-contents">
+            <colgroup>
+              <col style="width: 10%;">
+              <col style="width: 60%;">
+              <col style="width: 10%;">
+              <col style="width: 20%;">
+            </colgroup>
+            <thead>
+              <tr><th></th>
+              <th align="left">Item</th>
+              <th>Qty</th>
+              <th>Price</th>
+            </tr></thead>
+            <tbody>
+                <tr class="stock-item">
+                  <td class="item-image"><img src="/assets/noimage/mini-d5d987414566f22657bbe0b08a980ddb4230d156845a31ab3cad0a0825016ce8.png" alt="Mini d5d987414566f22657bbe0b08a980ddb4230d156845a31ab3cad0a0825016ce8"></td>
+                  <td class="item-name">Christmas Beer Forst 2L</td>
+                  <td class="item-qty">1</td>
+                  <td class="item-price">€10.00</td>
+                </tr>
+            </tbody>
+          </table>
+
+          <h5 class="stock-shipping-method-title">Shipping Method</h5>
+          <ul class="field radios shipping-methods">
+              <li class="shipping-method">
+                <label>
+                  <input type="radio" value="22" checked="checked" name="order[shipments_attributes][0][selected_shipping_rate_id]" id="order_shipments_attributes_0_selected_shipping_rate_id_22">
+                  <span class="rate-name">Corriere Espresso</span>
+                  <span class="rate-cost">€10.00</span>
+                </label>
+              </li>
+          </ul>
+        </div>
+
+<input type="hidden" value="23" name="order[shipments_attributes][0][id]" id="order_shipments_attributes_0_id">
+
+    </div>
+  </div>
+</fieldset>
+
+<br>
+
+<div class="form-buttons" data-hook="buttons">
+  <input type="submit" name="commit" value="Save and Continue" class="continue button primary">
+</div>
+
+</form>                  </div>
+                    <div id="checkout-summary" data-hook="checkout_summary_box" class="col-md-12">
+                      <h3>Order Summary</h3>
+
+<table data-hook="order_summary">
+  <tbody>
+    <tr data-hook="item_total">
+      <td><strong>Item Total:</strong></td>
+      <td><strong>€10.00</strong></td>
+    </tr>
+
+      </tbody><tbody data-hook="order_details_promotion_adjustments">
+      </tbody>
+
+    <tbody data-hook="order_details_tax_adjustments">
+        <tr class="total">
+          <td>iva alimenti e bevande 10.0% (Included in Price)</td>
+          <td>€0.91</td>
+        </tr>
+    </tbody>
+
+
+
+
+    <tbody><tr data-hook="order_total">
+      <td><strong>Order Total:</strong></td>
+      <td><strong><span id="summary-order-total">€20.00</span></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+                    </div>
+                </div>
+              </div>
+
+              <script>
+              Spree.current_order_id = "R900082815"
+              Spree.current_order_token = "M7-2xtfozGBNFCn1RcGVgA"
+              </script>
+
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+  <section class="big-footer">
+  <div class="container">
+    <div class="row">
+      <div class="big-footer__menu col-sm-4">
+        <ul class="menu-list">
+          <li class="title">Categorie</li>
+          <li><a href="/t/categories/beers">
+            Le nostre birre
+          </a></li>
+          <li><a href="/t/categories/merchandising">
+            Il merchandising
+          </a></li>
+          <li><a href="/products/birra-di-natale-forst-2l">
+            La birra di Natale
+          </a></li>
+        </ul>
+      </div>
+      <div class="big-footer__menu col-sm-4">
+        <ul class="menu-list">
+          <li class="title">CONTATTI</li>
+          <li><a href="http://www.forst.it/">www.forst.it</a></li>
+          <li><a href="mailto:shop@forst.it">shop@forst.it</a></li>
+          <li>+39 0473 260 360</li>
+          <li>
+            <br> Via Venosta, 11
+            <br> 39022 Forst/Lagundo (BZ)
+          </li>
+        </ul>
+      </div>
+      <div class="big-footer__menu col-sm-4">
+        <ul class="menu-list">
+          <li class="title">SEGUICI</li>
+          <li class="menu-list__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="footer">
+  <div class="footer__ornament">
+    <img class="footer__logo" src="/assets/layout/logo-small-49351b0b247fdca3f98a9ac348f36d6d93b24015b96552c0f433f391458ea52c.png" alt="">
+  </div>
+  <ul class="footer__nav">
+    <li>© Copyright Forstshop</li>
+    <li><a href="#" title="Informativa sulla privacy">Informativa sulla privacy</a></li>
+    <li><a href="#" title="Condizioni generali di vendita">Condizioni generali di vendita</a></li>
+  </ul>
+</section>
+
+
+
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+  </div>
+</div>
