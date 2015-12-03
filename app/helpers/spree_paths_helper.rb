@@ -12,7 +12,8 @@ module SpreePathsHelper
   end
 
   def shop_christmas_beer_path
-    #spree.product_path Spree::Product.find_by_slug "birra-di-natale-forst-2l"
+    christmas_beer = Spree::Product.find_by_id 4
+    spree.product_path christmas_beer if christmas_beer
   end
 
   def continue_shopping_path
