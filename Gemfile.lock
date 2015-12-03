@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/dfranciosi/solidus_braintree.git
+  revision: 10df9ab1b3e22f3c621eaee910ff202285ac1b58
+  branch: mysql-legacy-support
+  specs:
+    solidus_braintree (0.2.1)
+      braintree (~> 2.46)
+      solidus (>= 1.0.0, < 2)
+
+GIT
   remote: git://github.com/dfranciosi/solidus_simple_weight_calculator.git
   revision: b9ebb1c2ba30a7973a4da111e26489f03a1e7f9a
   branch: master
@@ -385,9 +394,6 @@ GEM
       select2-rails (= 3.5.9.1)
       solidus_api (= 1.1.0)
       solidus_core (= 1.1.0)
-    solidus_braintree (0.2.1)
-      braintree (~> 2.46)
-      solidus (>= 1.0.0, < 2)
     solidus_core (1.1.0)
       activemerchant (~> 1.48.0)
       acts_as_list (~> 0.3)
@@ -499,7 +505,7 @@ DEPENDENCIES
   slackistrano
   solidus
   solidus_auth_devise
-  solidus_braintree
+  solidus_braintree!
   solidus_gateway
   solidus_globalize!
   solidus_i18n!
