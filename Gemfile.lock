@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dfranciosi/solidus_braintree.git
-  revision: 10df9ab1b3e22f3c621eaee910ff202285ac1b58
+  revision: 8675976877bb3b7d64d95bca52768aae3433e382
   branch: mysql-legacy-support
   specs:
     solidus_braintree (0.2.1)
