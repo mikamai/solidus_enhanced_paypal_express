@@ -18,13 +18,13 @@
       <%= link_to Spree.t('menu.merchandising'), shop_merchandising_path %>
       <ul>
         <li>
-          <%= link_to Spree.t('menu.glasses'), shop_merchandising_path :glasses %>
+          <%= link_to Spree.t('menu.glasses'), shop_merchandising_path(:glasses) %>
         </li>
         <li>
-          <%= link_to Spree.t('menu.glasses'), shop_merchandising_path :glasses %>
+          <%= link_to Spree.t('menu.clothes'), shop_merchandising_path(:clothes) %>
         </li>
         <li>
-          <%= link_to Spree.t('menu.accessories'), shop_merchandising_path :accessories %>
+          <%= link_to Spree.t('menu.accessories'), shop_merchandising_path(:accessories) %>
         </li>
       </ul>
     </li>
