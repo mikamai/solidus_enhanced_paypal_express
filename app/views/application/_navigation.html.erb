@@ -7,9 +7,11 @@
       </a>
     </div>
     <ul class="nav-languages__list">
-      <li class="<%= 'active' if I18n.locale == :it %>"><%= link_to Spree.t(:locale_it), url_for(locale: :it) %></li>
-      <li class="<%= 'active' if I18n.locale == :de %>"><%= link_to Spree.t(:locale_de), url_for(locale: :de) %></li>
-      <li class="<%= 'active' if I18n.locale == :en %>"><%= link_to Spree.t(:locale_en), url_for(locale: :en) %></li>
+      <% [:it, :de, :en].each do |lang| %>
+        <li class="<%= 'active' if I18n.locale == lang %>">
+          <%= link_to Spree.t(:"locale_#{lang}"), url_for(locale: lang) %>
+        </li>
+      <% end %>
     </ul>
   </div>
   <div class="cart-small hidden-xs">
