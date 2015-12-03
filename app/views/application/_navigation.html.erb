@@ -7,9 +7,9 @@
       </a>
     </div>
     <ul class="nav-languages__list">
-      <li class="active"><a href="#">IT</a></li>
-      <li><a href="#">DE</a></li>
-      <li><a href="#">EN</a></li>
+      <%= link_to t(:locale_it), url_for(locale: :it) %>
+      <%= link_to t(:locale_de), url_for(locale: :de) %>
+      <%= link_to t(:locale_en), url_for(locale: :en) %>
     </ul>
   </div>
   <div class="cart-small hidden-xs">
