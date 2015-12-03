@@ -1,6 +1,7 @@
 module ApplicationHelper
   def taxon_splash_image_path(taxon)
-    splash = case taxon.name
+    taxon_name = Globalize.with_locale(:en) { taxon.name }
+    splash = case taxon_name
              when "Beers"         then 'catalog_beer/catalog_beer_splash.jpg'
              when "Merchandising" then 'merchandising/merchandising.jpg'
              when "Clothing"      then 'merchandising/merchandising.jpg'
