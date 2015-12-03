@@ -3,6 +3,16 @@ it:
     locale_en: EN
     locale_it: IT
     locale_de: DE
+    menu:
+      forst_shop: FORST SHOP
+      our_beers: LE NOSTRE BIRRE
+      merchandising: IL MERCHANDISING
+      glasses: I BICCHIERI
+      clothes: ABBIGLIAMENTO
+      accessories: ACCESSORI
+      contacts: Contatti
+      privacy: Informativa sulla privacy
+      sales_conditions: Condizioni di vendita
     big_footer:
       categories: Categorie
       our_beers: Le nostre birre
