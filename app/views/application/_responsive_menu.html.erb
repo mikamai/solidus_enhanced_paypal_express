@@ -8,38 +8,36 @@
   </div>
   <ul class="navigation__primary-menu">
     <li class="visible-xs js-inject-link-to-cart"></li>
-    <li><a href="<%= root_path %>">
-      FORST SHOP
-    </a></li>
-    <li><a href="<%= shop_beers_path %>">
-      LE NOSTRE BIRRE
-    </a></li>
     <li>
-      <a href="<%= shop_merchandising_path %>">
-        IL MERCHANDISING
-      </a>
+      <%= link_to Spree.t('menu.forst_shop'), root_path %>
+    </li>
+    <li>
+      <%= link_to Spree.t('menu.our_beers'), shop_beers_path %>
+    </li>
+    <li>
+      <%= link_to Spree.t('menu.merchandising'), shop_merchandising_path %>
       <ul>
-        <li><a href="<%= shop_merchandising_path :glasses %>">
-          BICCHIERI
-        </a></li>
-        <li><a href="<%= shop_merchandising_path :clothing %>">
-          ABBIGLIAMENTO
-        </a></li>
-        <li><a href="<%= shop_merchandising_path :accessories %>">
-          ACCESSORI
-        </a></li>
+        <li>
+          <%= link_to Spree.t('menu.glasses'), shop_merchandising_path :glasses %>
+        </li>
+        <li>
+          <%= link_to Spree.t('menu.glasses'), shop_merchandising_path :glasses %>
+        </li>
+        <li>
+          <%= link_to Spree.t('menu.accessories'), shop_merchandising_path :accessories %>
+        </li>
       </ul>
     </li>
   </ul>
   <ul class="navigation__secondary-menu">
-    <li><a href="<%=  %>">
-      Contatti
-    </a></li>
-    <li><a href="<%=  %>">
-      Informativa privacy
-    </a></li>
-    <li><a href="<%=  %>">
-      Condizioni generali di vendita
-    </a></li>
+    <li>
+      <%= link_to Spree.t('menu.contacts'), '#' %>
+    </li>
+    <li>
+      <%= link_to Spree.t('menu.privacy'), '#' %>
+    </li>
+    <li>
+      <%= link_to Spree.t('menu.sales_conditions'), '#' %>
+    </li>
   </ul>
 </div>

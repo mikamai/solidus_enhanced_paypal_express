@@ -3,6 +3,16 @@ en:
     locale_en: EN
     locale_it: IT
     locale_de: DE
+    menu:
+      forst_shop: FORST SHOP
+      our_beers: OUR BEERS
+      merchandising: OUR MERCHANDISING
+      glasses: GLASSES
+      clothes: CLOTHES
+      accessories: ACCESSORIES
+      contacts: Contacts
+      privacy: Privacy
+      sales_conditions: Sales conditions
     big_footer:
       categories: Categories
       our_beers: Our beers
