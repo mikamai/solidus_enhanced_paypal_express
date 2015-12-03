@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/dfranciosi/solidus_simple_weight_calculator.git
-  revision: b9ebb1c2ba30a7973a4da111e26489f03a1e7f9a
+  revision: df9b8a58c9b9031c5353e7fa48b6d3e2b4c9a6d2
   branch: master
   specs:
     solidus_simple_weight_calculator (1.0.0)
