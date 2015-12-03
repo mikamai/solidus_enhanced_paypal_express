@@ -1,0 +1,45 @@
+<div class="site-container">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "navigation", locals: { sticky: true } %>
+        <div class="wrapper">
+          <div class="container">
+
+            <div class="row">
+              <!-- content page -->
+              <div class="registration-step col-md-12">
+                <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
+                  <h1><%= Spree.t(:registration) %></h1>
+                  <div id="registration">
+
+                    <% if Spree::Config[:allow_guest_checkout] %>
+                      <div id="guest_checkout" data-hook class="columns omega eight">
+                        <h2><%= Spree.t(:guest_user_account) %></h2>
+                        <% if flash[:registration_error] %>
+                          <div class='flash error'><%= flash[:registration_error] %></div>
+                        <% end %>
+                        <%= form_for @order, :url => update_checkout_registration_path, :method => :put, :html => { :id => 'checkout_form_registration' } do |f| %>
+                          <div class="registration-step__insert-email">
+                            <%= f.label :email, Spree.t(:email) %><br />
+                            <%= f.email_field :email, :class => 'title' %>
+                          </div>
+                          <div class="registration-step__button-continue"><%= f.submit Spree.t(:continue), :class => 'button primary' %></div>
+                        <% end %>
+                      </div>
+                    <% end %>
+                  </div>
+              </div>
+              <!-- end content page -->
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+</div>
