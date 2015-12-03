@@ -12,7 +12,7 @@
                   <div class="progress-cart__title col-md-2">
                     <h1><%= Spree.t(:checkout) %></h1>
                   </div>
-                  <div class="col-md-6" data-hook="checkout_progress">
+                  <div class="col-md-8 hidden-xs" data-hook="checkout_progress">
                     <ul class="progress-cart__list">
                       <% @order.checkout_steps.each do |step| %>
                         <li class="progress-cart__list__step <%= 'current' if step == @order.state %>"><%= Spree.t("order_state.#{step}").titleize %></li>
