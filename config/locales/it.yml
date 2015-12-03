@@ -1,6 +1,15 @@
 it:
-  locale_en: EN
-  locale_it: IT
-  locale_de: DE
   spree:
+    locale_en: EN
+    locale_it: IT
+    locale_de: DE
+    big_footer:
+      categories: Categorie
+      our_beers: Le nostre birre
+      merchandising: Il merchandising
+      christmas_beer: La birra di Natale
+      contacts: CONTATTI
+      website: www.forst.it
+      mail: shop@forst.it
+      follow_us: SEGUICI
 
