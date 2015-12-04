@@ -14,14 +14,14 @@ en:
       forbidden_message: Torna quando sarai più grande.
     menu:
       forst_shop: FORST SHOP
-      our_beers: OUR BEERS
-      merchandising: OUR MERCHANDISING
-      glasses: GLASSES
-      clothes: CLOTHES
-      accessories: ACCESSORIES
+      our_beers: Our Beers
+      merchandising: Our Merchandising
+      glasses: glasses
+      clothes: Fashion
+      accessories: Accessories
       contacts: Contacts
       privacy: Privacy
-      sales_conditions: Sales conditions
+      sales_conditions: Terms & Conditions
     big_footer:
       categories: Categories
       our_beers: Our beers
@@ -31,5 +31,24 @@ en:
       website: www.forst.it
       mail: shop@forst.it
       follow_us: FOLLOW US
-
-
+    home:
+      splash:
+        title_html: Welcome in the magical world of the Spezialbier-Brauerei FORST
+        description_html: >
+          Here you can order our beers and discover our clothing line and accessoires.
+          <br />
+          Let yourself be inspired by our products and join the magical wolrd of FORST brewery.
+      boxes:
+        merchandising: Merchandising
+        our_beers: Our beers
+        christmas_beer: Christmas beer
+      banner_product:
+        title_html: Christmas beer 2015
+        description_html: >
+          Christmas beer twelfth edition, available in the cozy siphon shaped 2 litres bottle.
+          For the first time in glass, it pictures the FORST plant dressed for Christmas.
+        call_to_action: DISCOVER MORE
+          <br>
+          For the first time in glass, it pictures the FORST plant dressed for Christmas.
+    taxons:
+      see_products: See Products

@@ -11,7 +11,9 @@
             <p><%= taxon.name %></p>
           </div>
           <div class="product-merchandising__discover">
-            <a href="<%= spree.nested_taxons_path(taxon) %>" class="button">Scopri i prodotti</a>
+            <a href="<%= spree.nested_taxons_path(taxon) %>" class="button">
+              <%= Spree.t('taxons.see_products') %>
+            </a>
           </div>
         </div>
       </div>

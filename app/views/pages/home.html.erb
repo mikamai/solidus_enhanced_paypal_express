@@ -7,11 +7,9 @@
         <div class="splash">
           <div class="splash__content">
             <div class="splash__logo"><img src="<%= image_path 'home/splash-logo.png' %>" alt="" /></div>
-            <h1 class="splash__title">Il magico mondo della Spezialbier-Brauerei FORST ti dà il benvenuto.</h1>
+            <h1 class="splash__title"><%= Spree.t('home.splash.title_html') %></h1>
             <p class="splash__description">
-              Qui puoi ordinare una delle nostre birre di qualità superiore
-              <br /> e scoprire la nostra linea di abbigliamento e accessori.
-              <br /> Lasciati ispirare dai nostri prodotti e ritrova la magia del mondo FORST.
+              <%= Spree.t('home.splash.description_html') %>
             </p>
           </div>
           <img data-fit="true" data-align="top center" class="splash__background coverized" src="<%= image_path 'home/splash.jpg' %>" alt="" />
@@ -29,7 +27,7 @@
               <img class="section-box__image" src="<%= image_path 'home/box-merchandising-background.png' %>" alt="" />
               <div class="section-box__content">
                 <img class="section-box__icon" src="<%= image_path 'home/box-merchandising-icon.png' %>" alt="" />
-                <h1 class="section-box__title">Il merchandising</h1>
+                <h1 class="section-box__title"><%= Spree.t('home.boxes.merchandising') %></h1>
               </div>
             </a>
           </div>
@@ -42,20 +40,20 @@
               <img class="section-box__image" src="<%= image_path 'home/coming-soon.png' %>" alt="" />
               <!-- <div class="section-box__content">
                 <img class="section-box__icon" src="<%= image_path 'home/box-birre-icon.png' %>" alt="" />
-                <h1 class="section-box__title">Le nostre birre</h1>
+                <h1 class="section-box__title"><%= Spree.t('home.boxes.our_beers') %></h1>
               </div>-->
             <!-- </a> -->
-          </div>
+              </div>
           <!-- // Section-box -->
         </div>
         <div class="col-sm-4 col-md-4">
           <!-- Section-box -->
           <div class="section-box">
-            <a class="section-box__link" href="<%= shop_christmas_beer_path %>" title="La birra di Natale">
+            <a class="section-box__link" href="<%= shop_christmas_beer_path %>" title="<%= Spree.t('home.boxes.christmas_beer') %>">
               <img class="section-box__image" src="<%= image_path 'home/box-birra-natale-background.png' %>" alt="" />
               <div class="section-box__content">
                 <img class="section-box__icon" src="<%= image_path 'home/box-birra-natale-icon.png' %>" alt="" />
-                <h1 class="section-box__title">La birra di Natale</h1>
+                <h1 class="section-box__title"><%= Spree.t('home.boxes.christmas_beer') %></h1>
               </div>
             </a>
           </div>
@@ -71,11 +69,11 @@
       <img class="banner-product__product" src="<%= image_path 'home/banner-product.png' %>" alt="" />
     </div>
     <div class="banner-product__container">
-      <h1 class="banner-product__title">La birra di Natale 2015</h1>
+      <h1 class="banner-product__title"><%= Spree.t('home.banner_product.title_html') %></h1>
       <p class="banner-product__description">
-        La dodicesima edizione della Birra di Natale, disponibile nell’elegante bottiglia da 2 litri a forma di sifone. Per la prima volta in vetro, raffigura lo stabilimento di Birra FORST in veste natalizia.
+        <%= Spree.t('home.banner_product.description_html') %>
       </p>
-      <a href="<%= shop_christmas_beer_path %>" class="btn-follow">SCOPRI DI PIÚ</a>
+      <a href="<%= shop_christmas_beer_path %>" class="btn-follow"><%= Spree.t('home.banner_product.call_to_action') %></a>
     </div>
   </div>
   <%= render partial: "big_footer" %>
