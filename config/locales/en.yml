@@ -17,11 +17,11 @@ en:
         Schau einfach wieder vorbei, sobald du alt genug bist, um FORST Bier genießen zu dürfen!
     menu:
       forst_shop: FORST SHOP
-      our_beers: Our Beers
-      merchandising: Our Merchandising
-      glasses: glasses
-      clothes: Fashion
-      accessories: Accessories
+      our_beers: OUR BEERS
+      merchandising: OUR MERCHANDISING
+      glasses: GLASSES
+      clothes: FASHION
+      accessories: ACCESSORIES
       contacts: Contacts
       privacy: Privacy
       sales_conditions: Terms & Conditions
@@ -30,10 +30,10 @@ en:
       our_beers: Our beers
       merchandising: Our merchandising
       christmas_beer: Christmas beer
-      contacts: CONTACTS
+      contacts: Contacts
       website: www.forst.it
       mail: shop@forst.it
-      follow_us: FOLLOW US
+      follow_us: Follow us
     home:
       splash:
         title_html: Welcome in the magical world of the Spezialbier-Brauerei FORST
