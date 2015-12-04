@@ -1,0 +1,59 @@
+<div class="overlay-background">
+  <img data-fit="true" data-align="top center" class="overlay-background__image coverized" src="<%= image_path 'entry/entry-page.jpg' %>" alt="">
+</div>
+<div class="entry-page-overlay"></div>
+
+<div class="entry-page">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="entry-page__navigation">
+          <ul class="entry-page__navigation__list">
+            <% [:it, :de, :en].each do |lang| %>
+              <li class="<%= 'active' if I18n.locale == lang %>">
+                <%= link_to Spree.t(:"locale_#{lang}"), url_for(locale: lang) %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="wrapper-entry-page">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="entry-page__logo-forst">
+                <img class="logo" src="<%= image_path 'home/splash-logo.png' %>"></img>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2">
+              <div class="entry-page__box">
+
+                <div class="entry-page__box__title">
+                  <h3><%= Spree.t('underage.forbidden_message') %></h3>
+                </div>
+
+                <div class="entry-page__box__disclaimer">
+                  <ul>
+                    <li>
+                      <%= link_to Spree.t('menu.underage.responsible_consumption'), '#' %>
+                    </li>
+                    <li>
+                      <%= link_to Spree.t('menu.underage.privacy'), '#' %>
+                    </li>
+                    <li>
+                      <%= link_to Spree.t('menu.underage.sales_conditions'), '#' %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

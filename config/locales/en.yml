@@ -3,6 +3,15 @@ en:
     locale_en: EN
     locale_it: IT
     locale_de: DE
+    underage:
+      yes: YES
+      no: NO
+      message: Per visitare Forst Shop devi essere maggiorenne.
+      question: Sei maggiorenne?
+      responsible_consumption: Consumo Responsabile
+      privacy: Informativa sulla privacy
+      sales_conditions: condizioni generali di vendita
+      forbidden_message: Torna quando sarai più grande.
     menu:
       forst_shop: FORST SHOP
       our_beers: OUR BEERS
