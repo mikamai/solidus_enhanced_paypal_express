@@ -50,7 +50,11 @@ de:
           For the first time in glass, it pictures the FORST plant dressed for Christmas.
         call_to_action: DISCOVER MORE
         title_html: Das Weihnachtsbier 2015
-        description_html: Das Weihnachtsbier in der exlusiven 2L-Glasflasche im personalisierten FORST-Stil. Das Dekor zeigt die Brauerei in einer weihnachtlich gestalteten Aufmachung, festlich und im weißen Kleid präsentiert sie sich.
+        description_html: >
+          Das Weihnachtsbier in der exlusiven 2L-Glasflasche im personalisierten FORST-Stil.
+          <br>
+          Das Dekor zeigt die Brauerei in einer weihnachtlich gestalteten Aufmachung,
+          festlich und im weißen Kleid präsentiert sie sich.
         call_to_action: Erfahren Sie mehr
     taxons:
       see_products: Erfahren Sie mehr
