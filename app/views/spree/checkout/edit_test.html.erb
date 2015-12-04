@@ -1,0 +1,61 @@
+<div class="site-container">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "navigation", locals: { sticky: true } %>
+          <div class="wrapper" data-hook="homepage_products">
+            <div class="container">
+              <div class="progress-cart" data-hook>
+                <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
+
+                <div class="row" data-hook="checkout_header">
+                  <div class="progress-cart__title col-md-2">
+                    <h1><%= Spree.t(:checkout) %></h1>
+                  </div>
+                  <div class="col-md-8 hidden-xs" data-hook="checkout_progress">
+                    <ul class="progress-cart__list">
+                      <% @order.checkout_steps.each do |step| %>
+                        <li class="progress-cart__list__step <%= 'current' if step == @order.state %>"><%= Spree.t("order_state.#{step}").titleize %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="row" data-hook="checkout_content">
+                  <div class="col-md-12" data-hook="checkout_form_wrapper">
+                    <%= form_for @order, :url => update_checkout_path(@order.state), :html => { :id => "checkout_form_#{@order.state}" } do |form| %>
+                      <% if @order.state == 'address' || !@order.email? %>
+                        <div class="customer-email" style='clear: both'>
+                          <%= form.label :email %>
+                          <%= form.text_field :email %>
+                        </p>
+                      <% end %>
+                      <%= render @order.state, :form => form %>
+                    <% end %>
+                  </div>
+                  <% if @order.state != 'confirm' %>
+                    <div id="checkout-summary" data-hook="checkout_summary_box" class="col-md-12">
+                      <%= render :partial => 'summary', :locals => { :order => @order } %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+
+              <script>
+              Spree.current_order_id = "<%= @order.number %>"
+              Spree.current_order_token = "<%= @order.guest_token %>"
+              </script>
+
+              <% if I18n.locale != :en %>
+                <%= javascript_include_tag 'jquery.validate/localization/messages_' + I18n.locale.to_s.downcase.gsub('-', '') %>
+              <% end %>
+
+            </div>
+          </div>
+      </div>
+
+
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+</div>
+
