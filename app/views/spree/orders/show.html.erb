@@ -1,0 +1,38 @@
+<div class="site-container">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "navigation", locals: { sticky: true } %>
+        <div class="wrapper">
+          <div class="container">
+            <div id="order_summary">
+              <div class="order-summary-number"><h2><%= Spree.t(:order_number, :number => @order.number) %></h2></div>
+              <% if order_just_completed?(@order) %>
+                <strong><%= Spree.t(:thank_you_for_your_order) %></strong>
+              <% end %>
+
+              <div id="order" data-hook>
+                <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
+
+                <br class="clear" />
+
+                <div class="form-buttons" data-hook="buttons">
+                  <%= link_to Spree.t(:back_to_store), spree.root_path, :class => "continue button primary" %>
+                  <% unless order_just_completed?(@order) %>
+                    <% if try_spree_current_user && respond_to?(:spree_account_path) %>
+                      <%= link_to Spree.t(:my_account), spree_account_path, :class => "button" %>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+</div>
