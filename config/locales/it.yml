@@ -11,7 +11,10 @@ it:
       responsible_consumption: Consumo Responsabile
       privacy: Informativa sulla privacy
       sales_conditions: condizioni generali di vendita
-      forbidden_message: Torna quando sarai più grande.
+      forbidden_message: >
+        L'accesso è consentito solo ai maggiorenni.
+        <br />
+        Torna quando sarai più grande per gustare la birra FORST!
     menu:
       forst_shop: FORST SHOP
       our_beers: LE NOSTRE BIRRE

@@ -11,7 +11,10 @@ en:
       responsible_consumption: Consumo Responsabile
       privacy: Informativa sulla privacy
       sales_conditions: condizioni generali di vendita
-      forbidden_message: Torna quando sarai più grande.
+      forbidden_message: >
+        Der Zutritt zu dieser Seite ist nur volljährig gewährt.
+        <br />
+        Schau einfach wieder vorbei, sobald du alt genug bist, um FORST Bier genießen zu dürfen!
     menu:
       forst_shop: FORST SHOP
       our_beers: Our Beers
