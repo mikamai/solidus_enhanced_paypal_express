@@ -32,7 +32,7 @@
               <%= render :partial => 'cart_form' %>
             </div>
 
-            <h2 class="product-details__subtitle">DESCRIZIONE</h2>
+            <h2 class="product-details__subtitle"><%= Spree.t(:description) %></h2>
             <p class="product-details__description">
               <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
             </p>
