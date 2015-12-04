@@ -31,4 +31,14 @@ it:
       website: www.forst.it
       mail: shop@forst.it
       follow_us: SEGUICI
-
+    home:
+      splash:
+        title_html: Il magico mondo della Spezialbier-Brauerei FORST ti dà il benvenuto.
+        description_html: Qui puoi ordinare una delle nostre birre di qualità superiore<br /> e scoprire la nostra linea di abbigliamento e accessori.<br /> Lasciati ispirare dai nostri prodotti e ritrova la magia del mondo FORST.
+      boxes:
+        merchandising: Il merchandising
+        christmas_beer: La birra di Natale
+      banner_product:
+        title_html: La birra di Natale 2015
+        description_html: La dodicesima edizione della Birra di Natale, disponibile nell’elegante bottiglia da 2 litri a forma di sifone. Per la prima volta in vetro, raffigura lo stabilimento di Birra FORST in veste natalizia.
+        call_to_action: SCOPRI DI PIÚ
