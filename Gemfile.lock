@@ -38,6 +38,15 @@ GIT
       routing-filter (~> 0.5.0)
       solidus_core (~> 1.0)
 
+GIT
+  remote: git://github.com/svenfuchs/rails-i18n.git
+  revision: a7d33d1b319bdbaa1da64ced0aa0d280891a3a09
+  branch: master
+  specs:
+    rails-i18n (4.0.7)
+      i18n (~> 0.7)
+      railties (~> 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -299,9 +308,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
-    rails-i18n (4.0.7)
-      i18n (~> 0.7)
-      railties (~> 4.0)
     railties (4.2.4)
       actionpack (= 4.2.4)
       activesupport (= 4.2.4)
@@ -497,6 +503,7 @@ DEPENDENCIES
   mysql2 (< 0.4)
   rack-livereload
   rails (= 4.2.4)
+  rails-i18n!
   rb-fsevent
   recipient_interceptor
   rspec-rails

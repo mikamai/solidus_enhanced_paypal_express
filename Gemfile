@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'browserify-rails'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 4.4.0'
+gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
 
 
 # Solidus!

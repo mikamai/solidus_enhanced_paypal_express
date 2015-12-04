@@ -7,7 +7,7 @@
       </a>
     </div>
     <ul class="nav-languages__list">
-      <% [:it, :de, :en].each do |lang| %>
+      <% I18n.available_locales.each do |lang| %>
         <li class="<%= 'active' if I18n.locale == lang %>">
           <%= link_to Spree.t(:"locale_#{lang}"), url_for(locale: lang) %>
         </li>
