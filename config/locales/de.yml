@@ -14,17 +14,17 @@ de:
       forbidden_message: Torna quando sarai più grande.
     menu:
       forst_shop: FORST SHOP
-      our_beers: Unsere Bierspezialitäten
-      merchandising: Merchandising
-      glasses: Gläser
-      clothes: Bekleidung
-      accessories: Accesoires
+      our_beers: UNSERE BIERSPEZIALITÄTEN
+      merchandising: MERCHANDISING
+      glasses: GLÄSER
+      clothes: BEKLEIDUNG
+      accessories: ACCESOIRES
       contacts: Kontakt
       privacy: Privacy
       sales_conditions: Sales conditions
     big_footer:
       categories: Categories
-      our_beers: Our beers
+      our_beers: Unsere Bierspezialitäten
       merchandising: Merchandising
       christmas_beer: Das Weihnachtsbier
       contacts: Kontakt
@@ -42,7 +42,7 @@ de:
           Entdecken Sie unsere Produkte und treten Sie ein in die magische Welt der Brauerei FORST.
       boxes:
         merchandising: Merchandising
-        our_beers: Our beers
+        our_beers: Unsere Bierspezialitäten
         christmas_beer: Das Weihnachtsbier
       banner_product:
         title_html: Christmas beer 2015
