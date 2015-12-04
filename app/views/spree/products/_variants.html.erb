@@ -1,0 +1,16 @@
+<select name="variant_id">
+  <% product.variants_and_option_values(current_currency).each do |variant| %>
+    <option
+        value="<%= variant.id %>"
+        <%# Updates price via JS %>
+        data-price="<%= variant.price_in(current_currency).money %>"
+        <% unless variant.can_supply? %>disabled="disabled"<% end %>
+    >
+      <%= variant_options(variant) %>
+
+      <% unless variant.can_supply? %>
+        - <%= Spree.t(:out_of_stock) %>
+      <% end %>
+    </option>
+  <% end %>
+</select>
