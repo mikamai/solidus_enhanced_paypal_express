@@ -1,0 +1,80 @@
+.privacy-cookies
+  font-family: "Helvetica", Arial
+  font-size: 13px
+  position: fixed
+  display: block
+  margin: 0
+  padding: 0
+  left: 0
+  bottom: 0
+  text-align: center
+  width: 100%
+  height: auto
+  z-index: 99999
+  overflow: hidden
+  background: #333333
+
+  .privacy-cookies-contents
+
+    .privacy-contents-left
+      box-sizing: border-box
+      display: inline-block
+      float: left
+      padding-right: 200px
+      width: 100%
+
+      p
+        text-align: center
+        line-height: 18px
+        margin: 24px
+        width: auto
+        color: #cccccc
+
+        a, a:link, a:visited, a:active
+          color: #FFF
+        a:hover
+          color: #CCC
+
+    .privacy-contents-right
+      box-sizing: border-box
+      height: 100%
+      position: absolute
+      right: 0
+      width: 200px
+      vertical-align: middle
+
+      button
+        cursor: pointer
+        font-size: 12px
+        text-transform: uppercase
+        background: #4d4d4d
+        border: 0 none
+        color: #ffffff
+        height: 40px
+        left: 50%
+        margin-left: -40%
+        margin-top: -20px
+        position: absolute
+        top: 50%
+        width: 80%
+
+        &:hover
+          background: #111
+
+    @media (max-width: 768px)
+
+      .privacy-contents-left
+        float: none
+        padding-right: 0
+
+      .privacy-contents-right
+        position: relative
+        width: 100%
+
+        button
+          position: relative
+          left: auto
+          margin: 10px auto 20px auto
+          padding: 6px 20px
+          top: auto
+          width: auto
