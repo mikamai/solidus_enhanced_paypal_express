@@ -57,9 +57,9 @@
             </div>
             <div class="table-cart__body">
               <div class="container">
+                    <% order.line_items.each do |item| %>
                 <div class="row">
                   <div class="table-cart__item">
-                    <% order.line_items.each do |item| %>
                       <div class="table-cart__item" data-hook="order_details_line_item_row">
                         <div class="table-cart__content image col-md-2 " data-hook="order_item_image">
                           <% if item.variant.images.length == 0 %>
@@ -78,9 +78,9 @@
                           <span class="hidden-md hidden-lg"><%= Spree.t(:qty) %>: </span><%= item.quantity %></div>
                         <div class="table-cart__content total col-md-2 total hidden-sm hidden-xs" data-hook="order_item_total"><span><%= item.display_amount.to_html %></span></div>
                       </div>
-                    <% end %>
                   </div>
                 </div>
+                    <% end %>
               </div>
             </div>
 

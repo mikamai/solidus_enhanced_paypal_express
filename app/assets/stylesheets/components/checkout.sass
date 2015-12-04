@@ -45,6 +45,7 @@
 
   .form-buttons
     input[type=submit]
+      margin-top: 20px
       vertical-align: top
       background: $color-green-forst
       color: #FFF
@@ -57,6 +58,11 @@
 
     .save-address
       line-height: 57px
+
+    +max-screen($screen-md)
+      &
+        text-align: center
+        margin-top: 20px
 
     +max-screen($screen-sm)
       &
