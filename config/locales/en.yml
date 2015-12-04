@@ -14,14 +14,14 @@ en:
       forbidden_message: Torna quando sarai più grande.
     menu:
       forst_shop: FORST SHOP
-      our_beers: OUR BEERS
-      merchandising: OUR MERCHANDISING
-      glasses: GLASSES
-      clothes: CLOTHES
-      accessories: ACCESSORIES
+      our_beers: Our Beers
+      merchandising: Our Merchandising
+      glasses: glasses
+      clothes: Fashion
+      accessories: Accessories
       contacts: Contacts
       privacy: Privacy
-      sales_conditions: Sales conditions
+      sales_conditions: Terms & Conditions
     big_footer:
       categories: Categories
       our_beers: Our beers
@@ -33,13 +33,11 @@ en:
       follow_us: FOLLOW US
     home:
       splash:
-        title_html: Spezialbier-Brauerei FORST magic world welcomes you.
+        title_html: Welcome in the magical world of the Spezialbier-Brauerei FORST
         description_html: >
-          Here you can get a superior quality beer of ours
+          Here you can order our beers and discover our clothing line and accessoires.
           <br />
-          and discover our clothing and accessories.
-          <br />
-          Get inspired by our products and discover FORST world's magic.
+          Let yourself be inspired by our products and join the magical wolrd of FORST brewery.
       boxes:
         merchandising: Merchandising
         christmas_beer: Christmas beer
