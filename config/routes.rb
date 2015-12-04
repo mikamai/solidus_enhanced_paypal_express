@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#underage'
+  get '/(:locale)', locale: /it|en|de/, to: 'pages#underage', as: :root
 
   get  'home', to: 'pages#home'
   get  'yes-answer', to: 'pages#yes_answer'

@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  include SolidusI18n::ControllerLocaleHelper
+
   def home
     render :home
   end
