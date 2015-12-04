@@ -34,13 +34,20 @@ en:
     home:
       splash:
         title_html: Spezialbier-Brauerei FORST magic world welcomes you.
-        description_html: Here you can get a superior quality beer of ours<br /> and discover our clothing and accessories.<br /> Get inspired by our products and discover FORST world's magic.
+        description_html: >
+          Here you can get a superior quality beer of ours
+          <br />
+          and discover our clothing and accessories.
+          <br />
+          Get inspired by our products and discover FORST world's magic.
       boxes:
         merchandising: Merchandising
         christmas_beer: Christmas beer
       banner_product:
         title_html: Christmas beer 2015
-        description_html: Christmas beer twelfth edition, available in the cozy siphon shaped 2 litres bottle. For the first time in glass, it pictures the FORST plant dressed for Christmas.
+        description_html: >
+          Christmas beer twelfth edition, available in the cozy siphon shaped 2 litres bottle.
+          For the first time in glass, it pictures the FORST plant dressed for Christmas.
         call_to_action: DISCOVER MORE
     taxons:
       see_products: See Products
