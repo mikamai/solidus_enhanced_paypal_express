@@ -2,7 +2,7 @@
   <div class="row">
 
     <% taxons.each do |taxon| %>
-      <div class="col-md-4 col-sm-4">
+      <div class="col-md-4 col-sm-4 merchandising-row">
         <div class="product-merchandising <%= cycle('first', 'middle', 'last') %>">
           <div class="product-merchandising__image">
             <img src="<%= taxon.icon.url(:big) %>" alt="<%= taxon.name %>">
