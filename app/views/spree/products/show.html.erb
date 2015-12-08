@@ -11,8 +11,8 @@
 
   <div class="wrapper">
     <div class="container">
+      <% cache [I18n.locale, current_currency, @product] do %>
       <div class="row">
-        <% cache [I18n.locale, current_currency, @product] do %>
         <div class="col-md-6 col-sm-6">
           <div id="product-images" class="product-images" data-hook="product_images">
             <div id="main-image" data-hook>
@@ -31,20 +31,27 @@
             <div id="cart-form" data-hook="cart_form">
               <%= render :partial => 'cart_form' %>
             </div>
-
+          </div>
+        </div>
+      </div>
+      <div class="product-description">
+        <div class="row description">
+          <div class="col-md-12">
             <h2 class="product-details__subtitle"><%= Spree.t(:description) %></h2>
             <p class="product-details__description">
               <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
             </p>
-
+          </div>
+        </div>
+        <div class="row attributes">
+          <div class="col-md-12">
             <ul class="product-details__attributes">
               <%= render :partial => 'properties' %>
             </ul>
-
           </div>
         </div>
-        <% end %>
       </div>
+    <% end %>
     </div>
   </div>
 
