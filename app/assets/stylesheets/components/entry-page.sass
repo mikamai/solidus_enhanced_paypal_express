@@ -127,13 +127,16 @@
           display: inline-block
 
           +min-screen($screen-md)
-            &:last-child
-              &::before
+            &:nth-child(2)
+              &::before,
+              &::after
                 display: block
                 content: "|"
-                margin: 0px 4px
+                margin-left: 4px
+                margin-right: 4px
                 display: inline-block
-                color: #c9cbcb
+                color: $color-green-forst
+
 
           +max-screen($screen-sm)
             &
@@ -143,6 +146,10 @@
             font-size: 14px
             font-weight: 100
             text-decoration: none
+            color: $color-green-forst
+
+            &:hover
+              text-decoration: underline
 
   .wrapper-entry-page
     position: absolute
