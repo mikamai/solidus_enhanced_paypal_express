@@ -148,6 +148,8 @@ GEM
     colorize (0.7.7)
     css_parser (1.3.7)
       addressable
+    dbmanager (0.4.2)
+      rails
     debug_inspector (0.0.2)
     deface (1.0.2)
       colorize (>= 0.5.8)
@@ -327,6 +329,9 @@ GEM
       mail
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    route_translator (4.1.0)
+      actionpack (>= 3.2, < 5.0)
+      activesupport (>= 3.2, < 5.0)
     routing-filter (0.5.1)
       actionpack (~> 4.2)
       activesupport (~> 4.2)
@@ -493,6 +498,7 @@ DEPENDENCIES
   capistrano-rails (~> 1.1.3)
   capistrano-rbenv (~> 2.0.3)
   coffee-rails (~> 4.1.0)
+  dbmanager
   font-awesome-sass (~> 4.4.0)
   guard
   guard-bundler
@@ -506,6 +512,7 @@ DEPENDENCIES
   rails-i18n!
   rb-fsevent
   recipient_interceptor
+  route_translator
   rspec-rails
   sass-rails (~> 5.0)
   sassc-rails
