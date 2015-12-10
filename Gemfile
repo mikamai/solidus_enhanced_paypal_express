@@ -10,6 +10,8 @@ gem 'browserify-rails'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 4.4.0'
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
+gem 'dbmanager'
+gem 'route_translator'
 
 
 # Solidus!
