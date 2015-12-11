@@ -13,5 +13,9 @@ class ApplicationController < ActionController::Base
     set_locale
   end
 
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
+  end
+
   helper SpreePathsHelper
 end
