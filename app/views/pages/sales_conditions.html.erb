@@ -1,0 +1,26 @@
+<div class="site-container">
+  <div class="container-fluid js_site_container js_main controller">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "navigation", locals: { sticky: true } %>
+        <div class="wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="static-page">
+                <div class="col-md-8 col-md-offset-2">
+                  <h2><%= Spree.t('sales_conditions.title') %></h2>
+                  <h3><%= Spree.t('sales_conditions.subtitle') %></h3>
+                  <p>
+                  <%= Spree.t('sales_conditions.body_html') %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render partial: "big_footer" %>
+  <%= render partial: "footer" %>
+</div>

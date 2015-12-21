@@ -13,6 +13,10 @@ class PagesController < ApplicationController
     render :privacy
   end
 
+  def sales_conditions
+    render :sales_conditions
+  end
+
   def yes_answer
     redirect_to home_url
   end
