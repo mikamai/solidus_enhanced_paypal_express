@@ -9,6 +9,10 @@ class PagesController < ApplicationController
     render :underage
   end
 
+  def privacy
+    render :privacy
+  end
+
   def yes_answer
     redirect_to home_url
   end
