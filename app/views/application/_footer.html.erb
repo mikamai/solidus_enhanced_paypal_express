@@ -4,7 +4,11 @@
   </div>
   <ul class="footer__nav">
     <li>© Copyright Forstshop</li>
-    <li><a href="#" title="Informativa sulla privacy">Informativa sulla privacy</a></li>
-    <li><a href="#" title="Condizioni generali di vendita">Condizioni generali di vendita</a></li>
+    <li>
+      <%= link_to Spree.t('menu.privacy'), privacy_path,  title: Spree.t('menu.privacy') %>
+    </li>
+    <li>
+      <%= link_to Spree.t('menu.sales_conditions'), privacy_path,  title: Spree.t('menu.sales_conditions') %>
+    </li>
   </ul>
 </section>
