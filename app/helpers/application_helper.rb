@@ -10,4 +10,12 @@ module ApplicationHelper
              end
     image_path splash
   end
+
+  def patched_route_path(route)
+    begin
+      send "#{route}_path"
+    rescue NameError
+      Rails.application.routes.url_helpers.send "#{route}_#{I18n.locale}_path"
+    end
+  end
 end

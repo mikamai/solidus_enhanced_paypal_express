@@ -5,10 +5,10 @@
   <ul class="footer__nav">
     <li>© Copyright Forstshop</li>
     <li>
-      <%= link_to Spree.t('menu.privacy'), privacy_path,  title: Spree.t('menu.privacy') %>
+      <%= link_to Spree.t('menu.privacy'), patched_route_path(:privacy),  title: Spree.t('menu.privacy') %>
     </li>
     <li>
-      <%= link_to Spree.t('menu.sales_conditions'), privacy_path,  title: Spree.t('menu.sales_conditions') %>
+      <%= link_to Spree.t('menu.sales_conditions'), patched_route_path(:sales_conditions),  title: Spree.t('menu.sales_conditions') %>
     </li>
   </ul>
 </section>

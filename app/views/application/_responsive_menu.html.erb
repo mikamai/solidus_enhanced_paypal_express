@@ -34,10 +34,10 @@
       <%= link_to Spree.t('menu.contacts'), '#' %>
     </li>
     <li>
-      <%= link_to Spree.t('menu.privacy'), privacy_path %>
+      <%= link_to Spree.t('menu.privacy'), patched_route_path(:privacy) %>
     </li>
     <li>
-      <%= link_to Spree.t('menu.sales_conditions'), sales_conditions_path %>
+      <%= link_to Spree.t('menu.sales_conditions'), patched_route_path(:sales_conditions) %>
     </li>
   </ul>
 </div>
