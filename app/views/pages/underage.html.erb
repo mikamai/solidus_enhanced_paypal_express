@@ -47,20 +47,7 @@
                     </li>
                   </ul>
                 </div>
-
-                <div class="entry-page__box__disclaimer">
-                  <ul>
-                    <li>
-                      <%= link_to Spree.t('menu.underage.responsible_consumption'), '#' %>
-                    </li>
-                    <li>
-                      <%= link_to Spree.t('menu.underage.privacy'), '#' %>
-                    </li>
-                    <li>
-                      <%= link_to Spree.t('menu.underage.sales_conditions'), '#' %>
-                    </li>
-                  </ul>
-                </div>
+                <%= render partial: "box_disclaimer" %>
               </div>
             </div>
           </div>
