@@ -17,6 +17,10 @@ class PagesController < ApplicationController
     render :sales_conditions
   end
 
+  def contacts
+    render :contacts
+  end
+
   def yes_answer
     redirect_to home_url
   end
