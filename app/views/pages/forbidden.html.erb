@@ -18,7 +18,6 @@
         </div>
       </div>
     </div>
-
     <div class="row">
       <div class="wrapper-entry-page">
         <div class="container">
@@ -28,27 +27,12 @@
                 <img class="logo" src="<%= image_path 'home/splash-logo.png' %>"></img>
               </div>
             </div>
-
             <div class="col-md-8 col-md-offset-2">
               <div class="entry-page__box">
-
                 <div class="entry-page__box__title">
                   <h3><%= Spree.t('underage.forbidden_message_html') %></h3>
                 </div>
-
-                <div class="entry-page__box__disclaimer">
-                  <ul>
-                    <li>
-                      <%= link_to Spree.t('menu.underage.responsible_consumption'), '#' %>
-                    </li>
-                    <li>
-                      <%= link_to Spree.t('menu.underage.privacy'), '#' %>
-                    </li>
-                    <li>
-                      <%= link_to Spree.t('menu.underage.sales_conditions'), '#' %>
-                    </li>
-                  </ul>
-                </div>
+                <%= render partial: "box_disclaimer" %>
               </div>
             </div>
           </div>
