@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get  'static-page',       to: 'pages#static-page'
     get  'privacy',           to: 'pages#privacy',          as: 'privacy'
     get  'sales-conditions',  to: 'pages#sales_conditions', as: 'sales_conditions'
+    get  'contacts',          to: 'pages#contacts',         as: 'contacts'
   end
 
   mount Spree::Core::Engine, at: '/'
