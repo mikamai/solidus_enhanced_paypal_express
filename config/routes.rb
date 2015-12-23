@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-
   localized do
-    root to: 'pages#underage', as: :root
+    root to: 'pages#home', as: :root
     get  'home',              to: 'pages#home',             as: 'home'
+    get  'underage',          to: 'pages#underage',         as: 'underage'
     get  'yes-answer',        to: 'pages#yes_answer',       as: 'yes_answer'
     get  'no-answer',         to: 'pages#no_answer',        as: 'no_answer'
     get  'mockup/:page',      to: 'mockup#static'
