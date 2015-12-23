@@ -50,5 +50,7 @@ module ForstDrunkenIbex
 
     # Set default locale to Italian
     config.i18n.default_locale = :it
+
+    config.x.adult_age = :adult_age
   end
 end
