@@ -48,18 +48,10 @@ de:
         our_beers: Unsere Bierspezialitäten
         christmas_beer: Das Weihnachtsbier
       banner_product:
-        title_html: Christmas beer 2015
+        title_html: ''
         description_html: >
-          Christmas beer twelfth edition, available in the cozy siphon shaped 2 litres bottle.
-          For the first time in glass, it pictures the FORST plant dressed for Christmas.
-        call_to_action: DISCOVER MORE
-        title_html: Das Weihnachtsbier 2015
-        description_html: >
-          Das Weihnachtsbier in der exlusiven 2L-Glasflasche im personalisierten FORST-Stil.
-          <br>
-          Das Dekor zeigt die Brauerei in einer weihnachtlich gestalteten Aufmachung,
-          festlich und im weißen Kleid präsentiert sie sich.
-        call_to_action: Erfahren Sie mehr
+          Entdecken Sie hier das passende Glas zu jeder FORST Bierspezialität
+        call_to_action: ERFAHREN
     privacy:
       title: Datenschutzbestimmungen
       subtitle: gemäß Art. 13 der Gesetzesverordnung Nr. 196/2003

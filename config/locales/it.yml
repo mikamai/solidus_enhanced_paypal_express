@@ -48,12 +48,10 @@ it:
         our_beers: Le nostre birre
         christmas_beer: La birra di Natale
       banner_product:
-        title_html: La birra di Natale 2015
+        title_html: ''
         description_html: >
-          La dodicesima edizione della Birra di Natale,
-          disponibile nell’elegante bottiglia da 2 litri a forma di sifone.
-          Per la prima volta in vetro, raffigura lo stabilimento di Birra FORST in veste natalizia.
-        call_to_action: SCOPRI DI PIÚ
+          Scopri qui il bicchiere adatto ad ogni specialità birraria FORST
+        call_to_action: SCOPRI
     privacy:
       title: INFORMATIVA PER IL TRATTAMENTO DEI DATI PERSONALI
       subtitle: EX ART. 13 D.LGS. 196/2003
