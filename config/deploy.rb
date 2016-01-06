@@ -54,11 +54,6 @@ set :slack_webhook, "https://hooks.slack.com/services/T04BWB6KH/B0ET1TB2Q/vQvG5c
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-# nvm
-set :nvm_type, :user # or :system, depends on your nvm setup
-set :nvm_node, 'v4.2.4'
-set :nvm_map_bins, %w{node npm}
-
 namespace :deploy do
 
   after :restart, :clear_cache do

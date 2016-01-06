@@ -44,7 +44,6 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.3', require: false
   gem 'capistrano-rbenv', '~> 2.0.3', require: false
   gem 'capistrano-npm', require: false
-  gem 'capistrano-nvm', require: false
   gem 'slackistrano', require: false
 end
 

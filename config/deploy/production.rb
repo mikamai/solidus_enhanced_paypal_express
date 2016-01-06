@@ -9,7 +9,6 @@ set :bundle_without, %w( development test staging ).join(' ')
 
 set :deploy_to, '/hosting/sites/forst/drunken-ibex'
 
-
 def tag_branch_target
   tags = `git tag`.split("\n")
   sorted_tags = tags.sort {|n,m| Gem::Version.new(n) <=> Gem::Version.new(m)}

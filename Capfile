@@ -23,7 +23,6 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
 require 'capistrano/npm'
-require 'capistrano/nvm'
 # require 'airbrake/capistrano3'
 
 require 'slackistrano'
