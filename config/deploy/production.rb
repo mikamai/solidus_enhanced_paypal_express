@@ -1,7 +1,6 @@
-NODES = %w(cayman.caynod.es)
-role :app, NODES
-role :web, NODES
 #role :db,  %w(cayenne@db1.caynod.es)
+
+server 'cayman.caynod.es', user: 'cayenne', roles: %w{app web}
 
 set :rbenv_ruby, '2.2.3'
 set :rails_env, 'production'
