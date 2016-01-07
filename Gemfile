@@ -45,6 +45,7 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.0.3', require: false
   gem 'capistrano-npm', require: false
   gem 'slackistrano', require: false
+  gem 'capistrano-db-tasks', require: false
 end
 
 group :test do
