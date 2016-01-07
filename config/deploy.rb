@@ -1,6 +1,8 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
+require 'capistrano-db-tasks'
+
 set :application, 'forst-drunken-ibex'
 set :repo_url, 'git@github.com:CayenneLabs/forst-drunken-ibex.git'
 
@@ -53,6 +55,15 @@ set :slack_webhook, "https://hooks.slack.com/services/T04BWB6KH/B0ET1TB2Q/vQvG5c
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+# Capistrano db-tasks settings
+
+# if you want to remove the local dump file after loading
+set :db_local_clean, true
+
+# if you want to remove the dump file from the server after downloading
+set :db_remote_clean, true
+
 
 namespace :deploy do
 
