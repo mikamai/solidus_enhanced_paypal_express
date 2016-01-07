@@ -64,6 +64,10 @@ set :db_local_clean, true
 # if you want to remove the dump file from the server after downloading
 set :db_remote_clean, true
 
+# If you want to import assets, you can change default asset dir (default = system)
+# This directory must be in your shared directory on the server
+set :assets_dir, %w(public/assets public/spree)
+set :local_assets_dir, %w(public/assets public/spree)
 
 namespace :deploy do
 
