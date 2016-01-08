@@ -1,6 +1,7 @@
 #role :db,  %w(cayenne@db1.caynod.es)
 
 server 'cayman.caynod.es', user: 'cayenne', roles: %w{app web}
+server 'db1.caynod.es',    user: 'cayenne', roles: %w{db}
 
 set :rbenv_ruby, '2.2.3'
 set :rails_env, 'production'
