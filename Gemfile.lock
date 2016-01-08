@@ -16,6 +16,14 @@ GIT
       solidus_core (~> 1.1.0)
 
 GIT
+  remote: git://github.com/sitnikovme/capistrano-db-tasks.git
+  revision: 7dbc65ceaf3148e89572698a06b80052865a4de2
+  branch: master
+  specs:
+    capistrano-db-tasks (0.4)
+      capistrano (>= 3.0.0)
+
+GIT
   remote: git://github.com/solidusio-contrib/solidus_globalize.git
   revision: 6dc8f65b1ac08a154e57945a9b3723e3d0b3ed07
   branch: master
@@ -123,8 +131,6 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
-    capistrano-db-tasks (0.4)
-      capistrano (>= 3.0.0)
     capistrano-npm (1.0.1)
       capistrano (>= 3.0.0)
     capistrano-passenger (0.1.1)
@@ -499,7 +505,7 @@ DEPENDENCIES
   byebug
   capistrano (~> 3.4.0)
   capistrano-bundler (~> 1.1.4)
-  capistrano-db-tasks
+  capistrano-db-tasks!
   capistrano-npm
   capistrano-passenger (= 0.1.1)
   capistrano-rails (~> 1.1.3)
