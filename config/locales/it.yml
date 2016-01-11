@@ -4,8 +4,8 @@ it:
     locale_it: IT
     locale_de: DE
     underage:
-      yes: YES
-      no: NO
+      affirmative: SÍ
+      negative: 'NO'
       message: Per visitare Forst Shop devi essere maggiorenne.
       question: Sei maggiorenne?
       responsible_consumption: Consumo Responsabile
