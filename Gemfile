@@ -21,7 +21,8 @@ gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
 
 #payment methods
-gem "solidus_braintree", github: 'dfranciosi/solidus_braintree', branch: 'mysql-legacy-support'
+gem 'solidus_braintree_vzero', git: 'git@github.com:CayenneLabs/solidus_braintree_vzero', branch: 'solidus-porting'
+gem 'solidus_braintree'
 #official solidus gateways
 gem "solidus_gateway"
 gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
@@ -45,7 +46,7 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.0.3', require: false
   gem 'capistrano-npm', require: false
   gem 'slackistrano', require: false
-  gem 'capistrano-db-tasks', github: 'sitnikovme/capistrano-db-tasks', branch: 'master'
+  gem 'capistrano-db-tasks', require: false
 end
 
 group :test do

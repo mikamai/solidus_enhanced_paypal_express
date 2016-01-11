@@ -10,3 +10,4 @@
 
 //= require_tree .
 //= require spree/frontend/solidus_i18n
+//= require spree/frontend/spree_braintree_vzero
