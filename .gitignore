@@ -17,4 +17,4 @@ log/development.log
 tags
 gems.tags
 /node_modules
-.rbenv-vars
+.rbenv-vars*

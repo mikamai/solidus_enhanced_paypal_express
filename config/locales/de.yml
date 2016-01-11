@@ -4,13 +4,13 @@ de:
     locale_it: IT
     locale_de: DE
     underage:
-      yes: YES
-      no: NO
-      message: Per visitare Forst Shop devi essere maggiorenne.
-      question: Sei maggiorenne?
-      responsible_consumption: Consumo Responsabile
-      privacy: Informativa sulla privacy
-      sales_conditions: condizioni generali di vendita
+      affirmative: JA
+      negative: NEIN
+      message: Um die Forst Shop zu besuchen, müssen sie volljährig sein.
+      question: Sind sie volljährig?
+      responsible_consumption: Genuss mit verantwortung
+      privacy: Datenschutzerklärung
+      sales_conditions: Gesetzliche bestimmungen
       forbidden_message_html: >
         Der Zutritt zu dieser Seite ist nur volljährig gewährt.
         <br />
