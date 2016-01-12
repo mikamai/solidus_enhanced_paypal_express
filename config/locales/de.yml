@@ -3,6 +3,8 @@ de:
     locale_en: EN
     locale_it: IT
     locale_de: DE
+    cart: 'Warenkorb'
+    empty: 'Leer'
     underage:
       affirmative: JA
       negative: NEIN
@@ -20,13 +22,14 @@ de:
       our_beers: UNSERE BIERSPEZIALITÄTEN
       merchandising: MERCHANDISING
       glasses: GLÄSER
-      clothes: BEKLEIDUNG
-      accessories: ACCESOIRES
+      clothing: BEKLEIDUNG
+      accessories: ACCESSOIRES
       contacts: Kontakt
       privacy: Privacy
-      sales_conditions: Sales conditions
+      sales_conditions: Verkaufsbedingungen
+      products: Produzieren
     big_footer:
-      categories: Categories
+      categories: Kategorien  
       our_beers: Unsere Bierspezialitäten
       merchandising: Merchandising
       christmas_beer: Das Weihnachtsbier
@@ -34,6 +37,8 @@ de:
       website: www.forst.it
       mail: shop@forst.it
       follow_us: Folgen Sie uns
+      address_html: >
+        Vinschgauerstraße 11,<br /> 39022 Forst/Algund (BZ)
     home:
       splash:
         title_html: Die zauberhafte Welt der Spezialbier-Brauerei FORST heißt Sie willkommen.
@@ -51,7 +56,7 @@ de:
         title_html: ''
         description_html: >
           Entdecken Sie hier das passende Glas zu jeder FORST Bierspezialität
-        call_to_action: ERFAHREN
+        call_to_action: Erfahren sie mehr
     privacy:
       title: Datenschutzbestimmungen
       subtitle: gemäß Art. 13 der Gesetzesverordnung Nr. 196/2003

@@ -3,6 +3,10 @@ it:
     locale_en: EN
     locale_it: IT
     locale_de: DE
+    cart: Carrello
+    empty: Vuoto
+    state: Regione
+    item: Articolo
     underage:
       affirmative: SÍ
       negative: 'NO'
@@ -20,11 +24,12 @@ it:
       our_beers: LE NOSTRE BIRRE
       merchandising: IL MERCHANDISING
       glasses: I BICCHIERI
-      clothes: ABBIGLIAMENTO
+      clothing: ABBIGLIAMENTO
       accessories: ACCESSORI
       contacts: Contatti
       privacy: Informativa sulla privacy
       sales_conditions: Condizioni di vendita
+      products: Prodotti
     big_footer:
       categories: Categorie
       our_beers: Le nostre birre
@@ -34,6 +39,8 @@ it:
       website: www.forst.it
       mail: shop@forst.it
       follow_us: Seguici
+      address_html: >
+        Via Venosta 11,<br /> 39022 Forst/Lagundo (BZ)
     home:
       splash:
         title_html: Il magico mondo della Spezialbier-Brauerei FORST ti dà il benvenuto.
