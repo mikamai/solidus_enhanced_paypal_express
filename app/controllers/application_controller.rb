@@ -26,4 +26,8 @@ class ApplicationController < ActionController::Base
   end
 
   helper SpreePathsHelper
+  helper Spree::BaseHelper
+  include Spree::Core::ControllerHelpers::Order
+  include Spree::Core::ControllerHelpers::Auth
+  include Spree::Core::ControllerHelpers::Store
 end
