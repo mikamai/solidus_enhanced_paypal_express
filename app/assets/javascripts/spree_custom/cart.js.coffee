@@ -3,8 +3,7 @@ $ ->
     event.preventDefault()
     $this = $(this)
     $this.attr('disabled', true)
-    alert("ciao")
-
+    
     item_quantity_input = $this.parents('.table-cart__item').first().find('.js-remove-from-cart__quantity')
     item_quantity_input.val(0)
 
