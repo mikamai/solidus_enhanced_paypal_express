@@ -1,16 +1,11 @@
-Spree.ajax
-  url: Spree.pathFor("cart_link"),
-  success: (data) ->
-    $ ->
-      $('.js-inject-link-to-cart').html data
-
 $ ->
   $('.js-remove-from-cart').one 'click', (event) ->
     event.preventDefault()
     $this = $(this)
+    $this.attr('disabled', true)
+    alert("ciao")
 
     item_quantity_input = $this.parents('.table-cart__item').first().find('.js-remove-from-cart__quantity')
-    item_quantity_input.attr('disabled', true)
     item_quantity_input.val(0)
 
     item_form = $this.parents('form').first()
