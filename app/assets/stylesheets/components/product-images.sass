@@ -1,11 +1,16 @@
 .product-images
   #main-image
-    padding: 0 15px
+    background-color: white
+    border: 1px solid #e6e6e6
+    width: 100%
     img
-      border: 1px solid #e6e6e6
-      width: 100%
       display: block
-      background-color: white
+      margin: auto
+      height: 400px
+
+      +screen($screen-sm,$screen-md)
+        height: 330px
+
 
 ul.thumbnails
   margin: 20px 0 0 0
