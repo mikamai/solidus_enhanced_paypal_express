@@ -21,7 +21,8 @@ gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
 
 #payment methods
-gem "solidus_braintree", github: 'dfranciosi/solidus_braintree', branch: 'mysql-legacy-support'
+gem 'solidus_braintree_vzero', git: 'git@github.com:CayenneLabs/solidus_braintree_vzero', branch: 'solidus-porting'
+gem 'solidus_braintree'
 #official solidus gateways
 gem "solidus_gateway"
 gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'

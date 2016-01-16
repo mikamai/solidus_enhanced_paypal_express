@@ -3,6 +3,8 @@
 #= require spree
 #= require_tree ./spree_custom/
 #= require vendor/privacy
+#= require spree/backend/spree_braintree_vzero
+#= require spree/frontend/spree_braintree_vzero
 
 require 'core/plugin'
 App = require 'core/app'

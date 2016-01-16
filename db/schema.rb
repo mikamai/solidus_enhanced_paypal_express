@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203141612) do
+ActiveRecord::Schema.define(version: 20160110112411) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",           limit: 255, null: false
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20151203141612) do
     t.integer  "country_id",        limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "braintree_id",      limit: 255
   end
 
   add_index "spree_addresses", ["country_id"], name: "index_spree_addresses_on_country_id", using: :btree
@@ -101,6 +102,22 @@ ActiveRecord::Schema.define(version: 20151203141612) do
 
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id", using: :btree
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type", using: :btree
+
+  create_table "spree_braintree_checkouts", force: :cascade do |t|
+    t.string   "transaction_id",        limit: 255
+    t.string   "state",                 limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "paypal_email",          limit: 255
+    t.string   "advanced_fraud_data",   limit: 255
+    t.string   "risk_id",               limit: 255
+    t.string   "risk_decision",         limit: 255
+    t.string   "braintree_last_digits", limit: 4
+    t.string   "braintree_card_type",   limit: 255
+  end
+
+  add_index "spree_braintree_checkouts", ["state"], name: "index_spree_braintree_checkouts_on_state", using: :btree
+  add_index "spree_braintree_checkouts", ["transaction_id"], name: "index_spree_braintree_checkouts_on_transaction_id", using: :btree
 
   create_table "spree_calculators", force: :cascade do |t|
     t.string   "type",            limit: 255
@@ -401,6 +418,8 @@ ActiveRecord::Schema.define(version: 20151203141612) do
     t.string   "number",               limit: 255
     t.string   "cvv_response_code",    limit: 255
     t.string   "cvv_response_message", limit: 255
+    t.string   "braintree_token",      limit: 255
+    t.string   "braintree_nonce",      limit: 255
   end
 
   add_index "spree_payments", ["order_id"], name: "index_spree_payments_on_order_id", using: :btree
