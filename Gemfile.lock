@@ -40,7 +40,7 @@ GIT
 
 GIT
   remote: git@github.com:CayenneLabs/solidus_braintree_vzero
-  revision: 32877611dc2c31206fdf34e11a9fbc33f00ecf0a
+  revision: 7b6eb12209638239b378b4e7f50066924dc2511e
   branch: solidus-porting
   specs:
     solidus_braintree_vzero (2.4.0.beta)
