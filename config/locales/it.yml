@@ -1,5 +1,6 @@
 it:
   spree:
+    order_mutex_error: Order Mutex error
     locale_en: EN
     locale_it: IT
     locale_de: DE
@@ -59,6 +60,12 @@ it:
         description_html: >
           Scopri qui il bicchiere adatto ad ogni specialità birraria FORST
         call_to_action: SCOPRI
+    pages:
+      checkout:
+        payment_message_html: >
+          Premi il <strong>pulsante "PayPal"</strong> per procedere al pagamento tramite la piattaforma PayPal, oppure inserisci di seguito le informazioni relative alla tua <strong>Carta di Credito</strong>.
+          <br />
+          Per confermare il pagamento e procedere al prossimo step clicca <strong>"Salva e Continua"</strong>.
     privacy:
       title: INFORMATIVA PER IL TRATTAMENTO DEI DATI PERSONALI
       subtitle: EX ART. 13 D.LGS. 196/2003

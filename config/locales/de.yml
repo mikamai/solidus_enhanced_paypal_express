@@ -1,5 +1,6 @@
 de:
   spree:
+    order_mutex_error: Order Mutex error
     locale_en: EN
     locale_it: IT
     locale_de: DE
@@ -57,6 +58,11 @@ de:
         description_html: >
           Entdecken Sie hier das passende Glas zu jeder FORST Bierspezialität
         call_to_action: Erfahren sie mehr
+    checkout:
+      payment_message_html: >
+        Premi il <strong>pulsante "PayPal"</strong> per procedere al pagamento tramite la piattaforma PayPal, oppure inserisci di seguito le informazioni relative alla tua <strong>Carta di Credito</strong>.
+        <br />
+        Per confermare il pagamento e procedere al prossimo step clicca <strong>"Salva e Continua"</strong>.
     privacy:
       title: Datenschutzbestimmungen
       subtitle: gemäß Art. 13 der Gesetzesverordnung Nr. 196/2003

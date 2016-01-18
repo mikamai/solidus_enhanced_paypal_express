@@ -1,5 +1,6 @@
 en:
   spree:
+    order_mutex_error: Order Mutex error
     locale_en: EN
     locale_it: IT
     locale_de: DE
