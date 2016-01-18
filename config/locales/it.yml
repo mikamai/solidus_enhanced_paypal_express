@@ -63,9 +63,9 @@ it:
     pages:
       checkout:
         payment_message_html: >
-          Premi il <strong>pulsante "PayPal"</strong> per procedere al pagamento tramite la piattaforma PayPal, oppure inserisci di seguito le informazioni relative alla tua <strong>Carta di Credito</strong>.
+          Premi il <strong>pulsante "PayPal"</strong> per procedere tramite la piattaforma PayPal al pagamento, oppure inserisci di seguito le informazioni relative alla tua <strong>Carta di Credito</strong>.
           <br />
-          Per confermare il pagamento e procedere al prossimo step clicca <strong>"Salva e Continua"</strong>.
+          Per confermare il pagamento e procedere, clicca <strong>"Salva e Continua"</strong>.
     privacy:
       title: INFORMATIVA PER IL TRATTAMENTO DEI DATI PERSONALI
       subtitle: EX ART. 13 D.LGS. 196/2003
