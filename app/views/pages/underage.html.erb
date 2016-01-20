@@ -7,14 +7,7 @@
   <div class="container-fluid js_site_container js_main controller">
     <div class="row">
       <div class="col-md-12">
-        <div class="entry-page__navigation">
-          <ul class="entry-page__navigation__list">
-            <% I18n.available_locales.each do |lang| %>
-              <li class="<%= 'active' if I18n.locale == lang %>">
-                <%= link_to Spree.t(:"locale_#{lang}"), url_for(locale: lang) %>
-              </li>
-            <% end %>
-          </ul>
+        <%= render partial: "navigation" %>
         </div>
       </div>
     </div>
