@@ -39,8 +39,8 @@ GIT
       railties (~> 4.0)
 
 GIT
-  remote: git@github.com:CayenneLabs/solidus_braintree_vzero
-  revision: 67a0c6812605b12142d2e5cc86b0284ff2a60a73
+  remote: git@github.com:curcumalabs/solidus_braintree_vzero
+  revision: d250a2e89b4e4bd4b0c3da159e6b6f212eb47bde
   branch: solidus-porting
   specs:
     solidus_braintree_vzero (2.4.0.beta)
