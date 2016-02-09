@@ -10,9 +10,7 @@ Behind-the-scenes, this extension uses [PayPal's Merchant Ruby SDK](https://gith
 
 1. Add this extension to your Gemfile with this line:
 
-        gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
-
-The `branch` option is important: it must match the version of Spree you're using. Use 2-2-stable if you're using Spree 2-2-stable or any 2.2.x version.
+        gem 'solidus_paypal_express', github: 'solidusio-contrib/solidus_paypal_express', branch: 'master'
 
 2. Install the gem using Bundler:
 
@@ -126,9 +124,9 @@ Starting point:
 * Ensure specs pass by running `bundle exec rspec spec`
 * Submit your pull request
 
-Copyright (c) 2013-2015 Spree Commerce and contributors, released under the [New BSD License][3]
+Copyright (c) 2016 Solidus Commerce and contributors, released under the [New BSD License][3]
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
-[2]: https://github.com/spree/better_spree_paypal_express/issues
-[3]: https://github.com/spree/better_spree_paypal_express/tree/master/LICENSE.md
-[4]: https://github.com/spree/spree_paypal_express
+[2]: https://github.com/solidusio/solidus_paypal_express/issues
+[3]: https://github.com/solidusio/solidus_paypal_express/tree/master/LICENSE.md
+[4]: https://github.com/solidusio/solidus_paypal_express
