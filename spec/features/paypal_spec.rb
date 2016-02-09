@@ -364,8 +364,9 @@ describe "PayPal", js: true, type: :feature do
   end
 
   def login_to_paypal
-    fill_in "Email", with: "solidus-test@example.com"
-    fill_in "Password", with: "spree1234"
+    click_on "paypal_button"
+    fill_in "email", with: "solidus-test@example.com"
+    fill_in "mypassword", with: "spree1234"
     click_button "Log in to PayPal"
   end
 
