@@ -1,10 +1,10 @@
 describe Spree::Gateway::PayPalExpress do
-  let(:gateway) { Spree::Gateway::PayPalExpress.create!(name: "PayPalExpress", environment: Rails.env) }
+  let(:gateway) { Spree::Gateway::PayPalExpress.create!(name: "PayPalExpress") }
 
   context "payment purchase" do
     let(:payment) do
       payment = FactoryGirl.create(:payment, payment_method: gateway, amount: 10)
-      allow(payment).to receive_messages source: mock_model(Spree::PaypalExpressCheckout, token: 'fake_token', payer_id: 'fake_payer_id', update: true)
+      allow(payment).to receive_messages source: double(Spree::PaypalExpressCheckout, token: 'fake_token', payer_id: 'fake_payer_id', update: true)
       payment
     end
 
@@ -45,17 +45,12 @@ describe Spree::Gateway::PayPalExpress do
 
     # Test for #11
     it "succeeds" do
-      response = double(
-        'pp_response',
-        success?: true,
-        errors: []
-      )
+      response = double('pp_response', success?: true)
       allow(response).
         to receive_message_chain("do_express_checkout_payment_response_details.payment_info.first.transaction_id").and_return '12345'
       expect(provider).
         to receive(:do_express_checkout_payment).
         and_return(response)
-
       expect { payment.authorize! }.to_not raise_error
     end
 
