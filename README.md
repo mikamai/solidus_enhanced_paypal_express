@@ -1,4 +1,4 @@
-# Spree PayPal Express
+# Solidus PayPal Express
 
 [![Build Status](https://travis-ci.org/spree-contrib/better_spree_paypal_express.svg?branch=2-4-stable)](https://travis-ci.org/spree-contrib/better_spree_paypal_express)
 
@@ -18,7 +18,7 @@ Behind-the-scenes, this extension uses [PayPal's Merchant Ruby SDK](https://gith
 
 3. Copy & run migrations
 
-        bundle exec rails g spree_paypal_express:install
+        bundle exec rails g solidus_paypal_express:install
 
 4. Restart your server
 
