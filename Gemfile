@@ -7,7 +7,7 @@ gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'browserify-rails'
-gem 'jquery-rails'
+gem 'jquery-rails', '< 4.0'
 gem 'font-awesome-sass', '~> 4.4.0'
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
 gem 'dbmanager'
@@ -28,6 +28,7 @@ gem "solidus_gateway"
 gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
 gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
 gem 'solidus_simple_weight_calculator', github: 'dfranciosi/solidus_simple_weight_calculator', branch: 'master'
+gem 'solidus_paypal_express', github: 'dfranciosi/solidus_paypal_express', branch: 'solidus-porting'
 
 group :development do
   gem 'spring'

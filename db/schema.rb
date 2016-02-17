@@ -149,6 +149,15 @@ ActiveRecord::Schema.define(version: 20160110112411) do
   add_index "spree_cartons", ["number"], name: "index_spree_cartons_on_number", unique: true, using: :btree
   add_index "spree_cartons", ["stock_location_id"], name: "index_spree_cartons_on_stock_location_id", using: :btree
 
+  create_table "spree_configurations", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "type",       limit: 50
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_configurations", ["name", "type"], name: "index_spree_configurations_on_name_and_type", using: :btree
+
   create_table "spree_countries", force: :cascade do |t|
     t.string   "iso_name",        limit: 255
     t.string   "iso",             limit: 255
@@ -184,6 +193,19 @@ ActiveRecord::Schema.define(version: 20160110112411) do
     t.integer  "stock_location_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "spree_gateways", force: :cascade do |t|
+    t.string   "type",        limit: 255
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.boolean  "active",                    default: true
+    t.string   "environment", limit: 255,   default: "development"
+    t.string   "server",      limit: 255,   default: "test"
+    t.boolean  "test_mode",                 default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "preferences", limit: 65535
   end
 
   create_table "spree_inventory_units", force: :cascade do |t|
@@ -530,6 +552,14 @@ ActiveRecord::Schema.define(version: 20160110112411) do
   add_index "spree_products", ["slug"], name: "index_spree_products_on_slug", using: :btree
   add_index "spree_products", ["slug"], name: "permalink_idx_unique", unique: true, using: :btree
 
+  create_table "spree_products_promotion_rules", id: false, force: :cascade do |t|
+    t.integer "product_id",        limit: 4
+    t.integer "promotion_rule_id", limit: 4
+  end
+
+  add_index "spree_products_promotion_rules", ["product_id"], name: "index_products_promotion_rules_on_product_id", using: :btree
+  add_index "spree_products_promotion_rules", ["promotion_rule_id"], name: "index_products_promotion_rules_on_promotion_rule_id", using: :btree
+
   create_table "spree_products_taxons", force: :cascade do |t|
     t.integer "product_id", limit: 4
     t.integer "taxon_id",   limit: 4
@@ -863,6 +893,11 @@ ActiveRecord::Schema.define(version: 20160110112411) do
 
   add_index "spree_shipping_methods", ["tax_category_id"], name: "index_spree_shipping_methods_on_tax_category_id", using: :btree
 
+  create_table "spree_shipping_methods_zones", id: false, force: :cascade do |t|
+    t.integer "shipping_method_id", limit: 4
+    t.integer "zone_id",            limit: 4
+  end
+
   create_table "spree_shipping_rates", force: :cascade do |t|
     t.integer  "shipment_id",        limit: 4
     t.integer  "shipping_method_id", limit: 4
@@ -1181,6 +1216,16 @@ ActiveRecord::Schema.define(version: 20160110112411) do
 
   add_index "spree_taxons_promotion_rules", ["promotion_rule_id"], name: "index_spree_taxons_promotion_rules_on_promotion_rule_id", using: :btree
   add_index "spree_taxons_promotion_rules", ["taxon_id"], name: "index_spree_taxons_promotion_rules_on_taxon_id", using: :btree
+
+  create_table "spree_tokenized_permissions", force: :cascade do |t|
+    t.integer  "permissable_id",   limit: 4
+    t.string   "permissable_type", limit: 255
+    t.string   "token",            limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_tokenized_permissions", ["permissable_id", "permissable_type"], name: "index_tokenized_name_and_type", using: :btree
 
   create_table "spree_trackers", force: :cascade do |t|
     t.string   "analytics_id", limit: 255
