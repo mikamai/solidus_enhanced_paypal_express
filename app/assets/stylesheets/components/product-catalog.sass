@@ -15,12 +15,18 @@
     position: absolute
     width: 100%
     text-align: center
-    font-size: 35px
-    top: 25%
+    font-size: 70px
+    top: 15%
     color: #fff
     font-weight: 400
     text-transform: uppercase
     z-index: 3
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.67)
+    +max-screen($screen-md)
+      font-size: 50px
+    +max-screen($screen-sm)
+      font-size: 35px
+      top: 25%
 
   &__background
     position: absolute
