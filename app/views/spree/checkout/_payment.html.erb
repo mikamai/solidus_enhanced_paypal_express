@@ -39,7 +39,6 @@
           <% end %>
 
           <div id="payment-method-fields">
-            <%= Spree.t('pages.checkout.payment_message_html') %>
             <% @order.available_payment_methods.each do |method| %>
             <ul class="list-payment-method">
               <li class="list-payment-method-possibility">
