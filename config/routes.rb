@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     get  'underage',          to: 'pages#underage',         as: 'underage'
     get  'yes-answer',        to: 'pages#yes_answer',       as: 'yes_answer'
     get  'no-answer',         to: 'pages#no_answer',        as: 'no_answer'
-    get  'mockup/:page',      to: 'mockup#static'
     get  'static-page',       to: 'pages#static-page'
     get  'privacy',           to: 'pages#privacy',          as: 'privacy'
     get  'sales-conditions',  to: 'pages#sales_conditions', as: 'sales_conditions'
