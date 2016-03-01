@@ -3,8 +3,6 @@
 #= require spree
 #= require_tree ./spree_custom/
 #= require vendor/privacy
-#= require spree/frontend/solidus_paypal_express
-#= require spree/backend/solidus_paypal_express
 
 require 'core/plugin'
 App = require 'core/app'
