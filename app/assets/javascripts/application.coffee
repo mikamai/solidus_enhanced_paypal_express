@@ -1,6 +1,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require spree
+#= require spree/frontend/all
 #= require_tree ./spree_custom/
 #= require vendor/privacy
 
