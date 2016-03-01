@@ -12,6 +12,7 @@ gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
 gem 'dbmanager'
 gem 'route_translator'
 gem 'airbrake', '~> 5.0'
+gem 'browserify-rails'
 
 
 # Solidus!
