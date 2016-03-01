@@ -6,9 +6,6 @@
       </div>
     </div>
   </div>
-
-
-
   <div class="wrapper">
     <div class="container">
       <% cache [I18n.locale, current_currency, @product] do %>
@@ -35,8 +32,8 @@
         </div>
       </div>
       <div class="product-description">
-      <br/>
-      <hr width="100%">
+        <div class="product-frame"></div>
+        <div class="product-frame-border"></div>
         <div class="row description">
           <div class="col-md-12">
             <h2 class="product-details__subtitle"><%= Spree.t(:description) %></h2>
