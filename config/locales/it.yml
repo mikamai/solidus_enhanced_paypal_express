@@ -8,6 +8,7 @@ it:
     empty: Vuoto
     state: Regione
     item: Articolo
+    items_cannot_be_shipped: Siamo spiacenti, possiamo spedire alcolici solo in Italia.
     underage:
       affirmative: SÍ
       negative: 'NO'

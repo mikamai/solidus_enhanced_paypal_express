@@ -6,6 +6,7 @@ de:
     locale_de: DE
     cart: 'Warenkorb'
     empty: 'Leer'
+    items_cannot_be_shipped: Leider können wir Alkohol nur in Italien versandt.
     underage:
       affirmative: JA
       negative: NEIN

@@ -18,7 +18,7 @@
       </tbody>
     <% end %>
 
-    <tbody data-hook="order_details_tax_adjustments">
+    <tbody data-hook="order_details_tax_adjustments" class='order_summary_taxes'>
       <% order.all_adjustments.nonzero.tax.eligible.group_by(&:label).each do |label, adjustments| %>
         <tr class="total">
           <td><%= label %></td>
