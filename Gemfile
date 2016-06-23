@@ -8,7 +8,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '< 4.0'
 gem 'font-awesome-sass', '~> 4.4.0'
-gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
 gem 'dbmanager'
 gem 'route_translator'
 gem 'airbrake', '~> 5.0'
@@ -16,7 +15,7 @@ gem 'browserify-rails'
 
 
 # Solidus!
-gem 'solidus'
+gem 'solidus', '~> 1.3.0.rc2'
 gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
 
