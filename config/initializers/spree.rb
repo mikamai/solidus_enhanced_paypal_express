@@ -5,6 +5,7 @@ Spree.config do |config|
   # Without this preferences are loaded and persisted to the database. This
   # changes them to be stored in memory.
   # This will be the default in a future version.
+  # This line resets all preferences! It should be the first line in the block
   config.use_static_preferences!
 
   # Core:
@@ -18,9 +19,10 @@ Spree.config do |config|
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
 
-  # When true, product caches are only invalidated when they come in or out of
-  # stock. Default is to invalidate cache on any inventory changes.
-  # config.binary_inventory_cache = true
+  # When set, product caches are only invalidated when they fall below or rise
+  # above the inventory_cache_threshold that is set. Default is to invalidate cache on
+  # any inventory changes.
+  # config.inventory_cache_threshold = 3
 
 
   # Frontend:
@@ -29,7 +31,7 @@ Spree.config do |config|
   # config.logo = "logo/solidus_logo.png"
 
   # Template to use when rendering layout
-  config.layout = "layouts/application"
+  # config.layout = "spree/layouts/spree_application"
 
 
   # Admin:
@@ -46,8 +48,26 @@ Spree.config do |config|
   #   secret_key: ENV['STRIPE_SECRET_KEY'],
   #   publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
   #   server: Rails.env.production? ? 'production' : 'test',
-  #   test: !Rails.env.production?
+  #   test_mode: !Rails.env.production?
   # )
+end
+
+Spree::Frontend::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.locale = 'it'
+end
+
+Spree::Backend::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.locale = 'en'
+end
+
+Spree::Api::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.requires_authentication = true
 end
 
 Spree.user_class = "Spree::LegacyUser"
