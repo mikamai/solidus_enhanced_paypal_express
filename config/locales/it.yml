@@ -495,3 +495,27 @@ it:
 
     taxons:
       see_products: Scopri i prodotti
+
+# IT translation waiting for updates on solidus_i18n
+# Frontend
+    adjustment_labels:
+      tax_rates:
+        sales_tax: '%{name}'
+        vat: '%{name} (incl.)'
+        sales_tax_with_rate: '%{name} %{amount}'
+        vat_with_rate: '%{name} %{amount} (incl.)'
+        sales_tax_refund: 'Rimborso: %{name}'
+        vat_refund: ': %{name} (incl.)'
+        sales_tax_refund_with_rate: 'Rimborso: %{name} %{amount}'
+        vat_refund_with_rate: 'Rimborso: %{name} %{amount} (incl.)'
+# Backend
+    admin:
+      tab:
+        areas: Zone
+        taxes: Categorie di Tassazione
+        stock_items: Gestione Magazzino
+    listing_tax_categories: Categorie di Tassazione
+    back_to_tax_categories_list: Torna alle Categorie di Tassazione
+    editing_tax_category: Modifica Categoria di Tassazione
+    listing_orders: Ordini
+    shipment_number: Codice di spedizione
