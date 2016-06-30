@@ -15,7 +15,7 @@ gem 'browserify-rails'
 
 
 # Solidus!
-gem 'solidus', '~> 1.3.0.rc2'
+gem 'solidus', '~> 1.3.0'
 gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
 

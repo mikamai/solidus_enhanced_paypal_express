@@ -154,7 +154,7 @@ GEM
     coffee-script-source (1.10.0)
     colorize (0.7.7)
     concurrent-ruby (1.0.2)
-    css_parser (1.4.2)
+    css_parser (1.4.5)
       addressable
     dbmanager (0.4.2)
       rails
@@ -182,7 +182,7 @@ GEM
     execjs (2.7.0)
     ffaker (2.2.0)
     ffi (1.9.10)
-    font-awesome-rails (4.6.3.0)
+    font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     font-awesome-sass (4.4.0)
       sass (>= 3.2)
@@ -292,8 +292,8 @@ GEM
     polyamorous (1.3.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
-    premailer (1.8.6)
-      css_parser (>= 1.3.6)
+    premailer (1.8.7)
+      css_parser (>= 1.4.5)
       htmlentities (>= 4.0.0)
     premailer-rails (1.9.3)
       actionmailer (>= 3, < 6)
@@ -474,7 +474,7 @@ GEM
     sprockets (3.6.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.0.4)
+    sprockets-rails (3.1.1)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
@@ -551,7 +551,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sassc-rails
   slackistrano
-  solidus (~> 1.3.0.rc2)
+  solidus (~> 1.3.0)
   solidus_auth_devise
   solidus_braintree
   solidus_braintree_vzero!
