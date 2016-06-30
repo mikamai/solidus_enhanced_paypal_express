@@ -24,7 +24,7 @@ gem 'solidus_braintree_vzero', git: 'git@github.com:curcumalabs/solidus_braintre
 gem 'solidus_braintree'
 #official solidus gateways
 gem "solidus_gateway"
-gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
+gem 'solidus_i18n', github: 'luukveenis/solidus_i18n', branch: 'update-it-translations'
 gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
 gem 'solidus_simple_weight_calculator', github: 'dfranciosi/solidus_simple_weight_calculator', branch: 'master'
 gem 'solidus_paypal_express', github: 'dfranciosi/solidus_paypal_express', branch: 'solidus-porting'

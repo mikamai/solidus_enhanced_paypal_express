@@ -16,19 +16,9 @@ GIT
       solidus_core (~> 1.2)
 
 GIT
-  remote: git://github.com/solidusio-contrib/solidus_globalize.git
-  revision: 02ed2c1d3937c68c071800c27cc17fc53f3b90de
-  branch: master
-  specs:
-    solidus_globalize (3.1.0.beta)
-      friendly_id-globalize
-      globalize (~> 5.0)
-      solidus_i18n (~> 1.0)
-
-GIT
-  remote: git://github.com/solidusio-contrib/solidus_i18n.git
-  revision: 8999adb11178e50bdf70f6413e4a982274018324
-  branch: master
+  remote: git://github.com/luukveenis/solidus_i18n.git
+  revision: d11085e747adc4f9d3cd0b255c26bd58343ad2ea
+  branch: update-it-translations
   specs:
     solidus_i18n (1.0.0)
       deface (~> 1.0)
@@ -37,6 +27,16 @@ GIT
       rails-i18n (~> 4.0.1)
       routing-filter (~> 0.5.0)
       solidus_core (~> 1.1)
+
+GIT
+  remote: git://github.com/solidusio-contrib/solidus_globalize.git
+  revision: 02ed2c1d3937c68c071800c27cc17fc53f3b90de
+  branch: master
+  specs:
+    solidus_globalize (3.1.0.beta)
+      friendly_id-globalize
+      globalize (~> 5.0)
+      solidus_i18n (~> 1.0)
 
 GIT
   remote: git@github.com:curcumalabs/solidus_braintree_vzero
