@@ -59,6 +59,7 @@ de:
         description_html: >
           Entdecken Sie hier das passende Glas zu jeder FORST Bierspezialität
         call_to_action: Erfahren sie mehr
+  pages:
     checkout:
       payment_message_html: >
         Klicken Sie auf <strong>"PayPal"</strong> für eine Zahlung mittels PayPal-System oder geben Sie nachstehend die Informationen zu Ihrer Kreditkarte ein.
@@ -501,3 +502,16 @@ de:
 
     taxons:
       see_products: Erfahren Sie mehr
+
+# DE translation waiting for updates on solidus_i18n
+# Frontend
+    adjustment_labels:
+      tax_rates:
+        sales_tax: '%{name}'
+        vat: '%{name} (incl.)'
+        sales_tax_with_rate: '%{name} %{amount}'
+        vat_with_rate: '%{name} %{amount} (incl.)'
+        sales_tax_refund: 'Refund: %{name}'
+        vat_refund: 'Refund: %{name} (incl.)'
+        sales_tax_refund_with_rate: 'Refund: %{name} %{amount}'
+        vat_refund_with_rate: 'Refund: %{name} %{amount} (incl.)'

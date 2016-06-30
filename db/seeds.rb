@@ -111,3 +111,7 @@ taxons.each do |taxon_attrs|
     Spree::Taxon.create!(taxon_attrs)
   end
 end
+
+
+Spree::Core::Engine.load_seed if defined?(Spree::Core)
+Spree::Auth::Engine.load_seed if defined?(Spree::Auth)

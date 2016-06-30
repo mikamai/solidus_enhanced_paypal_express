@@ -8,7 +8,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '< 4.0'
 gem 'font-awesome-sass', '~> 4.4.0'
-gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
 gem 'dbmanager'
 gem 'route_translator'
 gem 'airbrake', '~> 5.0'
@@ -16,7 +15,7 @@ gem 'browserify-rails'
 
 
 # Solidus!
-gem 'solidus'
+gem 'solidus', '~> 1.3.0'
 gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
 
@@ -25,7 +24,7 @@ gem 'solidus_braintree_vzero', git: 'git@github.com:curcumalabs/solidus_braintre
 gem 'solidus_braintree'
 #official solidus gateways
 gem "solidus_gateway"
-gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
+gem 'solidus_i18n', github: 'luukveenis/solidus_i18n', branch: 'update-it-translations'
 gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
 gem 'solidus_simple_weight_calculator', github: 'dfranciosi/solidus_simple_weight_calculator', branch: 'master'
 gem 'solidus_paypal_express', github: 'dfranciosi/solidus_paypal_express', branch: 'solidus-porting'
