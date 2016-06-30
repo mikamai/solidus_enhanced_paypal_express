@@ -59,6 +59,7 @@ de:
         description_html: >
           Entdecken Sie hier das passende Glas zu jeder FORST Bierspezialität
         call_to_action: Erfahren sie mehr
+  pages:
     checkout:
       payment_message_html: >
         Klicken Sie auf <strong>"PayPal"</strong> für eine Zahlung mittels PayPal-System oder geben Sie nachstehend die Informationen zu Ihrer Kreditkarte ein.
