@@ -10,6 +10,9 @@
     clear: both
     margin-bottom: 30px
 
+    +max-screen($screen-sm)
+      text-align: center
+
   &__stepper
     width: 60px
     text-align: center
@@ -22,7 +25,7 @@
 
   &__title
     font-weight: 400
-    font-size: 35px
+    font-size: 33px
     text-transform: uppercase
     color: $color-green-forst
     margin: 0
@@ -38,16 +41,19 @@
       margin-top: 14px
 
   &__subtitle
-    font-weight: 200
-    font-size: 20px
+    font-weight: 400
+    font-size: 22px
     text-transform: uppercase
-    color: #000
+    color: #46521b
     margin: 0
     clear: both
     width: 100%
 
+    +max-screen($screen-sm)
+      // text-align: center
+
   &__price
-    font-size: 30px
+    font-size: 26px
     padding: 5px 18px
     border: 2px solid $color-gold
     border-left: 0
