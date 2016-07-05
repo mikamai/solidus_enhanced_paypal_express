@@ -3,10 +3,17 @@
     background-color: white
     border: 1px solid #e6e6e6
     width: 100%
+
     img
       display: block
       margin: auto
       height: 400px
+
+      +max-screen($screen-md)
+        width: 100%
+        height: auto
+        // max-height: 100%
+        // height: auto
 
       +screen($screen-sm,$screen-md)
         height: 330px
@@ -24,12 +31,14 @@ ul.thumbnails
 
   li.tmb-all, li.tmb-1
     float: left
-    padding: 0 15px
+    padding: 0 5px
     margin: 0
-    width: 33.33333333%
+    width: 100px
 
-    +max-screen($screen-sm)
+    +max-screen($screen-md)
       padding: 0 5px
+      width: 25%
+      margin: 5px 0
 
     a
       margin: 0
@@ -47,3 +56,7 @@ ul.thumbnails
     &.selected
       img
         border: 1px solid $color-green-forst
+
+    &:hover
+      img
+        border: 1px solid #ccc
