@@ -1,5 +1,5 @@
 <div class="col-md-12 field">
-  <%= image_tag 'credit_cards/accepted_credit_card.png', :id => 'credit-card-image' %>
+  <img id="credit-card-image" src="<%= image_path 'credit_cards/accepted_credit_card.png' %>" alt="" />
 </div>
 
 <% param_prefix = "payment_source[#{payment_method.id}]" %>
