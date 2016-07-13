@@ -37,6 +37,17 @@ GIT
       solidus_core (~> 1.1)
 
 GIT
+  remote: git://github.com/solidusio-contrib/solidus_editor.git
+  revision: 3d0f75aadb86059239e74459ac77798346a23125
+  branch: master
+  specs:
+    solidus_editor (2.2.1)
+      ckeditor (~> 4.1.2)
+      deface (~> 1.0.2)
+      solidus_backend (~> 1.0)
+      tinymce-rails (~> 4.2.5)
+
+GIT
   remote: git://github.com/solidusio-contrib/solidus_globalize.git
   revision: 02ed2c1d3937c68c071800c27cc17fc53f3b90de
   branch: master
@@ -147,6 +158,9 @@ GEM
     carmen (1.0.2)
       activesupport (>= 3.0.0)
     chronic (0.10.2)
+    ckeditor (4.1.6)
+      cocaine
+      orm_adapter (~> 0.5.0)
     cldr-plurals-runtime-rb (1.0.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -498,6 +512,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    tinymce-rails (4.2.8)
+      railties (>= 3.1.1)
     truncate_html (0.9.2)
     twitter_cldr (3.3.0)
       camertron-eprun
@@ -561,6 +577,7 @@ DEPENDENCIES
   solidus_auth_devise
   solidus_braintree
   solidus_braintree_vzero!
+  solidus_editor!
   solidus_gateway!
   solidus_globalize!
   solidus_i18n!
