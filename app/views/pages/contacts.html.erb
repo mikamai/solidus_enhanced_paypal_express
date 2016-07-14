@@ -5,8 +5,8 @@
         <%= render partial: "navigation", locals: { sticky: true } %>
 
         <div class="contacts">
-          <h2 class="contacts__title"><%= Spree.t('contacts.title') %></h2>
-          <h3 class="contacts__subtitle"><%= Spree.t('contacts.subtitle') %></h3>
+          <h2 class="contacts__title"><%= Spree.t('pages.contacts.title') %></h2>
+          <h3 class="contacts__subtitle"><%= Spree.t('pages.contacts.subtitle') %></h3>
           <img data-fit="true" data-align="top center" class="coverized contacts__background" src="<%= image_path 'contacts/contacts.jpg' %>" alt="">
         </div>
 
@@ -19,7 +19,7 @@
 
                   <div class="contacts-info address">
                     <a href="https://goo.gl/maps/M73bdNeaJB52" target="_blank">
-                    <i class="icon-pin"></i><%= Spree.t('contacts.address_contacts') %></a>
+                    <i class="icon-pin"></i><%= Spree.t('pages.contacts.address_contacts') %></a>
                   </div>
 
                   <div class="contacts-info mail">
