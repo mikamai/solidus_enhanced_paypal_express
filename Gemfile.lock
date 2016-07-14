@@ -1,4 +1,62 @@
 GIT
+  remote: git://github.com/dfranciosi/solidus.git
+  revision: 70afa16cb42becd7995770de2d0094d0fda90a4a
+  branch: shipping-specs-as-variant-additional-fields
+  specs:
+    solidus (1.4.0.alpha)
+      solidus_api (= 1.4.0.alpha)
+      solidus_backend (= 1.4.0.alpha)
+      solidus_core (= 1.4.0.alpha)
+      solidus_frontend (= 1.4.0.alpha)
+      solidus_sample (= 1.4.0.alpha)
+    solidus_api (1.4.0.alpha)
+      rabl (>= 0.9.4.pre1, < 0.12.0)
+      solidus_core (= 1.4.0.alpha)
+      versioncake (~> 3.0)
+    solidus_backend (1.4.0.alpha)
+      bourbon (>= 4, < 6)
+      coffee-rails
+      font-awesome-rails (~> 4.0)
+      handlebars_assets (~> 0.23)
+      jquery-rails
+      jquery-ui-rails (~> 5.0.0)
+      sass-rails
+      select2-rails (= 3.5.9.1)
+      solidus_api (= 1.4.0.alpha)
+      solidus_core (= 1.4.0.alpha)
+    solidus_core (1.4.0.alpha)
+      activemerchant (~> 1.48)
+      acts_as_list (~> 0.3)
+      awesome_nested_set (~> 3.0, >= 3.0.1)
+      cancancan (~> 1.10)
+      carmen (~> 1.0.0)
+      ffaker (~> 2.0)
+      friendly_id (~> 5.0)
+      highline (~> 1.6.18)
+      kaminari (~> 0.15, >= 0.15.1)
+      monetize (~> 1.1)
+      paperclip (~> 4.2)
+      paranoia (~> 2.1, >= 2.1.4)
+      premailer-rails
+      rails (~> 4.2.5)
+      ransack (~> 1.6)
+      responders
+      state_machines-activerecord (~> 0.2)
+      stringex (~> 1.5.1)
+      truncate_html (~> 0.9, >= 0.9.2)
+      twitter_cldr (~> 3.0)
+    solidus_frontend (1.4.0.alpha)
+      canonical-rails (~> 0.0.4)
+      coffee-rails
+      font-awesome-rails (~> 4.0)
+      jquery-rails
+      sass-rails
+      solidus_api (= 1.4.0.alpha)
+      solidus_core (= 1.4.0.alpha)
+    solidus_sample (1.4.0.alpha)
+      solidus_core (= 1.4.0.alpha)
+
+GIT
   remote: git://github.com/dfranciosi/solidus_gateway.git
   revision: bc6704d3a704fcdefb46799cb633669d820b1689
   branch: remove-activemerchant-version-lock
@@ -117,8 +175,8 @@ GEM
       airbrake-ruby (~> 1.4)
     airbrake-ruby (1.4.3)
     arel (6.0.3)
-    awesome_nested_set (3.0.3)
-      activerecord (>= 4.0.0, < 5)
+    awesome_nested_set (3.1.1)
+      activerecord (>= 4.0.0, < 5.1)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -278,6 +336,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mimemagic (0.3.0)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     monetize (1.4.0)
@@ -298,11 +357,12 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
-    paperclip (4.2.4)
+    paperclip (4.3.7)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
       mime-types
+      mimemagic (= 0.3.0)
     paranoia (2.1.5)
       activerecord (~> 4.0)
     paypal-sdk-core (0.2.10)
@@ -311,13 +371,13 @@ GEM
     paypal-sdk-merchant (1.106.1)
       paypal-sdk-core (~> 0.2.3)
     pkg-config (1.1.7)
-    polyamorous (1.3.0)
+    polyamorous (1.3.1)
       activerecord (>= 3.0)
     polyglot (0.3.5)
     premailer (1.8.7)
       css_parser (>= 1.4.5)
       htmlentities (>= 4.0.0)
-    premailer-rails (1.9.3)
+    premailer-rails (1.9.4)
       actionmailer (>= 3, < 6)
       premailer (~> 1.7, >= 1.7.9)
     pry (0.10.3)
@@ -426,16 +486,6 @@ GEM
       capistrano (>= 3.0.1)
       json
     slop (3.6.0)
-    solidus (1.3.0)
-      solidus_api (= 1.3.0)
-      solidus_backend (= 1.3.0)
-      solidus_core (= 1.3.0)
-      solidus_frontend (= 1.3.0)
-      solidus_sample (= 1.3.0)
-    solidus_api (1.3.0)
-      rabl (>= 0.9.4.pre1, < 0.12.0)
-      solidus_core (= 1.3.0)
-      versioncake (~> 3.0)
     solidus_auth_devise (1.4.0)
       deface (~> 1.0.0)
       devise (~> 3.5.1)
@@ -443,51 +493,9 @@ GEM
       json
       multi_json
       solidus_core (>= 1.0.6, < 2)
-    solidus_backend (1.3.0)
-      bourbon (>= 4, < 6)
-      coffee-rails
-      font-awesome-rails (~> 4.0)
-      handlebars_assets (~> 0.23)
-      jquery-rails
-      jquery-ui-rails (~> 5.0.0)
-      sass-rails
-      select2-rails (= 3.5.9.1)
-      solidus_api (= 1.3.0)
-      solidus_core (= 1.3.0)
     solidus_braintree (0.2.1)
       braintree (~> 2.46)
       solidus (>= 1.0.0, < 2)
-    solidus_core (1.3.0)
-      activemerchant (~> 1.48)
-      acts_as_list (~> 0.3)
-      awesome_nested_set (~> 3.0.1)
-      cancancan (~> 1.10)
-      carmen (~> 1.0.0)
-      ffaker (~> 2.0)
-      friendly_id (~> 5.0)
-      highline (~> 1.6.18)
-      kaminari (~> 0.15, >= 0.15.1)
-      monetize (~> 1.1)
-      paperclip (~> 4.2.0)
-      paranoia (~> 2.1, >= 2.1.4)
-      premailer-rails
-      rails (~> 4.2.5)
-      ransack (~> 1.6)
-      responders
-      state_machines-activerecord (~> 0.2)
-      stringex (~> 1.5.1)
-      truncate_html (= 0.9.2)
-      twitter_cldr (~> 3.0)
-    solidus_frontend (1.3.0)
-      canonical-rails (~> 0.0.4)
-      coffee-rails
-      font-awesome-rails (~> 4.0)
-      jquery-rails
-      sass-rails
-      solidus_api (= 1.3.0)
-      solidus_core (= 1.3.0)
-    solidus_sample (1.3.0)
-      solidus_core (= 1.3.0)
     spring (1.7.1)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -514,11 +522,10 @@ GEM
     tilt (2.0.5)
     tinymce-rails (4.2.8)
       railties (>= 3.1.1)
-    truncate_html (0.9.2)
-    twitter_cldr (3.3.0)
+    truncate_html (0.9.3)
+    twitter_cldr (3.5.0)
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.0.0)
-      json
       tzinfo
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -573,7 +580,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sassc-rails
   slackistrano
-  solidus (~> 1.3.0)
+  solidus!
   solidus_auth_devise
   solidus_braintree
   solidus_braintree_vzero!
@@ -589,4 +596,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
