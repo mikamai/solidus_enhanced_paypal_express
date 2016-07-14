@@ -14,7 +14,12 @@
                 <p><%= truncate(product.name, length: 50) %></p>
               </div>
               <div class="product-catalog__price" itemprop="price">
-                <p><%= display_price(product) %></p>
+                <% if has_starting_from_price?(product) %>
+                  <div class="product-catalog__starting-from">
+                    <%= Spree.t('starting_from') %>
+                  </div>
+                <% end %>
+                <%= display_price(product) %>
               </div>
             </div>
           </a>
