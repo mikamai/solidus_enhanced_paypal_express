@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713165252) do
+ActiveRecord::Schema.define(version: 20160714085035) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -495,14 +495,15 @@ ActiveRecord::Schema.define(version: 20160713165252) do
   add_index "spree_preferences", ["key"], name: "index_spree_preferences_on_key", unique: true, using: :btree
 
   create_table "spree_prices", force: :cascade do |t|
-    t.integer  "variant_id",  limit: 4,                                           null: false
-    t.decimal  "amount",                  precision: 10, scale: 2
-    t.string   "currency",    limit: 255
+    t.integer  "variant_id",    limit: 4,                                            null: false
+    t.decimal  "amount",                    precision: 10, scale: 2
+    t.string   "currency",      limit: 255
     t.datetime "deleted_at"
-    t.boolean  "is_default",                                       default: true, null: false
+    t.boolean  "is_default",                                         default: true,  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "country_iso", limit: 2
+    t.string   "country_iso",   limit: 2
+    t.boolean  "starting_from",                                      default: false
   end
 
   add_index "spree_prices", ["country_iso"], name: "index_spree_prices_on_country_iso", using: :btree
