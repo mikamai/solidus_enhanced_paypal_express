@@ -8,6 +8,13 @@ de:
     empty: 'Leer'
     items_cannot_be_shipped: Leider können wir Alkohol nur in Italien versandt.
     starting_from: Ab
+    categories:
+      categories: Kategorien
+      beers: Biere
+      merchandising: Merchandising
+      clothing: Bekleidung
+      accessories: Accessoires
+      glasses: Gläser
     underage:
       affirmative: JA
       negative: NEIN
