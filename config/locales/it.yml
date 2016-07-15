@@ -10,6 +10,8 @@ it:
     item: Articolo
     items_cannot_be_shipped: Siamo spiacenti, possiamo spedire alcolici solo in Italia.
     starting_from: A partire da
+    taxons:
+      see_products: Scopri i prodotti
     underage:
       affirmative: SÍ
       negative: 'NO'
@@ -494,8 +496,6 @@ it:
         subtitle: Se vuoi saperne più su di noi, hai domande o ti serve aiuto sentiti libero di contattarci. Ci piacerebbe molto conoscerti!
         address_contacts: Birra Forst Via Venosta, 11 39022 Forst/Lagundo (BZ)
 
-      taxons:
-        see_products: Scopri i prodotti
 
 # IT translation waiting for updates on solidus_i18n
 # Frontend
