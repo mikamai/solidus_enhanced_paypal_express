@@ -16,7 +16,7 @@ gem 'browserify-rails'
 
 # Solidus!
 #gem 'solidus', '~> 1.3.0'
-gem 'solidus', github: 'dfranciosi/solidus', branch: 'shipping-specs-as-variant-additional-fields'
+gem 'solidus', github: 'solidusio/solidus', branch: 'master'
 gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
 
