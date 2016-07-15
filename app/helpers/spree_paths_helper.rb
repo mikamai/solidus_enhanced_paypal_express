@@ -17,7 +17,7 @@ module SpreePathsHelper
   end
 
   def continue_shopping_path
-    spree.products_path
+    root_path
   end
 
   def locale_path
