@@ -10,6 +10,12 @@ it:
     item: Articolo
     items_cannot_be_shipped: Siamo spiacenti, possiamo spedire alcolici solo in Italia.
     starting_from: A partire da
+    categories:
+      beers: Birre
+      merchandising: Merchandising
+      clothing: Vestiti
+      accessories: Accessori
+      glasses: Bicchieri
     taxons:
       see_products: Scopri i prodotti
     underage:

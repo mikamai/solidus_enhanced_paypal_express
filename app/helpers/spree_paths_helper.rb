@@ -1,14 +1,16 @@
 module SpreePathsHelper
   def shop_merchandising_path(sub_category = nil)
-    if sub_category
-      spree.nested_taxons_path("categories/merchandising/#{sub_category.to_sym}")
+    taxon = if sub_category
+      Spree::Taxon.find_by_name(Spree.t("categories.#{sub_category}"))
     else
-      spree.nested_taxons_path("categories/merchandising")
+      Spree::Taxon.find_by_name(Spree.t('categories.merchandising'))
     end
+    spree.nested_taxons_path(taxon)
   end
 
   def shop_beers_path
-    spree.nested_taxons_path("categories/beers")
+    taxon = Spree::Taxon.find_by_name(Spree.t('categories.beers'))
+    spree.nested_taxons_path(taxon)
   end
 
   def shop_christmas_beer_path
