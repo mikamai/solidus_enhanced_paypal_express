@@ -17,7 +17,7 @@ Spree.config do |config|
   config.mails_from = "shop@forst.it"
 
   # Uncomment to stop tracking inventory levels in the application
-  # config.track_inventory_levels = false
+  config.track_inventory_levels = false
 
   # When set, product caches are only invalidated when they fall below or rise
   # above the inventory_cache_threshold that is set. Default is to invalidate cache on
