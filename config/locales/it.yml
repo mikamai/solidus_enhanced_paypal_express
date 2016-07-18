@@ -1,4 +1,8 @@
 it:
+  routes:
+    privacy: privacy
+    contacts: contatti
+    sales_conditions: condizioni-di-vendita
   spree:
     order_mutex_error: Order Mutex error
     locale_en: EN
