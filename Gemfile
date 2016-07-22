@@ -30,6 +30,9 @@ gem 'solidus_simple_weight_calculator', github: 'dfranciosi/solidus_simple_weigh
 gem 'solidus_paypal_express', github: 'dfranciosi/solidus_paypal_express', branch: 'solidus-porting'
 gem 'solidus_editor', github: 'solidusio-contrib/solidus_editor', branch: 'master'
 
+gem 'rollbar'
+gem 'oj', '~> 2.12.14'
+
 group :development do
   gem 'spring'
   gem 'byebug'
