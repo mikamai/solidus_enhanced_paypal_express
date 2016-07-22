@@ -10,7 +10,6 @@ gem 'jquery-rails', '< 4.0'
 gem 'font-awesome-sass', '~> 4.4.0'
 gem 'dbmanager'
 gem 'route_translator'
-gem 'airbrake', '~> 5.0'
 gem 'browserify-rails'
 
 
