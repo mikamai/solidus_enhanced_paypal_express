@@ -5,7 +5,7 @@ Rollbar.configure do |config|
   config.access_token = '889b89b9461a47b2a3c4532cc28a2a1d'
 
   # Here we'll disable in 'test':
-  if Rails.env.test?
+  unless Rails.env.production?
     config.enabled = false
   end
 
