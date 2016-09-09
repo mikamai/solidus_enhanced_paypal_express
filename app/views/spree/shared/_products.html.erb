@@ -11,7 +11,7 @@
                 <%= image_tag(product.display_image.attachment(:large), itemprop: "image") %>
               </div>
               <div class="product-catalog__name">
-                <p><%= truncate(product.name, length: 50) %></p>
+                <p><%= truncate(product.name.html_safe, length: 50) %></p>
               </div>
               <div class="product-catalog__price" itemprop="price">
                 <% if has_starting_from_price?(product) %>
