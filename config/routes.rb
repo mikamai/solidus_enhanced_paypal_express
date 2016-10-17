@@ -18,5 +18,7 @@ Rails.application.routes.draw do
     get  'contacts',          to: 'pages#contacts',         as: 'contacts'
   end
 
+  get 'state_from_country', to: 'form#state_from_country'
+
   mount Spree::Core::Engine, at: '/'
 end

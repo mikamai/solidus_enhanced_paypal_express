@@ -8,3 +8,12 @@ $ ->
       color: if is_checked  then 'grey' else ''
     )
   .trigger('change')
+
+  $('#order_bill_address_attributes_country_id').on 'change', (event) ->
+    $this = $(this)
+    setOptions = (options) ->
+      if options
+        $("#order_bill_address_attributes_state_id").append(options)
+      else
+        $("#order_bill_address_attributes_state_id").hide()
+    $.get '/state_from_country', {'id': $this.val()}, setOptions

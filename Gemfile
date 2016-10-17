@@ -34,6 +34,7 @@ gem 'rollbar'
 gem 'oj', '~> 2.12.14'
 
 group :development do
+  gem 'better_errors'
   gem 'spring'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
