@@ -52,6 +52,7 @@ group :development do
   gem 'capistrano-npm'
   gem 'slackistrano', require: false
   gem 'capistrano-db-tasks', require: false
+  gem "letter_opener"
 end
 
 group :test do

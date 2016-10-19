@@ -19,7 +19,16 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { host: ENV.fetch("APPLICATION_HOST") }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              ENV.fetch('SMTP_ADDRESS'),
+    domain:               ENV.fetch('SMTP_DOMAIN'),
+    user_name:            ENV.fetch('SMTP_USERNAME'),
+    password:             ENV.fetch('SMTP_PASSWORD'),
+    enable_starttls_auto: false,
+    openssl_verify_mode:  'none',
+  }
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

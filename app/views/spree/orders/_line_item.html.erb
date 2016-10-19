@@ -7,7 +7,7 @@
       <div class="table-cart__content table-cart__content--product col-md-6">
         <img class="table-cart__content__image" src="<%= item_image_url %>">
         <div class="table-cart__content__text">
-          <h1><%= line_item.name %></h1>
+          <h1><%= line_item.name.html_safe %></h1>
           <p>
             <%= line_item.description %>
           </p>

@@ -11,9 +11,22 @@ $ ->
 
   $('#order_bill_address_attributes_country_id').on 'change', (event) ->
     $this = $(this)
+    $select = $("#order_bill_address_attributes_state_id")
+    $text = $("#order_bill_address_attributes_state_name")
     setOptions = (options) ->
       if options
-        $("#order_bill_address_attributes_state_id").append(options)
+        $select.append(options)
+        $select.prop("disabled", false)
+        $select.removeClass("hidden").addClass("required")
+
+        $text.prop("disabled", true)
+        $text.addClass("hidden").removeClass("required")
       else
-        $("#order_bill_address_attributes_state_id").hide()
+        $select.prop("disabled", true)
+        $select.find('option').remove().end()
+        $select.addClass("hidden").removeClass("required")
+
+        $text.prop("disabled", false)
+        $text.removeClass("hidden").addClass("required")
     $.get '/state_from_country', {'id': $this.val()}, setOptions
+  .trigger('change')

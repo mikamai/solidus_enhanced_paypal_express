@@ -38,7 +38,7 @@
               <div class="container">
                 <div class="row">
                   <div class="table-cart__content col-md-2 item-image"><%= image_tag item.variant.display_image.attachment(:mini) %></div>
-                  <div class="table-cart__content col-md-6 item-name"><%= item.variant.name %></div>
+                  <div class="table-cart__content col-md-6 item-name"><%= item.variant.name.html_safe %></div>
                   <div class="table-cart__content col-md-2 item-qty"><%= item.quantity %></div>
                   <div class="table-cart__content col-md-2 item-price"><%= display_price(item.variant) %></div>
                 </div>

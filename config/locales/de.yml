@@ -1,4 +1,8 @@
 de:
+  number:
+    percentage:
+      format:
+        precision: 1
   routes:
     privacy: privacy
     contacts: kontakt

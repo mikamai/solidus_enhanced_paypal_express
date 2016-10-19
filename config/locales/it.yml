@@ -4,6 +4,7 @@ it:
     contacts: contatti
     sales_conditions: condizioni-di-vendita
   spree:
+    weight_and_packaging: Speciale Birra Natale
     order_mutex_error: Order Mutex error
     locale_en: EN
     locale_it: IT
@@ -504,8 +505,8 @@ it:
           </p><p>
           <strong>14 - Conciliareonline</strong>
           </p><p>
-          <strong>14.1</strong> Informiamo i Consumatori residenti in Europa che per la risoluzione delle controversie nascenti da acquisti online 
-          di beni o servizi sul nostro sito, potranno rivolgersi, previo preliminare contatto con noi volto alla risoluzione diretta del reclamo 
+          <strong>14.1</strong> Informiamo i Consumatori residenti in Europa che per la risoluzione delle controversie nascenti da acquisti online
+          di beni o servizi sul nostro sito, potranno rivolgersi, previo preliminare contatto con noi volto alla risoluzione diretta del reclamo
           <a href="mailto:info@forst.it">info@forst.it</a>, all'organismo ADR “Conciliareonline.it”, sul sito web “<a href="http://www.conciliareonline.it">www.conciliareonline.it</a>:<br/>
           Via Dodiciville, 2<br />
           I -39100 Bolzano (BZ)<br />
