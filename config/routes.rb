@@ -25,7 +25,6 @@ Rails.application.routes.draw do
   Spree::Core::Engine.routes.append do
     namespace :admin do
       resources :taxon_banner
-      # get 'taxon_banner/index', to: 'taxon_banner#index', as: "taxon_banners"
     end
   end
 

@@ -1,6 +1,6 @@
 <% admin_breadcrumb(Spree.t(:taxon_banner)) %>
 
-<%= form_for [:admin, @banner], :method => :post, :html => { :multipart => true } do |f| %>
+<%= form_for [:admin, @banner], :method => :put, :html => { :multipart => true } do |f| %>
   <fieldset class="no-border-top">
     <div class="left twelve columns alpha" data-hook="admin_taxon_banner_form_left">
       <div data-hook="admin_taxon_banner_form_name">
