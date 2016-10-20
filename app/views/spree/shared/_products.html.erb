@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <% if @taxon.id == 2 %>
-      <div class="col-md-12 christmas_banner">
-        <img class="visible-xs img-responsive" src="">
-        <img class="visible-sm img-responsive" src="">
-        <img class="visible-md visible-lg img-responsive" src="">
-      <div>
+    <% if @banner && @banner.desktop_size && @banner.tablet_size && @banner.mobile_size %>
+      <div class="col-md-12 product-catalog-banner">
+        <%= link_to (image_tag @banner.desktop_size.url, {class: "visible-md visible-lg img-responsive"}), @banner.destination_url %>
+        <%= link_to (image_tag @banner.tablet_size.url, {class: "visible-sm img-responsive"}), @banner.destination_url %>
+        <%= link_to (image_tag @banner.mobile_size.url, {class: "visible-xs img-responsive"}), @banner.destination_url %>
+      </div>
     <% end %>
 
     <% if products.any? %>

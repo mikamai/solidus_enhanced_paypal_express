@@ -21,4 +21,12 @@ Rails.application.routes.draw do
   get 'state_from_country', to: 'form#state_from_country'
 
   mount Spree::Core::Engine, at: '/'
+
+  Spree::Core::Engine.routes.append do
+    namespace :admin do
+      resources :taxon_banner
+      # get 'taxon_banner/index', to: 'taxon_banner#index', as: "taxon_banners"
+    end
+  end
+
 end

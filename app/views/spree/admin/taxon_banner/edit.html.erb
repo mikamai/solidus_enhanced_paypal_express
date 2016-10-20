@@ -1,0 +1,65 @@
+<% admin_breadcrumb(Spree.t(:taxon_banner)) %>
+
+<%= form_for [:admin, @banner], :method => :post, :html => { :multipart => true } do |f| %>
+  <fieldset class="no-border-top">
+    <div class="left twelve columns alpha" data-hook="admin_taxon_banner_form_left">
+      <div data-hook="admin_taxon_banner_form_name">
+        <%= f.field_container :name do %>
+          <%= f.label :name %>
+          <%= f.text_field :name, :class => 'fullwidth title' %>
+          <%= f.error_message_on :name %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_taxon_banner_form_destination_url">
+        <%= f.field_container :destination_url do %>
+          <%= f.label :destination_url %>
+          <%= f.text_field :destination_url, :class => 'fullwidth title' %>
+          <%= f.error_message_on :destination_url %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_taxon_banner_form_img_desk">
+        <%= f.field_container :desktop_size do %>
+          <%= f.label :desktop_size %>
+          <%= f.file_field :desktop_size, :class => 'fullwidth title' %>
+          <%= f.error_message_on :desktop_size %>
+        <% end %>
+        <%= "Immagine corrente: #{@banner.desktop_size_file_name || 'Nessuna'}" %>
+      </div>
+
+      <div data-hook="admin_taxon_banner_form_img_tablet">
+        <%= f.field_container :tablet_size do %>
+          <%= f.label :tablet_size %>
+          <%= f.file_field :tablet_size, :class => 'fullwidth title' %>
+          <%= f.error_message_on :tablet_size %>
+        <% end %>
+        <%= "Immagine corrente: #{@banner.tablet_size_file_name || 'Nessuna'}" %>
+      </div>
+
+      <div data-hook="admin_taxon_banner_form_img_mobi">
+        <%= f.field_container :mobile_size do %>
+          <%= f.label :mobile_size %>
+          <%= f.file_field :mobile_size, :class => 'fullwidth title' %>
+          <%= f.error_message_on :mobile_size %>
+        <% end %>
+        <%= "Immagine corrente: #{@banner.mobile_size_file_name || 'Nessuna'}" %>
+      </div>
+
+      <div data-hook="admin_taxon_banner_form_enabled">
+        <%= f.field_container :enabled do %>
+          <%= f.label :enabled %>
+          <%= f.check_box :enabled, :class => 'fullwidth title' %>
+          <%= f.error_message_on :enabled %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_taxon_banner_form_submit">
+        <%= f.field_container :submit do %>
+          <%= f.submit :submit, :class => 'fullwidth title' %>
+        <% end %>
+      </div>
+
+    </div>
+  </fieldset>
+<% end %>
