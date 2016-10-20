@@ -101,23 +101,22 @@
           <% end %>
         </div>
       </div>
-    <% else %>
-      <div data-hook="admin_product_form_sku">
-        <%= f.field_container :sku do %>
-          <%= f.label :sku, Spree::Variant.human_attribute_name(:sku) %>
-          <%= f.text_field :sku, :size => 16 %>
-        <% end %>
-      </div>
-
-      <div id="shipping_specs">
-        <% [:height, :width, :depth, :weight].each_with_index do |field, index| %>
-          <div id="shipping_specs_<%= field %>_field" data-hook="admin_product_form_<%= field %>" class="field two columns <%= index.even? ? 'alpha' : 'omega' %>">
-            <%= f.label field %>
-            <%= f.text_field field, value: number_with_precision(@product.send(field), precision: 2) %>
-          </div>
-        <% end %>
-      </div>
     <% end %>
+    <div data-hook="admin_product_form_sku">
+      <%= f.field_container :sku do %>
+        <%= f.label :sku, Spree::Variant.human_attribute_name(:sku) %>
+        <%= f.text_field :sku, :size => 16 %>
+      <% end %>
+    </div>
+
+    <div id="shipping_specs">
+      <% [:height, :width, :depth, :weight].each_with_index do |field, index| %>
+        <div id="shipping_specs_<%= field %>_field" data-hook="admin_product_form_<%= field %>" class="field two columns <%= index.even? ? 'alpha' : 'omega' %>">
+          <%= f.label field %>
+          <%= f.text_field field, value: number_with_precision(@product.send(field), precision: 2) %>
+        </div>
+      <% end %>
+    </div>
 
     <div data-hook="admin_product_form_shipping_categories">
       <%= f.field_container :shipping_categories do %>
