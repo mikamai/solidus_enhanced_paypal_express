@@ -6,8 +6,8 @@ class Spree::Admin::TaxonBannerController < Spree::Admin::ResourceController
       id = Spree::TaxonBanner.last.id
       redirect_to( action: :edit, id: id )
     else
-      @banner = Spree::TaxonBanner.new
-      render :edit
+      @banner = Spree::TaxonBanner.create
+      redirect_to( action: :edit, id: @banner.id )
     end
   end
 
