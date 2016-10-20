@@ -1,9 +1,8 @@
-#role :db,  %w(cayenne@db1.caynod.es)
+role :db,  %w(forst_rw@db1.caynod.es)
 NODES = %w(cayenne@app5.caynod.es cayenne@app6.caynod.es).freeze
 
 role :app, NODES
 role :web, NODES
-role :db,  NODES
 
 set :deploy_to, '/mnt/hosting/sites/forst/forst-drunken-ibex'
 
