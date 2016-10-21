@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161020141513) do
+ActiveRecord::Schema.define(version: 20161021085259) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -586,6 +586,7 @@ ActiveRecord::Schema.define(version: 20161020141513) do
     t.datetime "updated_at"
     t.boolean  "promotionable",                      default: true
     t.string   "meta_title",           limit: 255
+    t.boolean  "active",                             default: true
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on", using: :btree

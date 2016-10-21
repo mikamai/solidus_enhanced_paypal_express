@@ -39,6 +39,12 @@
           <%= Spree.t(:starting_from) %>
         <% end %>
       <% end %>
+      <%= f.field_container :active do %>
+        <%= f.label :active do %>
+          <%= f.check_box :active %>
+          <%= Spree.t(:active) %>
+        <% end %>
+      <% end %>
     </div>
 
     <% if show_rebuild_vat_checkbox? %>
