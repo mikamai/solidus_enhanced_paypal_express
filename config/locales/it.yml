@@ -517,6 +517,13 @@ it:
         title: Contatti
         subtitle: Se vuoi saperne più su di noi, hai domande o ti serve aiuto sentiti libero di contattarci. Ci piacerebbe molto conoscerti!
         address_contacts: Birra Forst Via Venosta, 11 39022 Forst/Lagundo (BZ)
+    shipment_mailer:
+      shipped_email:
+        dear_customer: Gentile Cliente,
+        order_has_been_sent: Ti informiamo che il tuo ordine %{order_number} è stato spedito.
+        thanks: Grazie per aver scelto Birra FORST e continua a seguirci.
+        greetings: Un cordiale saluto,
+
 
 
 # IT translation waiting for updates on solidus_i18n
