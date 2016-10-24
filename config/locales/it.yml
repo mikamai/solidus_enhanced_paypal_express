@@ -520,11 +520,21 @@ it:
     shipment_mailer:
       shipped_email:
         dear_customer: Gentile Cliente,
-        order_has_been_sent: Ti informiamo che il tuo ordine %{order_number} è stato spedito.
+        order_has_been_sent: Ti informiamo che il tuo ordine n. %{order_number} è stato spedito.
         thanks: Grazie per aver scelto Birra FORST e continua a seguirci.
         greetings: Un cordiale saluto,
-
-
+    order_mailer:
+      confirm_email:
+        status_alert: Status Alert
+        change_notification: "Ti informiamo che l'ordine n. %{order_number} è stato aggiornato."
+        status_update: "Status attuale:"
+        payment_status: "Pagamento: %{status}"
+        shipping_status: "Spedizione: %{status}"
+        status:
+          complete: Pagato
+          shipped: Spedito
+          ready: Pronto
+          paid: Pagato
 
 # IT translation waiting for updates on solidus_i18n
 # Frontend

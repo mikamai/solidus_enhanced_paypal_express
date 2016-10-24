@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>
+      <p class="lede">
+        <b><%= Spree.t('order_mailer.confirm_email.status_alert') %></b>
+      </p>
+      <p>
+        <%= Spree.t('order_mailer.confirm_email.change_notification', {order_number: @order.number}) %>
+      </p>
+      <p>
+        <%= Spree.t('order_mailer.confirm_email.status_update') %>
+      </p>
+      <p>
+        <%= Spree.t('order_mailer.confirm_email.payment_status', {status: Spree.t("order_mailer.confirm_email.status.#{@order.payment_state}")}) %>
+      </p>
+      <p>
+        <%= Spree.t('order_mailer.confirm_email.shipping_status', {status: Spree.t("order_mailer.confirm_email.status.#{@order.shipment_state}")}) %>
+      </p>
+    </td>
+  </tr>
+</table>
