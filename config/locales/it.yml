@@ -535,6 +535,8 @@ it:
           shipped: Spedito
           ready: Pronto
           paid: Pagato
+          balance_due: Pagamento PayPal in attesa
+          pending: In attesa
 
 # IT translation waiting for updates on solidus_i18n
 # Frontend
