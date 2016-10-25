@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025071721) do
+ActiveRecord::Schema.define(version: 20161025132803) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -1469,23 +1469,35 @@ ActiveRecord::Schema.define(version: 20161025071721) do
   end
 
   create_table "taxon_banners", force: :cascade do |t|
-    t.string   "name",                      limit: 255
-    t.boolean  "enabled",                               default: false
-    t.string   "destination_url",           limit: 255
-    t.string   "desktop_size_file_name",    limit: 255
-    t.string   "desktop_size_content_type", limit: 255
-    t.integer  "desktop_size_file_size",    limit: 4
+    t.string   "name",                         limit: 255
+    t.boolean  "enabled",                                  default: false
+    t.string   "destination_url",              limit: 255
+    t.string   "desktop_size_file_name",       limit: 255
+    t.string   "desktop_size_content_type",    limit: 255
+    t.integer  "desktop_size_file_size",       limit: 4
     t.datetime "desktop_size_updated_at"
-    t.string   "tablet_size_file_name",     limit: 255
-    t.string   "tablet_size_content_type",  limit: 255
-    t.integer  "tablet_size_file_size",     limit: 4
+    t.string   "tablet_size_file_name",        limit: 255
+    t.string   "tablet_size_content_type",     limit: 255
+    t.integer  "tablet_size_file_size",        limit: 4
     t.datetime "tablet_size_updated_at"
-    t.string   "mobile_size_file_name",     limit: 255
-    t.string   "mobile_size_content_type",  limit: 255
-    t.integer  "mobile_size_file_size",     limit: 4
+    t.string   "mobile_size_file_name",        limit: 255
+    t.string   "mobile_size_content_type",     limit: 255
+    t.integer  "mobile_size_file_size",        limit: 4
     t.datetime "mobile_size_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "desktop_size_de_file_name",    limit: 255
+    t.string   "desktop_size_de_content_type", limit: 255
+    t.integer  "desktop_size_de_file_size",    limit: 4
+    t.datetime "desktop_size_de_updated_at"
+    t.string   "tablet_size_de_file_name",     limit: 255
+    t.string   "tablet_size_de_content_type",  limit: 255
+    t.integer  "tablet_size_de_file_size",     limit: 4
+    t.datetime "tablet_size_de_updated_at"
+    t.string   "mobile_size_de_file_name",     limit: 255
+    t.string   "mobile_size_de_content_type",  limit: 255
+    t.integer  "mobile_size_de_file_size",     limit: 4
+    t.datetime "mobile_size_de_updated_at"
   end
 
   add_foreign_key "spree_adjustments", "spree_orders", column: "order_id", name: "fk_spree_adjustments_order_id"

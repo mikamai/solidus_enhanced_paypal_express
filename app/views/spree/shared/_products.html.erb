@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
-    <% if @banner && @banner.desktop_size && @banner.tablet_size && @banner.mobile_size %>
+    <% if @banner_img %>
       <div class="col-md-12 product-catalog-banner">
-        <%= link_to (image_tag @banner.desktop_size.url, {class: "visible-md visible-lg img-responsive"}), @banner.destination_url %>
-        <%= link_to (image_tag @banner.tablet_size.url, {class: "visible-sm img-responsive"}), @banner.destination_url %>
-        <%= link_to (image_tag @banner.mobile_size.url, {class: "visible-xs img-responsive"}), @banner.destination_url %>
+        <%= link_to (image_tag @banner_img[:desktop_url], {class: "visible-md visible-lg img-responsive"}), @banner_img[:url] %>
+        <%= link_to (image_tag @banner_img[:tablet_url], {class: "visible-sm img-responsive"}), @banner_img[:url] %>
+        <%= link_to (image_tag @banner_img[:mobile_url], {class: "visible-xs img-responsive"}), @banner_img[:url] %>
       </div>
     <% end %>
 
