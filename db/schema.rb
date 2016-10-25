@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025132803) do
+ActiveRecord::Schema.define(version: 20161025142802) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -1498,6 +1498,7 @@ ActiveRecord::Schema.define(version: 20161025132803) do
     t.string   "mobile_size_de_content_type",  limit: 255
     t.integer  "mobile_size_de_file_size",     limit: 4
     t.datetime "mobile_size_de_updated_at"
+    t.string   "destination_url_de",           limit: 255
   end
 
   add_foreign_key "spree_adjustments", "spree_orders", column: "order_id", name: "fk_spree_adjustments_order_id"

@@ -11,19 +11,21 @@
         <% end %>
       </div>
 
-      <div data-hook="admin_taxon_banner_form_destination_url">
-        <%= f.field_container :destination_url do %>
-          <%= f.label :destination_url %>
-          <%= f.text_field :destination_url, :class => 'fullwidth title' %>
-          <%= f.error_message_on :destination_url %>
-        <% end %>
-      </div>
-
       <div data-hook="admin_taxon_banner_form_enabled">
         <%= f.field_container :enabled do %>
           <%= f.label :enabled %>
           <%= f.check_box :enabled, :class => 'fullwidth title' %>
           <%= f.error_message_on :enabled %>
+        <% end %>
+      </div>
+
+      <hr style="height: 1px;background: #333;border: 0;">
+
+      <div data-hook="admin_taxon_banner_form_destination_url">
+        <%= f.field_container :destination_url do %>
+          <%= f.label :destination_url_it %>
+          <%= f.text_field :destination_url, :class => 'fullwidth title' %>
+          <%= f.error_message_on :destination_url %>
         <% end %>
       </div>
 
@@ -55,6 +57,14 @@
       </div>
 
       <hr style="height: 1px;background: #333;border: 0;">
+
+      <div data-hook="admin_taxon_banner_form_destination_url_de">
+        <%= f.field_container :destination_url_de do %>
+          <%= f.label :destination_url_de %>
+          <%= f.text_field :destination_url_de, :class => 'fullwidth title' %>
+          <%= f.error_message_on :destination_url_de %>
+        <% end %>
+      </div>
 
       <div data-hook="admin_taxon_banner_form_img_desk_de">
         <%= f.field_container :desktop_size_de do %>
