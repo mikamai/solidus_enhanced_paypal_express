@@ -4,7 +4,7 @@ it:
     contacts: contatti
     sales_conditions: condizioni-di-vendita
   spree:
-    weight_and_packaging: Speciale Birra Natale
+    packaging_christmas: Confezione spedizione Birra di Natale
     order_mutex_error: Order Mutex error
     locale_en: EN
     locale_it: IT

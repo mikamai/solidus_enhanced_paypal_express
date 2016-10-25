@@ -33,6 +33,14 @@
         <td><%= Spree::Money.new(order.shipments.to_a.sum(&:cost), currency: order.currency).to_html %></td>
       </tr>
 
+      <% packaging_total = order.line_items.inject(0){|r,l| r += l.quantity * l.product.packaging_cost} %>
+      <% if packaging_total > 0 %>
+        <tr data-hook="packaging_total">
+          <td><%= Spree.t(:packaging_christmas) %>:</td>
+          <td><%= Spree::Money.new(packaging_total, currency: order.currency).to_html %></td>
+        </tr>
+      <% end %>
+
       <% if order.shipment_adjustments.nonzero.exists? %>
         <tbody data-hook="order_details_shipment_promotion_adjustments">
           <% order.shipment_adjustments.nonzero.promotion.eligible.group_by(&:label).each do |label, adjustments| %>

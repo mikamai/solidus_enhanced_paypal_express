@@ -1,5 +1,6 @@
 en:
   spree:
+    packaging_christmas: Confezione spedizione Birra di Natale
     order_mutex_error: Order Mutex error
     locale_en: EN
     locale_it: IT
