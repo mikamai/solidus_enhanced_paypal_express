@@ -4,7 +4,7 @@ module Spree
       preference :costs_string, :text, default: "1:5\n2:7\n5:10\n10:15\n100:50"
       preference :default_weight, :decimal, default: 1
       preference :max_item_size, :decimal, default: 0
-      preference :handling_fee, :decimal, default: 5.60
+      preference :handling_fee, :decimal, default: 0
       preference :handling_max, :decimal, default: 0
 
       def self.description
@@ -37,6 +37,7 @@ module Spree
         weight_class = costs.keys.select { |w| total_weight <= w }.min
         shipping_costs = costs[weight_class]
 
+        additional_costs = extra_price(package)
         shipping_costs ? shipping_costs + handling_fee : 0
       end
 
@@ -50,6 +51,14 @@ module Spree
         clean_costs_string.count(':') > 0 &&
         clean_costs_string.split(/\:|\n/).size.even? &&
         clean_costs_string.split(/\:|\n/).all? { |s | s.strip.match(/^\d|\.+$/) }
+      end
+
+      def extra_price(package)
+        extra = 0
+        package.each do |item|
+          extra += item.additional_cost
+        end
+        return extra
       end
 
       def item_oversized?(item)
