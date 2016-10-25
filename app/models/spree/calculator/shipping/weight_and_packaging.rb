@@ -35,9 +35,9 @@ module Spree
         total_weight = total_weight(content_items)
         costs = costs_string_to_hash(clean_costs_string)
         weight_class = costs.keys.select { |w| total_weight <= w }.min
-        shipping_costs = costs[weight_class]
+        additional_costs = extra_price(content_items)
+        shipping_costs = costs[weight_class] + additional_costs
 
-        additional_costs = extra_price(package)
         shipping_costs ? shipping_costs + handling_fee : 0
       end
 
@@ -53,12 +53,8 @@ module Spree
         clean_costs_string.split(/\:|\n/).all? { |s | s.strip.match(/^\d|\.+$/) }
       end
 
-      def extra_price(package)
-        extra = 0
-        package.each do |item|
-          extra += item.additional_cost
-        end
-        return extra
+      def extra_price(content_items)
+        content_items.inject(0){ |result, item| result += item.variant.product[:packaging_cost]}
       end
 
       def item_oversized?(item)

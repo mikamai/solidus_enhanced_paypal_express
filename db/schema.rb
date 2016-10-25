@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021085259) do
+ActiveRecord::Schema.define(version: 20161025071721) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -573,7 +573,7 @@ ActiveRecord::Schema.define(version: 20161021085259) do
   add_index "spree_product_translations", ["spree_product_id"], name: "index_spree_product_translations_on_spree_product_id", using: :btree
 
   create_table "spree_products", force: :cascade do |t|
-    t.string   "name",                 limit: 255,   default: "",   null: false
+    t.string   "name",                 limit: 255,                            default: "",   null: false
     t.text     "description",          limit: 65535
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -584,9 +584,10 @@ ActiveRecord::Schema.define(version: 20161021085259) do
     t.integer  "shipping_category_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "promotionable",                      default: true
+    t.boolean  "promotionable",                                               default: true
     t.string   "meta_title",           limit: 255
-    t.boolean  "active",                             default: true
+    t.boolean  "active",                                                      default: true
+    t.decimal  "packaging_cost",                     precision: 10, scale: 2, default: 0.0
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on", using: :btree

@@ -33,6 +33,11 @@
         <%= f.text_field :price, :value => number_to_currency(@product.price, :unit => ''), :required => true %>
         <%= f.error_message_on :price %>
       <% end %>
+      <%= f.field_container :packaging_cost do %>
+        <%= f.label :packaging_cost, class: 'required' %>
+        <%= f.text_field :packaging_cost, :value => number_to_currency(@product.packaging_cost, :unit => ''), :required => true %>
+        <%= f.error_message_on :packaging_cost %>
+      <% end %>
       <%= f.field_container :starting_from do %>
         <%= f.label :starting_from do %>
           <%= f.check_box :starting_from, { checked: has_starting_from_price?(@product) } %>

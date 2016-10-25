@@ -18,3 +18,4 @@ tags
 gems.tags
 /node_modules
 .rbenv-vars*
+.byebug_history
