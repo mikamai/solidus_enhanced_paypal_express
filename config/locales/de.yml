@@ -8,6 +8,7 @@ de:
     contacts: kontakt
     sales_conditions: verkaufsbedingungen
   spree:
+    item_total_with_vat: Artikel gesamt MwSt. inklusiv
     packaging_christmas: Confezione spedizione Birra di Natale
     order_mutex_error: Order Mutex error
     locale_en: EN

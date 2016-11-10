@@ -4,6 +4,7 @@ it:
     contacts: contatti
     sales_conditions: condizioni-di-vendita
   spree:
+    item_total_with_vat: Totale Articoli IVA inclusa
     packaging_christmas: Confezione spedizione Birra di Natale
     order_mutex_error: Order Mutex error
     locale_en: EN

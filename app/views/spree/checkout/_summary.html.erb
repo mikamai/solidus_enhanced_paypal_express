@@ -3,7 +3,7 @@
 <table data-hook="order_summary">
   <tbody>
     <tr data-hook="item_total">
-      <td><strong><%= Spree.t(:item_total) %>:</strong></td>
+      <td><strong><%= Spree.t(:item_total_with_vat) %>:</strong></td>
       <td><strong><%= order.display_item_total.to_html %></strong></td>
     </tr>
 
@@ -18,21 +18,14 @@
       </tbody>
     <% end %>
 
-    <tbody data-hook="order_details_tax_adjustments" class='order_summary_taxes'>
-      <% order.all_adjustments.nonzero.tax.eligible.group_by(&:label).each do |label, adjustments| %>
+    <% if order.passed_checkout_step?("address") && order.shipments.any? %>
+<!--       <% order.all_adjustments.nonzero.tax.eligible.group_by(&:label).each do |label, adjustments| %>
         <tr class="total">
           <td><%= label %></td>
           <td><%= Spree::Money.new(adjustments.sum(&:amount), currency: order.currency).to_html %></td>
         </tr>
       <% end %>
-    </tbody>
-
-    <% if order.passed_checkout_step?("address") && order.shipments.any? %>
-      <tr data-hook="shipping_total">
-        <td><%= Spree.t(:shipping_total) %>:</td>
-        <td><%= Spree::Money.new(order.shipments.to_a.sum(&:cost), currency: order.currency).to_html %></td>
-      </tr>
-
+ -->
       <% packaging_total = order.line_items.inject(0){|r,l| r += l.quantity * l.product.packaging_cost} %>
       <% if packaging_total > 0 %>
         <tr data-hook="packaging_total">
@@ -40,6 +33,11 @@
           <td><%= Spree::Money.new(packaging_total, currency: order.currency).to_html %></td>
         </tr>
       <% end %>
+
+      <tr data-hook="shipping_total">
+        <td><%= Spree.t(:shipping_total) %>:</td>
+        <td><%= Spree::Money.new(order.shipments.to_a.sum(&:cost), currency: order.currency).to_html %></td>
+      </tr>
 
       <% if order.shipment_adjustments.nonzero.exists? %>
         <tbody data-hook="order_details_shipment_promotion_adjustments">
