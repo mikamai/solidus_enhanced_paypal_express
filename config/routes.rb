@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   Spree::Core::Engine.routes.append do
     namespace :admin do
       resources :taxon_banner
+      resources :orders
     end
   end
 

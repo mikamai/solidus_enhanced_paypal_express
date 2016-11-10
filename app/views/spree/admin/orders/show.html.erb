@@ -1,0 +1,74 @@
+<div data-hook="admin_order_edit_form">
+  <div id="order-form-wrapper">
+    <div data-hook="admin_order_form_fields">
+    <% order = @order %>
+
+    <h1><%= "Ordine ##{order.number}" %></h1>
+
+    <% if Spree::Order.checkout_step_names.include?(:delivery) %>
+      <% @order.shipments.order(:created_at).each do |shipment| %>
+
+        <% manifest_items = Spree::ShippingManifest.new(inventory_units: shipment.inventory_units.where(carton_id: nil)).items %>
+          <div id="<%= "shipment_#{shipment.id}" %>" class="js-shipment-edit" data-hook="admin_shipment_form">
+          <table class="stock-contents shipment index" data-hook="stock-contents">
+            <colgroup>
+              <col style="width: 10%;" />
+              <col style="width: 30%;" />
+              <col style="width: 15%;" />
+              <col style="width: 15%;" />
+              <col style="width: 15%;" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th colspan="2"><%= Spree::LineItem.human_attribute_name(:description) %></th>
+                <th><%= Spree::LineItem.human_attribute_name(:price) %></th>
+                <th><%= Spree::LineItem.human_attribute_name(:quantity) %></th>
+                <th><%= Spree::LineItem.human_attribute_name(:total) %></th>
+              </tr>
+            </thead>
+            <tbody data-shipment-number="<%= shipment.number %>" data-order-number="<%= order.number %>">
+              <% manifest_items.each do |item| %>
+                <tr class="stock-item"
+                    data-item-quantity="<%= item.quantity %>"
+                    data-variant-id="<%= item.variant.id %>"
+                    >
+                  <td class="item-image">
+                    <%= image_tag item.variant.display_image.attachment(:mini) %>
+                  </td>
+                  <td class="item-name">
+                    <%= item.variant.product.name %><br><%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
+                    <% if item.variant.sku.present? %>
+                      <strong><%= Spree::Variant.human_attribute_name(:sku) %>:</strong> <%= item.variant.sku %>
+                    <% end %>
+                  </td>
+                  <td class="item-price align-center"><%= item.line_item.single_money.to_html %></td>
+                  <td class="item-qty-show align-center">
+                      <% item.states.each do |state,count| %>
+                        <%= count %> x <%= Spree.t(state, scope: 'inventory_states') %>
+                      <% end %>
+                  </td>
+                  <td class="item-total align-center"><%= line_item_shipment_price(item.line_item, item.quantity) %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+      </div>
+      <% end %>
+    <% end %>
+    <% if order.line_items.exists? %>
+      <fieldset class="no-border-bottom" id="order-total" data-hook="order_details_total">
+        <legend><%= Spree.t(:order_total) %></legend>
+        <span class="order-total"><%= order.display_total %></span>
+      </fieldset>
+    <% end %>
+      <div style="display: inline-block; width: 45%; margin: auto">
+        <%= content_tag :h4, Spree.t(:billing_address) %>
+        <%= render "spree/admin/shared/address", address: order.bill_address %>
+      </div>
+      <div style="display: inline-block; width: 45%; margin: auto">
+        <%= content_tag :h4, Spree.t(:shipping_address) %>
+        <%= render "spree/admin/shared/address", address: order.ship_address %>
+      </div>
+    </div>
+  </div>
+</div>
