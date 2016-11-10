@@ -11,6 +11,7 @@ gem 'font-awesome-sass', '~> 4.4.0'
 gem 'dbmanager'
 gem 'route_translator'
 gem 'browserify-rails'
+gem 'wicked_pdf'
 
 
 # Solidus!
