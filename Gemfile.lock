@@ -116,7 +116,7 @@ GIT
       solidus_core (= 1.4.0.alpha)
 
 GIT
-  remote: git@github.com:curcumalabs/solidus_braintree_vzero
+  remote: git@gitlab.com:cayennelabs/solidus_braintree_vzero.git
   revision: c1d98462effabb4d311b7dd5090526c74a6630ec
   branch: solidus-porting
   specs:
