@@ -70,4 +70,6 @@ Spree::Api::Config.configure do |config|
   config.requires_authentication = true
 end
 
+Spree::Config[:require_payment_to_ship] = false
+
 Spree.user_class = "Spree::LegacyUser"
