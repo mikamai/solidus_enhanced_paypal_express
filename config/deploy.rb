@@ -1,7 +1,7 @@
 require 'capistrano-db-tasks'
 
 set :application, 'forst-drunken-ibex'
-set :repo_url, 'git@github.com:curcumalabs/forst-drunken-ibex.git'
+set :repo_url, 'git@gitlab.com:cayennelabs/forst-drunken-ibex.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
