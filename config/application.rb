@@ -30,6 +30,8 @@ module ForstDrunkenIbex
       end
     end
 
+    config.assets.precompile += %w( spree/backend/print_eval.css )
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
