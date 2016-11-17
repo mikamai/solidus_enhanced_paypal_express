@@ -22,6 +22,8 @@ it:
       clothing: ABBIGLIAMENTO
       accessories: ACCESSORI
       glasses: I BICCHIERI
+    products:
+      sales_total: Totale Vendite
     taxons:
       see_products: Scopri i prodotti
     underage:

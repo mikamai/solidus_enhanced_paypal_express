@@ -18,6 +18,8 @@ de:
     empty: 'Leer'
     items_cannot_be_shipped: Leider können wir Alkohol nur in Italien versandt.
     starting_from: Ab
+    products:
+      sales_total: Totale Vendite
     categories:
       categories: Kategorien
       beers: UNSERE BIERSPEZIALITÄTEN
