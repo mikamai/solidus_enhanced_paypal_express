@@ -19,7 +19,7 @@ gem 'wicked_pdf'
 gem 'solidus', github: 'solidusio/solidus', branch: 'master'
 gem 'solidus_auth_devise'
 gem 'recipient_interceptor'
-
+gem 'solidus_cmd'
 #payment methods
 gem 'solidus_braintree_vzero', git: 'git@gitlab.com:cayennelabs/solidus_braintree_vzero.git', branch: 'solidus-porting'
 gem 'solidus_braintree'
