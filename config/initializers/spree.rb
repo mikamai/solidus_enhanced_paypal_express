@@ -73,3 +73,9 @@ end
 Spree::Config[:require_payment_to_ship] = false
 
 Spree.user_class = "Spree::LegacyUser"
+
+# F**K THIS HIDDEN CONFIG F**K SOLIDUS AND F**K SPREE, orders must be splitted only if items are backordered, otherwise orders with different shipping category will need double shippings
+# Should maybe create a new splitter that uses shipping method instead of category
+Rails.application.config.spree.stock_splitters = %w[
+          Spree::Stock::Splitter::Backordered
+        ]
