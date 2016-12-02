@@ -30,3 +30,25 @@ $ ->
         $text.removeClass("hidden").addClass("required")
     $.get '/state_from_country', {'id': $this.val()}, setOptions
   .trigger('change')
+
+  $('#order_ship_address_attributes_country_id').on 'change', (event) ->
+    $this = $(this)
+    $select = $("#order_ship_address_attributes_state_id")
+    $text = $("#order_ship_address_attributes_state_name")
+    setOptions = (options) ->
+      if options
+        $select.append(options)
+        $select.prop("disabled", false)
+        $select.removeClass("hidden").addClass("required")
+
+        $text.prop("disabled", true)
+        $text.addClass("hidden").removeClass("required")
+      else
+        $select.prop("disabled", true)
+        $select.find('option').remove().end()
+        $select.addClass("hidden").removeClass("required")
+
+        $text.prop("disabled", false)
+        $text.removeClass("hidden").addClass("required")
+    $.get '/state_from_country', {'id': $this.val()}, setOptions
+  .trigger('change')
