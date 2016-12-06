@@ -1,4 +1,3 @@
-
-every '0 4,10,16,22 * * * *' do
-            rake 'solidus_braintree_vzero:update_states'
-          end
+every 1.day, :at => "00:01am" do
+  rake "paypal:capture_all_payments"
+end
