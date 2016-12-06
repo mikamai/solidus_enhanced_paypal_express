@@ -32,6 +32,7 @@ Spree.config do |config|
 
   # Template to use when rendering layout
   config.layout = "layouts/application"
+  config.auto_capture = true
 
 
   # Admin:
@@ -71,6 +72,7 @@ Spree::Api::Config.configure do |config|
 end
 
 Spree::Config[:require_payment_to_ship] = false
+Spree::Config[:auto_capture] = true
 
 Spree.user_class = "Spree::LegacyUser"
 
