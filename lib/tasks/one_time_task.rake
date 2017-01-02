@@ -23,4 +23,25 @@ namespace :one_time_task do
 
   end
 
+  desc "Add 22% VAT to all non beer products"
+  task "add_vat" => :environment do
+
+    logger = Logger.new(Rails.root.join("log", "update_vat.log"))
+
+    products = Spree::Product.joins(:taxons).where("spree_taxons.id": [3,4,5,6])
+
+    products.each do |product|
+      logger.info("Updating product #{product[:id]} - #{product.name}.")
+      product.variants_including_master.each do |variant|
+        logger.info("Updating variant #{variant[:id]}.")
+        variant.prices.each do |price|
+          amount = price[:amount]
+          logger.info("Updating price #{price[:id]}: from #{amount.to_f} to #{(amount * 1.22).to_f}.")
+          price.update_attribute(:amount, amount * 1.22)
+        end
+      end
+    end
+
+  end
+
 end
