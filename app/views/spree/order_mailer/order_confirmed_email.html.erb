@@ -1,0 +1,242 @@
+<table class="body">
+  <tr>
+  <td class="center" align="center" valign="top">
+    <center>
+    <table class="header row" >
+      <tr>
+      <td>
+        <table class="container" >
+        <tr>
+          <td class="wrapper header-align">
+          <table class="nine columns">
+            <tr align="right">
+            <td>
+              <a href="<%= root_url(host: @host) %>" >
+              <img src="{{ store.logo }}" alt="Forst Shop" style="border:0; max-height: 130px;"/>
+              </a>
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table>
+          </td>
+          <td class="wrapper last header-align">
+          <table class="three columns principal_color">
+            <tr>
+            <td class="btn">
+              <a href="<%= root_url(host: @host) %>">Vai al Negozio</a>
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+      </td>
+      </tr>
+    </table><!--/row header-->
+
+    <table class="container">
+      <tr>
+      <td>
+        <!-- content start -->
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="twelve columns">
+            <tr>
+            <td>
+              <h1>Ciao <%= "#{@order.bill_address.first_name} #{@order.bill_address.last_name}" %>!</h1><br>
+              Ti ringraziamo per il tuo ordine presso <a href="<%= root_url(host: @host) %>">Forst Shop</a>.
+
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table> <!-- twelve columns -->
+          </td>
+        </tr>
+        </table><!-- row -->
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="twelve columns status">
+            <tr>
+            <td>
+              <h6>Ordine <%= @order[:id] %></h6>
+              <strong>Stato:</strong> <%= @order.state %>
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+
+        <table class="container product">
+        <tr>
+          <td>
+
+          <table class="block-grid three-up">
+            <tr>
+            <% @order.line_items.each do |line_item| %>
+              <td class="center">
+                <a href="<%= spree.product_path(line_item.product) %>" title="Vai al prodotto">
+
+                <div class="box-img-product">
+                  <img class="img-product" src="{{ product.images.first | thumb: '270x150'}}">
+                </div>
+                <br/>
+                <div class="info" >
+                  <b class="name"><%= line_item.product.name.html_safe %></b><br>
+                  Quantità: <%= line_item.quantity %><br/>
+                  Prezzo: <b class="price"><%= line_item.display_amount.to_html %></b><br/>
+                </div>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="six columns">
+            <thead>
+            <tr>
+              <th class="box-title" align="left">Informazioni riguardo la fatturazione
+
+              </th>
+              <th class="expander"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="box-content">
+              <%= order.billing_address.formatted %>
+              </td>
+
+              <td class="expander"></td>
+            </tr>
+            </tbody>
+          </table><!--six columns-->
+          </td>
+          <td class="wrapper last">
+          <table class="six columns">
+            <thead>
+            <tr>
+              <th class="box-title" align="left" >{% t "Metodo di pagamento" %}
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="box-content">
+              <b>{{ order.payment_method }}</b><br/>
+              {{ order.payment_information }}
+              </td>
+              <td class="expander"></td>
+            </tr>
+            </tbody>
+          </table><!--six columns-->
+          </td>
+        </tr>
+        </table><!--/row-->
+
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="six columns">
+            <thead>
+            <tr>
+              <th class="box-title" align="left" >{% t "Informazioni di spedizione" %}
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="box-content">
+              {{ order.shipping_address.formatted }}
+              </td>
+              <td class="expander"></td>
+            </tr>
+            </tbody>
+          </table><!--six columns-->
+          </td>
+          <td class="wrapper last">
+          <table class="six columns">
+            <thead>
+            <tr>
+              <th class="box-title" align="left" >{% t "Metodo di spedizione" %}
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="box-content">
+              {{ order.shipping_method }}
+              </td>
+              <td class="expander"></td>
+            </tr>
+            </tbody>
+          </table><!--six columns-->
+          </td>
+        </tr>
+        </table>
+
+
+        {% if order.additional_information != null and order.additional_information != empty %}
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="twelve columns">
+            <tr>
+            <th class="box-title" align="left" >{% t "Informazioni aggiuntive" %}:
+            </th>
+            </tr>
+            <tr>
+            <td class="box-content">
+              {{ order.additional_information | newline_to_br }}
+
+              {% if order.aditional_fields != empty %}
+                {% for field in order.additional_fields %}
+                  {% if field.value != blank %}
+                    <span>
+                    {{ field.label }} ({{ field.area }}): {{ field.value }}<br>
+                    </span>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+        {% endif %}
+
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="twelve columns">
+            <tr>
+            <td>
+              <p> {% t "Se hai qualche domanda riguardo il tuo ordine, per favore, contattaci!" %}
+              <b>shop@forst.it</b>.<br/><br/>
+              {% t "Ti ringraziamo nuovamente" %},<br/><strong>{{ store.name }}</strong>
+              </p>
+            </td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+      </td>
+      </tr>
+    </table><!--/row content-->
+    </center>
+  </td>
+  </tr>
+</table>
