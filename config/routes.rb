@@ -29,4 +29,8 @@ Rails.application.routes.draw do
     end
   end
 
+  if !Rails.env.production?
+    get 'mailer(/:action)' => 'spree_order_mailer#:action'
+  end
+
 end

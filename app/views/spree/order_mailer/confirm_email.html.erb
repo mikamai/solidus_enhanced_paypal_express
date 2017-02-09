@@ -1,21 +1,172 @@
-<table>
+<table class="body">
   <tr>
-    <td>
-      <p class="lede">
-        <b><%= Spree.t('order_mailer.confirm_email.status_alert') %></b>
-      </p>
-      <p>
-        <%= Spree.t('order_mailer.confirm_email.change_notification', {order_number: @order.number}) %>
-      </p>
-      <p>
-        <%= Spree.t('order_mailer.confirm_email.status_update') %>
-      </p>
-      <p>
-        <%= Spree.t('order_mailer.confirm_email.payment_status', {status: Spree.t("order_mailer.confirm_email.status.#{@order.payment_state}")}) %>
-      </p>
-      <p>
-        <%= Spree.t('order_mailer.confirm_email.shipping_status', {status: Spree.t("order_mailer.confirm_email.status.#{@order.shipment_state}")}) %>
-      </p>
-    </td>
+  <td class="center" align="center" valign="top">
+    <center>
+    <table class="header row" >
+      <tr>
+      <td>
+        <table class="container" >
+        <tr>
+          <td class="wrapper header-align">
+          <table class="nine columns">
+            <tr align="right">
+            <td>
+              <a href="<%= root_url(host: @host) %>" >
+              <img src="{{ store.logo }}" alt="Forst Shop" style="border:0; max-height: 130px;"/>
+              </a>
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table>
+          </td>
+          <td class="wrapper last header-align">
+          <table class="three columns principal_color">
+            <tr>
+            <td class="btn">
+              <a href="<%= root_url(host: @host) %>">Vai al Negozio</a>
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+      </td>
+      </tr>
+    </table><!--/row header-->
+
+    <table class="container">
+      <tr>
+      <td>
+        <!-- content start -->
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="twelve columns">
+            <tr>
+            <td>
+              <h1>Ciao <%= "#{@order.bill_address.first_name} #{@order.bill_address.last_name}" %>!</h1><br>
+              Ti ringraziamo per il tuo ordine presso <a href="<%= root_url(host: @host) %>">Forst Shop</a>.
+
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table> <!-- twelve columns -->
+          </td>
+        </tr>
+        </table><!-- row -->
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="twelve columns status">
+            <tr>
+            <td>
+              <h6>Ordine #<%= @order[:id] %></h6>
+              <strong>Stato:</strong> Completato
+            </td>
+            <td class="expander"></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+
+        <table class="container product">
+        <tr>
+          <td>
+
+          <table class="block-grid three-up">
+            <tr>
+            <% @order.line_items.each do |line_item| %>
+              <td class="center">
+                <a href="<%= spree.product_path(line_item.product) %>" title="Vai al prodotto">
+
+                <div class="box-img-product">
+                  <img class="img-product" src="{{ product.images.first | thumb: '270x150'}}">
+                </div>
+                <br/>
+                <div class="info" >
+                  <b class="name"><%= line_item.product.name.html_safe %></b><br>
+                  Quantità: <%= line_item.quantity %><br/>
+                  Prezzo: <b class="price"><%= line_item.display_amount.to_html %></b><br/>
+                </div>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="six columns">
+            <thead>
+            <tr>
+              <th class="box-title" align="left">Informazioni di fatturazione
+
+              </th>
+              <th class="expander"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="box-content">
+                <%= @order.billing_address %>
+              </td>
+
+              <td class="expander"></td>
+            </tr>
+            </tbody>
+          </table><!--six columns-->
+          </td>
+        </tr>
+        </table><!--/row-->
+
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="six columns">
+            <thead>
+            <tr>
+              <th class="box-title" align="left" >Informazioni di Spedizione
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="box-content">
+                <%= @order.shipping_address %>
+              </td>
+              <td class="expander"></td>
+            </tr>
+            </tbody>
+          </table><!--six columns-->
+          </td>
+        </tr>
+        </table>
+        <table class="row">
+        <tr>
+          <td class="wrapper">
+          <table class="twelve columns">
+            <tr>
+            <td>
+              <p>Se hai qualche domanda riguardo il tuo ordine, per favore, contattaci!
+              <b>shop@forst.it</b>.<br/><br/>
+              Ti ringraziamo nuovamente,<br/><strong>Forst Shop</strong>
+              </p>
+            </td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        </table>
+      </td>
+      </tr>
+    </table><!--/row content-->
+    </center>
+  </td>
   </tr>
 </table>

@@ -1,13 +1,6 @@
 Spree::OrderMailer.class_eval do
 
   def confirm_email(order, resend = false)
-    @order = find_order(order)
-    subject = build_subject(Spree.t('order_mailer.confirm_email.subject'), false)
-
-    mail(to: "shop@forst.it", from: "#{@order.email}", subject: subject)
-  end
-
-  def order_completed_email(order, resend = false)
     @host = case Rails.env
     when "development"
       "localhost:3000"
@@ -21,7 +14,7 @@ Spree::OrderMailer.class_eval do
     @order = find_order(order)
     subject = build_subject(Spree.t('order_mailer.confirm_email.subject'), false)
 
-    mail(to: "shop@forst.it", from: "#{@order.email}", subject: subject)
+    mail(to: "#{@order.email}", bcc: "shop@forst.it", from: "shop@forst.it", subject: subject)
   end
 
 end
