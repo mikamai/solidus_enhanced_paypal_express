@@ -82,7 +82,7 @@
                 <a href="<%= spree.product_path(line_item.product) %>" title="Vai al prodotto">
 
                 <div class="box-img-product">
-                  <img class="img-product" src="{{ product.images.first | thumb: '270x150'}}">
+                  <img class="img-product" src=<%= line_item.product.images.first.attachment.url(:product) %>>
                 </div>
                 <br/>
                 <div class="info" >
