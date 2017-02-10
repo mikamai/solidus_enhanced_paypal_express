@@ -12,7 +12,7 @@
             <tr align="right">
             <td>
               <a href="<%= root_url(host: @host) %>" >
-              <img src="{{ store.logo }}" alt="Forst Shop" style="border:0; max-height: 130px;"/>
+              <img src="<%= image_url('home/splash-logo.png', host: @host) %>" alt="Forst Shop" style="border:0; max-height: 130px;"/>
               </a>
             </td>
             <td class="expander"></td>
@@ -79,10 +79,10 @@
             <tr>
             <% @order.line_items.each do |line_item| %>
               <td class="center">
-                <a href="<%= spree.product_path(line_item.product) %>" title="Vai al prodotto">
+                <a href="<%= spree.product_url(line_item.product, host: @host) %>" title="Vai al prodotto">
 
                 <div class="box-img-product">
-                  <img class="img-product" src=<%= line_item.product.images.first.attachment.url(:product) %>>
+                  <img class="img-product" src=<%= asset_url(line_item.product.images.first.attachment.url(:product), host: @host) %>>
                 </div>
                 <br/>
                 <div class="info" >
