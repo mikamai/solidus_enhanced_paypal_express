@@ -1,5 +1,7 @@
 Spree::OrderMailer.class_eval do
 
+  layout "mailer", only: [:confirm_email]
+
   def confirm_email(order, resend = false)
     @host = case Rails.env
     when "development"
