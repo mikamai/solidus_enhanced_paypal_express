@@ -36,9 +36,10 @@ $ ->
     $select = $("#order_ship_address_attributes_state_id")
     $text = $("#order_ship_address_attributes_state_name")
     setOptions = (options) ->
+      console.log(options)
       if options
         $select.append(options)
-        $select.prop("disabled", false)
+        $select.prop("disabled", $('#order_use_billing').is(':checked'))
         $select.removeClass("hidden").addClass("required")
 
         $text.prop("disabled", true)
