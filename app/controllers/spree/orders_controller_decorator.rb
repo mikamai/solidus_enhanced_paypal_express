@@ -1,6 +1,7 @@
 Spree::OrdersController.class_eval do
 
   before_action :dummy_validate_first_state_order, only: :update
+  after_action :send_confirm_email, only: :update
 
   def update
     if @order.contents.update_cart(order_params)
@@ -24,6 +25,12 @@ Spree::OrdersController.class_eval do
       @order.update_attribute(:state, "cart")
       @order.ship_address.delete
       @order.bill_address.delete
+    end
+  end
+
+  def send_confirm_email
+    if @order.completed?
+      Spree::OrderMailer.confirm_email(@order).deliver_later
     end
   end
 
