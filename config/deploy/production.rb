@@ -1,4 +1,5 @@
 # role :db,  %w(forst_rw@db1.caynod.es)
+require 'whenever/capistrano'
 NODES = %w(cayenne@app5.caynod.es cayenne@app6.caynod.es).freeze
 
 role :app, NODES
