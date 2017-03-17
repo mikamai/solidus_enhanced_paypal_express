@@ -63,11 +63,11 @@
     <% end %>
       <div style="display: inline-block; width: 45%; margin: auto">
         <%= content_tag :h4, Spree.t(:billing_address) %>
-        <%= render "spree/admin/shared/address", address: order.bill_address %>
+        <%= render "spree/admin/shared/forst_requested_address", address: order.bill_address, order: order %>
       </div>
       <div style="display: inline-block; width: 45%; margin: auto">
         <%= content_tag :h4, Spree.t(:shipping_address) %>
-        <%= render "spree/admin/shared/address", address: order.ship_address %>
+        <%= render "spree/admin/shared/forst_requested_address", address: order.ship_address, order: order %>
       </div>
     </div>
   </div>
