@@ -528,6 +528,8 @@ it:
           paid: Pagato
           balance_due: Pagamento PayPal in attesa
           pending: In attesa
+    api:
+      must_specify_api_key: "Api key necessaria"
 
 # IT translation waiting for updates on solidus_i18n
 # Frontend
