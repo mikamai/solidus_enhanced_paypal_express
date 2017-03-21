@@ -17,6 +17,7 @@ de:
     cart: 'Warenkorb'
     empty: 'Leer'
     items_cannot_be_shipped: Leider können wir Alkohol nur in Italien versandt.
+    items_cannot_be_shipped_because_of_weight: Siamo spiacenti, il Suo ordine non può essere completato, in quanto è stato superato il peso massimo.
     starting_from: Ab
     products:
       sales_total: Totale Vendite

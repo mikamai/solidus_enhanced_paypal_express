@@ -15,6 +15,7 @@ it:
     state: Regione
     item: Articolo
     items_cannot_be_shipped: Siamo spiacenti, possiamo spedire alcolici solo in Italia.
+    items_cannot_be_shipped_because_of_weight: Siamo spiacenti, il Suo ordine non può essere completato, in quanto è stato superato il peso massimo.
     starting_from: A partire da
     categories:
       beers: LE NOSTRE BIRRE

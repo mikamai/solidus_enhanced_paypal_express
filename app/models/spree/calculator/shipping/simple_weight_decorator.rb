@@ -14,6 +14,22 @@ Spree::Calculator::Shipping::SimpleWeight.class_eval do
     shipping_costs ? shipping_costs + handling_fee : 0
   end
 
+  def available?(package)
+    return false if !costs_string_valid?
+    if order_overweight?(package.contents)
+      package.order.errors.add(:base, Spree.t(:items_cannot_be_shipped_because_of_weight))
+      return false
+    end
+
+    if preferred_max_item_size > 0
+      package.contents.each do |item|
+        return false if item_oversized?(item)
+      end
+    end
+
+    true
+  end
+
   private
 
   def extra_price(content_items)
