@@ -44,4 +44,19 @@ namespace :one_time_task do
 
   end
 
+  desc "Update with all old stock movements"
+  task "update_stock_movements" => :environment do
+    starting_time = 1490196851 ## 2017-03-22 16:34:11 +0100 because I say so
+    time = Time.at starting_time
+    stock_movements = Spree::StockMovement.where("created_at < ?", time)
+    stock_movements.each do |sm|
+      begin
+        sm.stock_item.adjust_count_on_hand sm.quantity if sm.stock_item
+        p "Just updated stock movement ##{sm[:id]}"
+      rescue
+        p "Could not adjust stock movement ##{sm[:id]}"
+      end
+    end
+  end
+
 end
