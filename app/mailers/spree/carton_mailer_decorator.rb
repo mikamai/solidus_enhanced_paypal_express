@@ -28,7 +28,7 @@ Spree::CartonMailer.class_eval do
     @store = @order.store
     subject = (options[:resend] ? "[#{Spree.t(:resend).upcase}] " : '')
     subject += "#{@store.name} #{Spree.t('shipment_mailer.shipped_email.subject')} ##{@order.number}"
-    mail(to: "luca.mattiazzi@cayenne.it", from: from_address(@store), subject: subject)
+    mail(to: "webmaster@cayennelabs.it", from: from_address(@store), subject: subject)
   end
 
 end
