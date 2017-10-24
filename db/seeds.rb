@@ -6,7 +6,7 @@ tax_category = Spree::TaxCategory.find_or_create_by!(:name => "Default")
 shipping_category = Spree::ShippingCategory.find_or_create_by!(:name => "Default")
 
 product_default_attrs = {
-  :description => Faker::Lorem.paragraph,
+  :description => "Neque dicta enim quasi. Qui corrupti est quisquam. Facere animi quod aut. Qui nulla consequuntur consectetur sapiente.",
   :available_on => Time.zone.now,
   :tax_category => tax_category,
   :shipping_category => shipping_category,
