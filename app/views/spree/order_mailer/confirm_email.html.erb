@@ -23,7 +23,7 @@
           <table class="three columns principal_color">
             <tr>
             <td class="btn">
-              <a href="<%= root_url(host: @host) %>">Vai al Negozio</a>
+              <a href="<%= root_url(host: @host) %>"><%= Spree.t 'order_mailer.confirm_email.gift_date' %>:</a>
             </td>
             <td class="expander"></td>
             </tr>
@@ -45,9 +45,8 @@
           <table class="twelve columns">
             <tr>
             <td>
-              <h1>Ciao <%= "#{@order.bill_address.first_name} #{@order.bill_address.last_name}" %>!</h1><br>
-              Ti ringraziamo per il tuo ordine presso <a href="<%= root_url(host: @host) %>">Forst Shop</a>.
-
+              <h1><%= Spree.t 'order_mailer.confirm_email.greetings', first_name: @order.bill_address.first_name, last_name: @order.bill_address.last_name%></h1><br>
+              <%= Spree.t 'order_mailer.confirm_email.thanks_for_ordering', url: root_url(host: @host) %>
             </td>
             <td class="expander"></td>
             </tr>
@@ -61,8 +60,8 @@
           <table class="twelve columns status">
             <tr>
             <td>
-              <h6>Ordine #<%= @order[:number] %></h6>
-              <strong>Stato:</strong> Completato
+              <h6><%= Spree.t 'order_mailer.confirm_email.order' %> #<%= @order[:number] %></h6>
+              <strong><%= Spree.t 'order_mailer.confirm_email.state' %>:</strong> <%= Spree.t 'order_mailer.confirm_email.state_completed' %>
             </td>
             <td class="expander"></td>
             </tr>
@@ -79,16 +78,15 @@
             <tr>
             <% @order.line_items.each do |line_item| %>
               <td class="center">
-                <a href="<%= spree.product_url(line_item.product, host: @host) %>" title="Vai al prodotto">
-
+                <a href="<%= spree.product_url(line_item.product, host: @host) %>" title="<%= Spree.t 'order_mailer.confirm_email.go_to_product' %>">
                 <div class="box-img-product">
                   <img class="img-product" src=<%= asset_url(line_item.product.images.first.attachment.url(:product), host: @host) %>>
                 </div>
                 <br/>
                 <div class="info" >
                   <b class="name"><%= line_item.product.name.html_safe %></b><br>
-                  Quantità: <%= line_item.quantity %><br/>
-                  Prezzo: <b class="price"><%= line_item.display_amount.to_html %></b><br/>
+                  <%= Spree.t 'order_mailer.confirm_email.quantity' %>: <%= line_item.quantity %><br/>
+                  <%= Spree.t 'order_mailer.confirm_email.price' %>: <b class="price"><%= line_item.display_amount.to_html %></b><br/>
                 </div>
                 </a>
               </td>
@@ -105,7 +103,7 @@
           <table class="six columns">
             <thead>
             <tr>
-              <th class="box-title" align="left">Informazioni di fatturazione
+              <th class="box-title" align="left"><%= Spree.t 'order_mailer.confirm_email.billing_info' %>
 
               </th>
               <th class="expander"></th>
@@ -131,7 +129,7 @@
           <table class="six columns">
             <thead>
             <tr>
-              <th class="box-title" align="left" >Informazioni di Spedizione
+              <th class="box-title" align="left" ><%= Spree.t 'order_mailer.confirm_email.shipping_info' %>
               </th>
             </tr>
             </thead>
@@ -153,9 +151,9 @@
           <table class="twelve columns">
             <tr>
             <td>
-              <p>Se hai qualche domanda riguardo il tuo ordine, per favore, contattaci!
+              <p><%= Spree.t 'order_mailer.confirm_email.contact_us' %>
               <b>shop@forst.it</b>.<br/><br/>
-              Ti ringraziamo nuovamente,<br/><strong>Forst Shop</strong>
+              <%= Spree.t 'order_mailer.confirm_email.thanks_again' %>
               </p>
             </td>
             </tr>

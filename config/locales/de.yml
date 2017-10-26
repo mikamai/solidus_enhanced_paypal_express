@@ -8,6 +8,32 @@ de:
     contacts: kontakt
     sales_conditions: verkaufsbedingungen
   spree:
+    order_mailer:
+      confirm_email:
+        greetings: Hallo %{first_name} %{last_name}!
+        thanks_for_ordering: Vielen Dank für Ihre Bestellung bei unserem <a href="%{url}">Forstshop</a>
+        order: Bestellung
+        state: Status
+        state_completed: Bestellung bezahlt
+        go_to_product: Vai al prodotto
+        quantity: Menge
+        price: Price
+        billing_info: Informationen zur rechnungstellung
+        shipping_info: Zahlungsart
+        contact_us: Se hai qualche domanda riguardo il tuo ordine, per favore, contattaci!
+        thanks_again: Ti ringraziamo nuovamente,<br/><strong>Forst Shop</strong>
+        status_alert: Statusalarm
+        change_notification: "Bitte beachten Sie, dass die Bestellnummer% {order_number} aktualisiert wurde."
+        status_update: "Aktueller Status:"
+        payment_status: "Zahlung:% {status}"
+        shipping_status: "Versand:% {status}"
+        status:
+          complete: bezahlt
+          shipped: versendet
+          ready: Hallo
+          paid: bezahlt
+          balance_due: PayPal Zahlung Waiting
+          pending: Waiting
     item_total_with_vat: Artikel gesamt MwSt. inklusiv
     packaging_christmas: Besondere Weihnachtsbier-Verpackung
     order_mutex_error: Order Mutex error

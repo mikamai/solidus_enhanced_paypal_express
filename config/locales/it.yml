@@ -517,6 +517,18 @@ it:
         greetings: Un cordiale saluto,
     order_mailer:
       confirm_email:
+        greetings: Ciao %{first_name} %{last_name}!
+        thanks_for_ordering: Ti ringraziamo per il tuo ordine presso <a href="%{url}">Forst Shop</a>
+        order: Ordine
+        state: Stato
+        state_completed: Completato
+        go_to_product: Vai al prodotto
+        quantity: Quantità
+        price: Prezzo
+        billing_info: Informazioni di fatturazione
+        shipping_info: Informazioni di Spedizione
+        contact_us: Se hai qualche domanda riguardo il tuo ordine, per favore, contattaci!
+        thanks_again: Ti ringraziamo nuovamente,<br/><strong>Forst Shop</strong>
         status_alert: Status Alert
         change_notification: "Ti informiamo che l'ordine n. %{order_number} è stato aggiornato."
         status_update: "Status attuale:"
