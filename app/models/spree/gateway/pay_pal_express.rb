@@ -188,5 +188,7 @@ module Spree
     def sandbox?
       self.preferred_server == "sandbox"
     end
+
+    alias_method :purchase, :capture
   end
 end
