@@ -1,6 +1,5 @@
 RSpec.describe Spree::Gateway::PayPalExpress do
   describe ".express_checkout_url" do
-
     shared_context "gateway setup" do |token, use_new_layout, server|
       subject { payment_method.express_checkout_url(pp_response, {}) }
 
