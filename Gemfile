@@ -28,7 +28,7 @@ gem "solidus_gateway", github: 'dfranciosi/solidus_gateway', branch: 'remove-act
 gem 'solidus_i18n', github: 'luukveenis/solidus_i18n', branch: 'update-it-translations'
 gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
 gem 'solidus_simple_weight_calculator', github: 'dfranciosi/solidus_simple_weight_calculator', branch: 'master'
-gem 'spree_paypal_express', github: 'dfranciosi/solidus_paypal_express'
+gem 'spree_paypal_express', github: 'mikamai/solidus_paypal_express'
 gem 'solidus_editor', github: 'solidusio-contrib/solidus_editor', branch: 'master'
 
 gem 'rollbar'
