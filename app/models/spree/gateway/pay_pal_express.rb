@@ -149,12 +149,9 @@ module Spree
         payment_details
     end
 
-    def purchase(money, source, options = {})
-      params = options.slice(:currency).merge({
-        token: source.token,
-        payer_id: source.payer_id,
-      })
-      provider.purchase(money, params)
+    def purchase(money, source)
+      provider.purchase(money, token: source.token,
+                               payer_id: source.payer_id)
     end
 
     def checkout_payment_params(token, payer_id)
