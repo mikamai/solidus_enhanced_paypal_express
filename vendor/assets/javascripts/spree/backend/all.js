@@ -11,4 +11,4 @@
 //= require_tree .
 //= require spree/backend/solidus_globalize
 //= require spree/backend/spree_braintree_vzero
-//= require spree/backend/solidus_paypal_express
+//= require spree/backend/spree_paypal_express
