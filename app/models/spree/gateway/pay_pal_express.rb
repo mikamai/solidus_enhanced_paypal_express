@@ -1,10 +1,9 @@
 require 'paypal-sdk-merchant'
+require 'uri'
+
 module Spree
   class Gateway::PayPalExpress < Gateway
     preference :use_new_layout, :boolean, default: true
-    preference :login, :string
-    preference :password, :string
-    preference :signature, :string
     preference :server, :string, default: 'sandbox'
     preference :solution, :string, default: 'Mark'
     preference :landing_page, :string, default: 'Billing'
@@ -15,16 +14,7 @@ module Spree
     end
 
     def provider_class
-      ::PayPal::SDK::Merchant::API
-    end
-
-    def provider
-      ::PayPal::SDK.configure(
-        mode: preferred_server.present? ? preferred_server : "sandbox",
-        username: preferred_login,
-        password: preferred_password,
-        signature: preferred_signature)
-      provider_class.new
+      ActiveMerchant::Billing::PaypalExpressGateway
     end
 
     def auto_capture?
@@ -101,7 +91,7 @@ module Spree
         "https://www.#{server_domain}paypal.com/cgi-bin/webscr?" +
           "cmd=_express-checkout&force_sa=true&"
       end +
-      encode_www_form(params)
+      URI.encode_www_form(params)
     end
 
     def do_authorize(token, payer_id)
@@ -130,6 +120,7 @@ module Spree
       response.do_capture_response_details.payment_info.transaction_id
     end
 
+    # TODO: Make sure this still works after changing Provider.
     # response ::
     #   PayPal::SDK::Merchant::DataTypes::DoExpressCheckoutPaymentResponseType
     def authorization_transaction_id(response)
@@ -156,6 +147,14 @@ module Spree
           checkout_details_params(token)).
         get_express_checkout_details_response_details.
         payment_details
+    end
+
+    def purchase(money, source, options = {})
+      params = options.slice(:currency).merge({
+        token: source.token,
+        payer_id: source.payer_id,
+      })
+      provider.purchase(money, params)
     end
 
     def checkout_payment_params(token, payer_id)
