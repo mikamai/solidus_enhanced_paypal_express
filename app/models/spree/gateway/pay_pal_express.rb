@@ -4,6 +4,9 @@ require 'uri'
 module Spree
   class Gateway::PayPalExpress < Gateway
     preference :use_new_layout, :boolean, default: true
+    preference :login, :string
+    preference :password, :string		
+    preference :signature, :string
     preference :server, :string, default: 'sandbox'
     preference :solution, :string, default: 'Mark'
     preference :landing_page, :string, default: 'Billing'
