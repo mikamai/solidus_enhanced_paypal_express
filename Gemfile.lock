@@ -25,16 +25,24 @@ GIT
 
 GIT
   remote: git://github.com/luukveenis/solidus_i18n.git
-  revision: d11085e747adc4f9d3cd0b255c26bd58343ad2ea
+  revision: 2b8b5ee3b1f23be9a227ab99a2861a463c3a27fa
   branch: update-it-translations
   specs:
-    solidus_i18n (1.0.0)
+    solidus_i18n (1.1.0)
       deface (~> 1.0)
       i18n_data (~> 0.7.0)
       kaminari-i18n (~> 0.3.2)
-      rails-i18n (~> 4.0.1)
-      routing-filter (~> 0.5.0)
-      solidus_core (~> 1.1)
+      rails-i18n (>= 4.0.1, < 6)
+      routing-filter (~> 0.6.0)
+      solidus_core (>= 1.1, < 3)
+
+GIT
+  remote: git://github.com/mikamai/solidus_paypal_express.git
+  revision: fcef7da4beaee820717f296064471c1b21009dad
+  specs:
+    spree_paypal_express (2.0.3)
+      paypal-sdk-merchant (= 1.106.1)
+      solidus_core (~> 1.0)
 
 GIT
   remote: git://github.com/solidusio-contrib/solidus_editor.git
@@ -416,7 +424,7 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails-i18n (4.0.8)
+    rails-i18n (4.0.9)
       i18n (~> 0.7)
       railties (~> 4.0)
     railties (4.2.6)
@@ -443,9 +451,9 @@ GEM
     route_translator (4.3.0)
       actionpack (>= 3.2, < 5.0)
       activesupport (>= 3.2, < 5.0)
-    routing-filter (0.5.1)
-      actionpack (~> 4.2)
-      activesupport (~> 4.2)
+    routing-filter (0.6.1)
+      actionpack (>= 4.2, < 5.2)
+      activesupport (>= 4.2, < 5.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -605,6 +613,7 @@ DEPENDENCIES
   solidus_i18n!
   solidus_paypal_express!
   solidus_simple_weight_calculator!
+  spree_paypal_express!
   spring
   spring-commands-rspec
   uglifier (>= 1.3.0)
@@ -612,4 +621,4 @@ DEPENDENCIES
   wicked_pdf
 
 BUNDLED WITH
-   1.12.5
+   1.16.0
