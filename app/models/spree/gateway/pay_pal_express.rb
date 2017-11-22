@@ -21,10 +21,6 @@ module Spree
       ActiveMerchant::Billing::PaypalExpressGateway
     end
 
-    def auto_capture?
-      preferred_auto_capture
-    end
-
     def method_type
       'paypal'
     end
