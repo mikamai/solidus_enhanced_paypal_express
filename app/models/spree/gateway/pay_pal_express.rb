@@ -14,7 +14,7 @@ module Spree
     preference :auto_capture, :boolean, default: true
 
     def supports?(source)
-      true
+      source.is_a? PaypalExpressSource
     end
 
     def provider_class
@@ -22,7 +22,7 @@ module Spree
     end
 
     def method_type
-      'paypal'
+      'paypal_express'
     end
 
     # amount :: float
@@ -46,38 +46,6 @@ module Spree
       do_capture(amount_cents, authorization, currency)
     end
 
-    def credit(credit_cents, transaction_id, originator:, **_options)
-      payment = originator.payment
-      amount = credit_cents / 100.0
-
-      refund_type = payment.amount == amount.to_f ? 'Full' : 'Partial'
-
-      refund_transaction = provider.build_refund_transaction(
-        TransactionID: payment.transaction_id,
-        RefundType: refund_type,
-        Amount: {
-          currencyID: payment.currency,
-          value: amount
-        },
-        RefundSource: 'any'
-      )
-
-      refund_transaction_response = provider.refund_transaction(refund_transaction)
-
-      if refund_transaction_response.success?
-        payment.source.update_attributes(
-          refunded_at: Time.current,
-          refund_transaction_id: refund_transaction_response.RefundTransactionID,
-          state: 'refunded',
-          refund_type: refund_type
-        )
-      end
-
-      build_response(
-        refund_transaction_response,
-        refund_transaction_response.refund_transaction_id)
-    end
-
     def server_domain
       preferred_server == 'live' ? '' : 'sandbox.'
     end
@@ -94,6 +62,18 @@ module Spree
       end
 
       "https://www.#{server_domain}paypal.com/#{layout}#{URI.encode_www_form(params)}"
+    end
+
+    def purchase_link(order, options)
+      total_cents = order.display_total.cents
+      options.merge!({
+        currency: order.currency,
+        max_amount: total_cents,
+        allow_guest_checkout: true
+      })
+      response = provider.setup_purchase total_cents, options
+      token = response.params['token']
+      provider.redirect_url_for(token)
     end
 
     def do_authorize(token, payer_id)
@@ -122,17 +102,6 @@ module Spree
 
     def capture_transaction_id(response)
       response.do_capture_response_details.payment_info.transaction_id
-    end
-
-    # TODO: Make sure this still works after changing Provider.
-    # response ::
-    #   PayPal::SDK::Merchant::DataTypes::DoExpressCheckoutPaymentResponseType
-    def authorization_transaction_id(response)
-      response
-        .do_express_checkout_payment_response_details
-        .payment_info
-        .first
-        .transaction_id
     end
 
     def build_response(response, transaction_id)
