@@ -26,7 +26,9 @@ require 'pry'
 require 'capybara/rspec'
 require 'capybara/rails'
 require 'capybara-screenshot/rspec'
-require "show_me_the_cookies"
+require 'show_me_the_cookies'
+require 'rspec/active_model/mocks'
+
 
 # To stop these warnings:
 # WARN: tilt autoloading 'sass' in a non thread-safe way; explicit require 'sass' suggested.

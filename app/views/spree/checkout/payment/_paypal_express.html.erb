@@ -1,0 +1,12 @@
+<%
+  options = {
+    return_url: paypal_return_url(payment_method_id: payment_method.id),
+    cancel_return_url: paypal_cancel_url(payment_method_id: payment_method.id)
+  }
+  link = payment_method.purchase_link(@order, options)
+%>
+
+<div class='button-group payment-buttons'>
+  <%= link_to(image_tag('https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif'), link, method: :post, id: 'paypal_button') %>
+</div>
+<img src='https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png' alt='Buy now with PayPal' />

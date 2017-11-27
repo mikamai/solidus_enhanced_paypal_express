@@ -1,1 +1,3 @@
-inherit_from: .rubocop_todo.yml
+# This Rubocop file isn't valid, most namespaces are wrong and make the linter crash.
+# Disabling for now so it falls back to default config
+#inherit_from: .rubocop_todo.yml
