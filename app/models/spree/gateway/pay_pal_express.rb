@@ -36,7 +36,7 @@ module Spree
       )
       response = provider.setup_purchase total_cents, options
       token = response.params['token']
-      provider.redirect_url_for(token).gsub('paypal.com', "#{url_domain}paypal.com")
+      provider.redirect_url_for(token)
     end
 
 
