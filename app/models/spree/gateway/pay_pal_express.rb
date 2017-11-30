@@ -4,7 +4,8 @@ module Spree
     preference :password, :string
     preference :signature, :string
     preference :currency_code, :string, default: 'EUR'
-
+    preference :auto_capture, :boolean, default: true
+    
     def supports?(source)
       source.is_a? Spree::PaypalExpressCheckout
     end
