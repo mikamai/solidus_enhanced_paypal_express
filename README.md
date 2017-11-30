@@ -1,18 +1,14 @@
-# Spree PayPal Express
+# Solidus PayPal Express
 
 [![Build Status](https://travis-ci.org/spree-contrib/better_spree_paypal_express.svg?branch=2-4-stable)](https://travis-ci.org/spree-contrib/better_spree_paypal_express)
 
-This is a "re-do" of the official [spree_paypal_express][4] extension. The old extension is extremely hard to maintain and complex.
-
-Behind-the-scenes, this extension uses [PayPal's Merchant Ruby SDK](https://github.com/paypal/merchant-sdk-ruby).
+This is an enhanced version of the [solidus_paypal_express](https://github.com/dfranciosi/solidus_paypal_express) by `dfranciosi`. Instead of using [PayPal's Merchant Ruby SDK](https://github.com/paypal/merchant-sdk-ruby) we run `ActiveMerchant::Billing::PaypalExpressGateway` as a provider.
 
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
 
-        gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
-
-The `branch` option is important: it must match the version of Spree you're using. Use 2-2-stable if you're using Spree 2-2-stable or any 2.2.x version.
+        gem 'solidus_paypal_express', github: 'mikamai/solidus_enhanced_paypal_express'
 
 2. Install the gem using Bundler:
 
@@ -20,7 +16,7 @@ The `branch` option is important: it must match the version of Spree you're usin
 
 3. Copy & run migrations
 
-        bundle exec rails g spree_paypal_express:install
+        bundle exec rails g solidus_paypal_express:install
 
 4. Restart your server
 
@@ -33,6 +29,8 @@ If your server was running, restart it so that it can find the assets properly.
 Go to [PayPal's Developer Website](https://developer.paypal.com/), sign in with your PayPal account, click "Applications" then "Sandbox Accounts" and create a new "Business" account. Once the account is created, click on the triangle next to its email address, then "Profile". The "API Credentials" tab will provide your API credentials (probably). If this tab is blank, try refreshing the page.
 
 You will also need a "Personal" account to test the transactions on your site. Create this in the same way, finding the account information under "Profile" as well. You may need to set a password in order to be able to log in to PayPal's sandbox for this user.
+
+Remember to set the server as `test` instead of `live`.
 
 #### Spree Setup
 
@@ -48,13 +46,7 @@ If you are unable to find it, then follow [PayPal's own documentation](https://d
 
 #### Spree Setup
 
-Same as sandbox setup, but change "Server" from "sandbox" to "live".
-
-## Configuration
-
-The PayPal Express Checkout has [no less than 4.5 billion configuration options](https://github.com/paypal/merchant-sdk-ruby/blob/1d65e598d2f9f200f85c6b3338d4293dbed576d8/lib/paypal-sdk/merchant/data_types.rb#L830-L959).
-
-This Spree extension supports *some* of those. If your favourite is not here, then please submit an issue about it, or better still a patch to add it in.
+Same as sandbox setup, but change "Server" from "test" to "live".
 
 ### Solution Type
 
@@ -79,16 +71,6 @@ payment_method.preferred_landing_page = "Billing"
 ```
 
 "Login" will show the users the login form for PayPal, and "Billing" will show them a form where they can enter their credit card data and possibly sign up for a PayPal account (depending on the Solution Type setting above).
-
-### Logo
-
-Determines what logo, if any, to display at the top left of the PayPal express checkout:
-
-```ruby
-payment_method.preferred_logourl = 'http://yoursite.com/images/checkout.jpg'
-```
-
-**Must** be an absolute path to the image.
 
 ## Caveats
 
@@ -126,9 +108,9 @@ Starting point:
 * Ensure specs pass by running `bundle exec rspec spec`
 * Submit your pull request
 
-Copyright (c) 2013-2015 Spree Commerce and contributors, released under the [New BSD License][3]
+Copyright (c) 2016 Solidus Commerce and contributors, released under the [New BSD License][3]
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
-[2]: https://github.com/spree/better_spree_paypal_express/issues
-[3]: https://github.com/spree/better_spree_paypal_express/tree/master/LICENSE.md
-[4]: https://github.com/spree/spree_paypal_express
+[2]: https://github.com/solidusio/solidus_paypal_express/issues
+[3]: https://github.com/solidusio/solidus_paypal_express/tree/master/LICENSE.md
+[4]: https://github.com/solidusio/solidus_paypal_express
